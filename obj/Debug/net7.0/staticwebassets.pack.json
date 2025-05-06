@@ -1,0 +1,1621 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Power Plus\\.nuget\\packages\\datatables.net-dt\\1.13.8\\contentFiles\\any\\any\\wwwroot\\css\\jquery.dataTables.css",
+      "PackagePath": "staticwebassets\\css\\jquery.dataTables.css"
+    },
+    {
+      "Id": "C:\\Users\\Power Plus\\.nuget\\packages\\datatables.net-dt\\1.13.8\\contentFiles\\any\\any\\wwwroot\\css\\jquery.dataTables.min.css",
+      "PackagePath": "staticwebassets\\css\\jquery.dataTables.min.css"
+    },
+    {
+      "Id": "C:\\Users\\Power Plus\\.nuget\\packages\\datatables.net-dt\\1.13.8\\contentFiles\\any\\any\\wwwroot\\js\\dataTables.dataTables.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.dataTables.js"
+    },
+    {
+      "Id": "C:\\Users\\Power Plus\\.nuget\\packages\\datatables.net-dt\\1.13.8\\contentFiles\\any\\any\\wwwroot\\js\\dataTables.dataTables.min.js",
+      "PackagePath": "staticwebassets\\js\\dataTables.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\animate-custom.css",
+      "PackagePath": "staticwebassets\\css\\animate-custom.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\Descr.WD3",
+      "PackagePath": "staticwebassets\\css\\icons\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\flaticons\\Descr.WD3",
+      "PackagePath": "staticwebassets\\css\\icons\\flaticons\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\flaticons\\flaticon.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\flaticons\\flaticon.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\flaticons\\flaticon.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\flaticons\\flaticon.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\flaticons\\flaticon.ttf",
+      "PackagePath": "staticwebassets\\css\\icons\\flaticons\\flaticon.ttf"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\flaticons\\flaticon.woff",
+      "PackagePath": "staticwebassets\\css\\icons\\flaticons\\flaticon.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\Descr.WD3",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.eot@",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.eot@"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.eot@v=4.0.3",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.eot@v=4.0.3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.svg@v=4.0.3",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.svg@v=4.0.3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.ttf@v=4.0.3",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.ttf@v=4.0.3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.woff@v=4.0.3",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfont.woff@v=4.0.3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.ttf",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.ttf"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.woff",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontba72.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\font-awesome\\fonts\\fontawesome-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\Descr.WD3",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.eot@",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.eot@"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.ttf",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.ttf"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.woff",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regular.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regulard41d.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\glyphicons\\glyphicons_halflings\\font\\glyphiconshalflings-regulard41d.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\icons.min.css",
+      "PackagePath": "staticwebassets\\css\\icons\\icons.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\Descr.WD3",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\artill_clean_icons-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\artill_clean_icons-webfont.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\artill_clean_icons-webfont.eot@",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\artill_clean_icons-webfont.eot@"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\artill_clean_icons-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\artill_clean_icons-webfont.ttf"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\artill_clean_icons-webfont.woff",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\artill_clean_icons-webfont.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\artill_clean_icons-webfontd41d.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\artill_clean_icons-webfontd41d.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\weather\\weatherfont\\artill_clean_icons-webfont.html",
+      "PackagePath": "staticwebassets\\css\\icons\\weather\\weatherfont\\artill_clean_icons-webfont.html"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\zocial\\Descr.WD3",
+      "PackagePath": "staticwebassets\\css\\icons\\zocial\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\zocial\\zocial-regular-webfont.eot",
+      "PackagePath": "staticwebassets\\css\\icons\\zocial\\zocial-regular-webfont.eot"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\zocial\\zocial-regular-webfont.svg",
+      "PackagePath": "staticwebassets\\css\\icons\\zocial\\zocial-regular-webfont.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\icons\\zocial\\zocial-regular-webfont.ttf",
+      "PackagePath": "staticwebassets\\css\\icons\\zocial\\zocial-regular-webfont.ttf"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\plugins.min.css",
+      "PackagePath": "staticwebassets\\css\\plugins.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\style.min.css",
+      "PackagePath": "staticwebassets\\css\\style.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\fonts\\Descr.WD3",
+      "PackagePath": "staticwebassets\\fonts\\Descr.WD3"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\fonts\\carrois.woff",
+      "PackagePath": "staticwebassets\\fonts\\carrois.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\fonts\\opensans-bold.woff",
+      "PackagePath": "staticwebassets\\fonts\\opensans-bold.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\fonts\\opensans-light.woff",
+      "PackagePath": "staticwebassets\\fonts\\opensans-light.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\fonts\\opensans-semibold.woff",
+      "PackagePath": "staticwebassets\\fonts\\opensans-semibold.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\fonts\\opensans.woff",
+      "PackagePath": "staticwebassets\\fonts\\opensans.woff"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\account\\login-logo.png",
+      "PackagePath": "staticwebassets\\img\\account\\login-logo.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\account\\login-questionmark-icon.png",
+      "PackagePath": "staticwebassets\\img\\account\\login-questionmark-icon.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\account\\register-icon.png",
+      "PackagePath": "staticwebassets\\img\\account\\register-icon.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\account\\user-icon.png",
+      "PackagePath": "staticwebassets\\img\\account\\user-icon.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar1.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar1.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar10.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar10.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar10_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar10_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar11.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar11.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar11_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar11_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar12.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar12.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar12_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar12_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar13.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar13.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar13_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar13_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar1_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar1_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar2.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar2.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar2_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar2_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar3.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar3.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar3_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar3_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar4.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar4.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar4_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar4_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar5.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar5.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar5_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar5_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar6.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar6.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar6_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar6_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar7.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar7.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar7_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar7_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar8.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar8.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar8_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar8_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar9.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar9.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\avatars\\avatar9_big.png",
+      "PackagePath": "staticwebassets\\img\\avatars\\avatar9_big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\displayscreen\\news_app.apk",
+      "PackagePath": "staticwebassets\\img\\displayscreen\\news_app.apk"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\displayscreen\\outdoor_screen.png",
+      "PackagePath": "staticwebassets\\img\\displayscreen\\outdoor_screen.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\favicon.png",
+      "PackagePath": "staticwebassets\\img\\favicon.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\gradient-big.png",
+      "PackagePath": "staticwebassets\\img\\gradient-big.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\gradient.png",
+      "PackagePath": "staticwebassets\\img\\gradient.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\logo.png",
+      "PackagePath": "staticwebassets\\img\\logo.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\construction1.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\construction1.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\construction2.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\construction2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\construction3.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\construction3.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\construction4.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\construction4.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\me.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\me.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\more.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\more.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\nature1.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\nature1.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\nature2.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\nature2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\nature3.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\nature3.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\nature4.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\nature4.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\pics1.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\pics1.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\pics2.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\pics2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\pics3.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\pics3.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\pics4.jpg",
+      "PackagePath": "staticwebassets\\img\\profil_page\\pics4.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\review1.png",
+      "PackagePath": "staticwebassets\\img\\profil_page\\review1.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\profil_page\\review2.png",
+      "PackagePath": "staticwebassets\\img\\profil_page\\review2.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\small\\bars.png",
+      "PackagePath": "staticwebassets\\img\\small\\bars.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\small\\bars_active.png",
+      "PackagePath": "staticwebassets\\img\\small\\bars_active.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\small\\key_small.png",
+      "PackagePath": "staticwebassets\\img\\small\\key_small.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\small\\lines.png",
+      "PackagePath": "staticwebassets\\img\\small\\lines.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\small\\lines_active.png",
+      "PackagePath": "staticwebassets\\img\\small\\lines_active.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\small\\user_small.png",
+      "PackagePath": "staticwebassets\\img\\small\\user_small.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\various\\image_crop1.jpg",
+      "PackagePath": "staticwebassets\\img\\various\\image_crop1.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\various\\image_crop2.jpg",
+      "PackagePath": "staticwebassets\\img\\various\\image_crop2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\various\\timeline1.jpg",
+      "PackagePath": "staticwebassets\\img\\various\\timeline1.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\various\\timeline2.jpg",
+      "PackagePath": "staticwebassets\\img\\various\\timeline2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\widgets\\compas.png",
+      "PackagePath": "staticwebassets\\img\\widgets\\compas.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\widgets\\logo-nike.png",
+      "PackagePath": "staticwebassets\\img\\widgets\\logo-nike.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\widgets\\mountain.jpg",
+      "PackagePath": "staticwebassets\\img\\widgets\\mountain.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\widgets\\pensils.png",
+      "PackagePath": "staticwebassets\\img\\widgets\\pensils.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\widgets\\profil2.jpg",
+      "PackagePath": "staticwebassets\\img\\widgets\\profil2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\img\\widgets\\profil3.jpg",
+      "PackagePath": "staticwebassets\\img\\widgets\\profil3.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\account.js",
+      "PackagePath": "staticwebassets\\js\\account.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\application.js",
+      "PackagePath": "staticwebassets\\js\\application.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\calendar.js",
+      "PackagePath": "staticwebassets\\js\\calendar.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\charts.js",
+      "PackagePath": "staticwebassets\\js\\charts.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\checkbox.js",
+      "PackagePath": "staticwebassets\\js\\checkbox.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\dashboard.js",
+      "PackagePath": "staticwebassets\\js\\dashboard.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\editor.js",
+      "PackagePath": "staticwebassets\\js\\editor.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\form.js",
+      "PackagePath": "staticwebassets\\js\\form.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\form_wizard.js",
+      "PackagePath": "staticwebassets\\js\\form_wizard.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\gallery.js",
+      "PackagePath": "staticwebassets\\js\\gallery.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\icons.js",
+      "PackagePath": "staticwebassets\\js\\icons.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\image_croping.js",
+      "PackagePath": "staticwebassets\\js\\image_croping.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\mailbox.js",
+      "PackagePath": "staticwebassets\\js\\mailbox.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\maps-google.js",
+      "PackagePath": "staticwebassets\\js\\maps-google.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\notifications.js",
+      "PackagePath": "staticwebassets\\js\\notifications.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\session_timeout.js",
+      "PackagePath": "staticwebassets\\js\\session_timeout.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\slider.js",
+      "PackagePath": "staticwebassets\\js\\slider.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\table_dynamic.js",
+      "PackagePath": "staticwebassets\\js\\table_dynamic.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\table_editable.js",
+      "PackagePath": "staticwebassets\\js\\table_editable.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\test.js",
+      "PackagePath": "staticwebassets\\js\\test.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\timeline.js",
+      "PackagePath": "staticwebassets\\js\\timeline.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\tree_view.js",
+      "PackagePath": "staticwebassets\\js\\tree_view.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\vfs_fonts.js",
+      "PackagePath": "staticwebassets\\js\\vfs_fonts.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\js\\widgets.js",
+      "PackagePath": "staticwebassets\\js\\widgets.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\backstretch\\backstretch.min.js",
+      "PackagePath": "staticwebassets\\plugins\\backstretch\\backstretch.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-datepicker\\bootstrap-datepicker.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-datepicker\\bootstrap-datepicker.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-dropdown\\bootstrap-hover-dropdown.min.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-dropdown\\bootstrap-hover-dropdown.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-progressbar\\bootstrap-progressbar.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-progressbar\\bootstrap-progressbar.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-progressbar\\bootstrap-progressbar.js.readme",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-progressbar\\bootstrap-progressbar.js.readme"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-select\\bootstrap-select.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-select\\bootstrap-select.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-slider\\bootstrap-slider.css",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-slider\\bootstrap-slider.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-slider\\bootstrap-slider.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-slider\\bootstrap-slider.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap-switch\\bootstrap-switch.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap-switch\\bootstrap-switch.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\bootstrap\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\plugins\\bootstrap\\bootstrap.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\breakpoints\\breakpoints.js",
+      "PackagePath": "staticwebassets\\plugins\\breakpoints\\breakpoints.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-circliful\\css\\jquery.circliful.css",
+      "PackagePath": "staticwebassets\\plugins\\charts-circliful\\css\\jquery.circliful.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-circliful\\js\\jquery.circliful.min.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-circliful\\js\\jquery.circliful.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-d3\\d3.v3.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-d3\\d3.v3.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-d3\\nv.d3.css",
+      "PackagePath": "staticwebassets\\plugins\\charts-d3\\nv.d3.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-d3\\nv.d3.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-d3\\nv.d3.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-flot\\jquery.flot.animator.min.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-flot\\jquery.flot.animator.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-flot\\jquery.flot.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-flot\\jquery.flot.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-flot\\jquery.flot.resize.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-flot\\jquery.flot.resize.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-flot\\jquery.flot.time.min.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-flot\\jquery.flot.time.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-morris\\morris.min.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-morris\\morris.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-morris\\raphael.min.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-morris\\raphael.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\css\\extensions5e1f.css",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\css\\extensions5e1f.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\interp_cardinal.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\interp_cardinal.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\interp_linear.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\interp_linear.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\interp_step.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\interp_step.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\offset_pct.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\offset_pct.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\offset_stack.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\offset_stack.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\offset_stream.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\offset_stream.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\offset_value.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\offset_value.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\om_bar.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\om_bar.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\om_lines.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\om_lines.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\om_scatter.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\om_scatter.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\images\\om_stack.png",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\images\\om_stack.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\examples\\js\\extensions.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\examples\\js\\extensions.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\rickshaw.css",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\rickshaw.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Class.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Class.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Color.Palette.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Color.Palette.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Compat.ClassList.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Compat.ClassList.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Color.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Color.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Number.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Number.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.RandomData.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.RandomData.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Time.Local.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Time.Local.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Time.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Fixtures.Time.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Annotate.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Annotate.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Axis.Time.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Axis.Time.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Axis.Y.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Axis.Y.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Behavior.Series.Highlight.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Behavior.Series.Highlight.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Behavior.Series.Order.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Behavior.Series.Order.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Behavior.Series.Toggle.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Behavior.Series.Toggle.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.HoverDetail.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.HoverDetail.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Legend.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Legend.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.RangeSlider.Preview.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.RangeSlider.Preview.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.RangeSlider.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.RangeSlider.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Area.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Area.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Bar.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Bar.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Line.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Line.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.ScatterPlot.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.ScatterPlot.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Stack.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.Stack.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Renderer.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Smoother.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.Smoother.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.Graph.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\src\\js\\Rickshaw.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-rickshaw\\vendor\\d3.v3.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-rickshaw\\vendor\\d3.v3.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\charts-sparkline\\sparkline.min.js",
+      "PackagePath": "staticwebassets\\plugins\\charts-sparkline\\sparkline.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\cke-editor\\adapters\\jquery.js",
+      "PackagePath": "staticwebassets\\plugins\\cke-editor\\adapters\\jquery.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\cke-editor\\ckeditor.js",
+      "PackagePath": "staticwebassets\\plugins\\cke-editor\\ckeditor.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\cke-editor\\sample.jpg",
+      "PackagePath": "staticwebassets\\plugins\\cke-editor\\sample.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\dataTables.bootstrap.js",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\dataTables.bootstrap.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\dataTables.css",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\dataTables.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\dataTables.tableTools.css",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\dataTables.tableTools.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\dataTables.tableTools.js",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\dataTables.tableTools.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\dynamic\\jquery.dataTables.min.js",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\dynamic\\jquery.dataTables.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\sort_asc_disabled.png",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\sort_asc_disabled.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\sort_desc_disabled.png",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\sort_desc_disabled.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datatables\\table.editable.html",
+      "PackagePath": "staticwebassets\\plugins\\datatables\\table.editable.html"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datetimepicker\\jquery.datetimepicker.css",
+      "PackagePath": "staticwebassets\\plugins\\datetimepicker\\jquery.datetimepicker.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\datetimepicker\\jquery.datetimepicker.js",
+      "PackagePath": "staticwebassets\\plugins\\datetimepicker\\jquery.datetimepicker.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\dropzone\\dropzone.css",
+      "PackagePath": "staticwebassets\\plugins\\dropzone\\dropzone.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\dropzone\\dropzone.min.js",
+      "PackagePath": "staticwebassets\\plugins\\dropzone\\dropzone.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\dropzone\\spritemap.png",
+      "PackagePath": "staticwebassets\\plugins\\dropzone\\spritemap.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\dropzone\\spritemap@2x.png",
+      "PackagePath": "staticwebassets\\plugins\\dropzone\\spritemap@2x.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\font-awesome-animation\\font-awesome-animation.min.html",
+      "PackagePath": "staticwebassets\\plugins\\font-awesome-animation\\font-awesome-animation.min.html"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\fullcalendar\\fullcalendar.css",
+      "PackagePath": "staticwebassets\\plugins\\fullcalendar\\fullcalendar.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\fullcalendar\\fullcalendar.min.js",
+      "PackagePath": "staticwebassets\\plugins\\fullcalendar\\fullcalendar.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\fullcalendar\\moment.min.js",
+      "PackagePath": "staticwebassets\\plugins\\fullcalendar\\moment.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\gallery-mixitup\\jquery.mixitup.js",
+      "PackagePath": "staticwebassets\\plugins\\gallery-mixitup\\jquery.mixitup.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\google-maps\\gmaps.js",
+      "PackagePath": "staticwebassets\\plugins\\google-maps\\gmaps.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\google-maps\\markerclusterer.js",
+      "PackagePath": "staticwebassets\\plugins\\google-maps\\markerclusterer.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\icheck\\custom.js",
+      "PackagePath": "staticwebassets\\plugins\\icheck\\custom.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\icheck\\icheck.js",
+      "PackagePath": "staticwebassets\\plugins\\icheck\\icheck.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\idle-timeout\\jquery.idletimeout.js",
+      "PackagePath": "staticwebassets\\plugins\\idle-timeout\\jquery.idletimeout.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\idle-timeout\\jquery.idletimer.js",
+      "PackagePath": "staticwebassets\\plugins\\idle-timeout\\jquery.idletimer.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jQRangeSliders\\iThing.css",
+      "PackagePath": "staticwebassets\\plugins\\jQRangeSliders\\iThing.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jQRangeSliders\\jQAllRangeSliders-min.js",
+      "PackagePath": "staticwebassets\\plugins\\jQRangeSliders\\jQAllRangeSliders-min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jQRangeSliders\\jQAllRangeSliders-withRuler-min.js",
+      "PackagePath": "staticwebassets\\plugins\\jQRangeSliders\\jQAllRangeSliders-withRuler-min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jcrop\\Jcrop.gif",
+      "PackagePath": "staticwebassets\\plugins\\jcrop\\Jcrop.gif"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jcrop\\jquery.Jcrop.min.css",
+      "PackagePath": "staticwebassets\\plugins\\jcrop\\jquery.Jcrop.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jcrop\\jquery.Jcrop.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jcrop\\jquery.Jcrop.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jnotify\\jNotify.jquery.css",
+      "PackagePath": "staticwebassets\\plugins\\jnotify\\jNotify.jquery.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jnotify\\jNotify.jquery.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jnotify\\jNotify.jquery.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-1.11.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-1.11.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\canvas-to-blob.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\canvas-to-blob.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\css\\jquery.fileupload-ui.css",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\css\\jquery.fileupload-ui.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\css\\jquery.fileupload.css",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\css\\jquery.fileupload.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\img\\loading.gif",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\img\\loading.gif"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\img\\progressbar.gif",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\img\\progressbar.gif"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\jquery.blueimp-gallery.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\jquery.blueimp-gallery.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload-audio.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload-audio.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload-image.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload-image.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload-process.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload-process.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload-ui.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload-ui.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload-validate.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload-validate.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload-video.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload-video.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.fileupload.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.fileupload.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\jquery.iframe-transport.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\jquery.iframe-transport.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\main.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\main.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\js\\vendor\\jquery.ui.widget.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\js\\vendor\\jquery.ui.widget.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\load-image.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\load-image.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-file-upload\\tmpl.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-file-upload\\tmpl.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-migrate-1.2.1.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-migrate-1.2.1.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-steps\\jquery.steps.css",
+      "PackagePath": "staticwebassets\\plugins\\jquery-steps\\jquery.steps.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-steps\\jquery.steps.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-steps\\jquery.steps.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-ui-touch-punch\\jquery.ui.touch-punch.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-ui-touch-punch\\jquery.ui.touch-punch.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-ui\\jquery-ui-1.10.4.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-ui\\jquery-ui-1.10.4.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-validation\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-validation\\additional-methods.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jquery-validation\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\plugins\\jquery-validation\\jquery.validate.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\jstree.dnd.js",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\jstree.dnd.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\jstree.js",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\jstree.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\jstree.types.js",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\jstree.types.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\src\\themes\\default\\32px.png",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\src\\themes\\default\\32px.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\src\\themes\\default\\40px.png",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\src\\themes\\default\\40px.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\src\\themes\\default\\style.css",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\src\\themes\\default\\style.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\jstree\\src\\themes\\default\\throbber.gif",
+      "PackagePath": "staticwebassets\\plugins\\jstree\\src\\themes\\default\\throbber.gif"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\magnific\\jquery.magnific-popup.min.js",
+      "PackagePath": "staticwebassets\\plugins\\magnific\\jquery.magnific-popup.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\magnific\\magnific-popup.css",
+      "PackagePath": "staticwebassets\\plugins\\magnific\\magnific-popup.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\mcustom-scrollbar\\jquery.mCustomScrollbar.concat.min.js",
+      "PackagePath": "staticwebassets\\plugins\\mcustom-scrollbar\\jquery.mCustomScrollbar.concat.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\metrojs\\images\\metroIcons.jpg",
+      "PackagePath": "staticwebassets\\plugins\\metrojs\\images\\metroIcons.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\metrojs\\images\\metroIcons_light.jpg",
+      "PackagePath": "staticwebassets\\plugins\\metrojs\\images\\metroIcons_light.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\metrojs\\metrojs.css",
+      "PackagePath": "staticwebassets\\plugins\\metrojs\\metrojs.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\metrojs\\metrojs.min.js",
+      "PackagePath": "staticwebassets\\plugins\\metrojs\\metrojs.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\mmenu\\js\\jquery.mmenu.min.all.js",
+      "PackagePath": "staticwebassets\\plugins\\mmenu\\js\\jquery.mmenu.min.all.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\modal\\css\\component.css",
+      "PackagePath": "staticwebassets\\plugins\\modal\\css\\component.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\modal\\js\\classie.js",
+      "PackagePath": "staticwebassets\\plugins\\modal\\js\\classie.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\modal\\js\\modalEffects.js",
+      "PackagePath": "staticwebassets\\plugins\\modal\\js\\modalEffects.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\modernizr\\modernizr-2.6.2-respond-1.1.0.min.js",
+      "PackagePath": "staticwebassets\\plugins\\modernizr\\modernizr-2.6.2-respond-1.1.0.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\nestable\\jquery.nestable.js",
+      "PackagePath": "staticwebassets\\plugins\\nestable\\jquery.nestable.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\nprogress\\nprogress.js",
+      "PackagePath": "staticwebassets\\plugins\\nprogress\\nprogress.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\numerator\\jquery-numerator.js",
+      "PackagePath": "staticwebassets\\plugins\\numerator\\jquery-numerator.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\parsley\\parsley.extend.js",
+      "PackagePath": "staticwebassets\\plugins\\parsley\\parsley.extend.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\parsley\\parsley.js",
+      "PackagePath": "staticwebassets\\plugins\\parsley\\parsley.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\pickadate\\picker.date.js",
+      "PackagePath": "staticwebassets\\plugins\\pickadate\\picker.date.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\pickadate\\picker.js",
+      "PackagePath": "staticwebassets\\plugins\\pickadate\\picker.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\pickadate\\picker.time.js",
+      "PackagePath": "staticwebassets\\plugins\\pickadate\\picker.time.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\pickadate\\themes\\default.css",
+      "PackagePath": "staticwebassets\\plugins\\pickadate\\themes\\default.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\pickadate\\themes\\default.date.css",
+      "PackagePath": "staticwebassets\\plugins\\pickadate\\themes\\default.date.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\pickadate\\themes\\default.time.css",
+      "PackagePath": "staticwebassets\\plugins\\pickadate\\themes\\default.time.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\quicksearch\\jquery.quicksearch.js",
+      "PackagePath": "staticwebassets\\plugins\\quicksearch\\jquery.quicksearch.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\simple-weather\\jquery.simpleWeather.min.js",
+      "PackagePath": "staticwebassets\\plugins\\simple-weather\\jquery.simpleWeather.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\sortable\\jquery-sortable.js",
+      "PackagePath": "staticwebassets\\plugins\\sortable\\jquery-sortable.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\summernote\\summernote.css",
+      "PackagePath": "staticwebassets\\plugins\\summernote\\summernote.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\summernote\\summernote.min.js",
+      "PackagePath": "staticwebassets\\plugins\\summernote\\summernote.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\visible\\jquery.visible.js",
+      "PackagePath": "staticwebassets\\plugins\\visible\\jquery.visible.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\wizard\\folder.png",
+      "PackagePath": "staticwebassets\\plugins\\wizard\\folder.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\wizard\\groups.png",
+      "PackagePath": "staticwebassets\\plugins\\wizard\\groups.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\wizard\\server_new.png",
+      "PackagePath": "staticwebassets\\plugins\\wizard\\server_new.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\wizard\\wizard.css",
+      "PackagePath": "staticwebassets\\plugins\\wizard\\wizard.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\plugins\\wizard\\wizard.js",
+      "PackagePath": "staticwebassets\\plugins\\wizard\\wizard.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\customer\\photo\\1f75137c-1225-4bad.jpeg",
+      "PackagePath": "staticwebassets\\upload\\customer\\photo\\1f75137c-1225-4bad.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\customer\\photo\\de9fbabd-258a-4199.PNG",
+      "PackagePath": "staticwebassets\\upload\\customer\\photo\\de9fbabd-258a-4199.PNG"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\customer\\photo\\default_logo.png",
+      "PackagePath": "staticwebassets\\upload\\customer\\photo\\default_logo.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\1000107564.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\1000107564.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\1683abfe-bd22-4ed3-a2ec-b8ed75e09b06.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\1683abfe-bd22-4ed3-a2ec-b8ed75e09b06.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\2ca48ad4-d2cf-4e49-ab68-3433d6a56e05.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\2ca48ad4-d2cf-4e49-ab68-3433d6a56e05.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\300dfe08-e98c-41dd-b54e-b7ad7f9383a0.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\300dfe08-e98c-41dd-b54e-b7ad7f9383a0.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\31e1bc10-bc43-4d0b-98a9-5b67a4992f53.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\31e1bc10-bc43-4d0b-98a9-5b67a4992f53.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\31e562bf-87d0-4968-b25a-76ae2ee70cb7.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\31e562bf-87d0-4968-b25a-76ae2ee70cb7.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\378a4672-0898-493d-9433-67654b0e69dd.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\378a4672-0898-493d-9433-67654b0e69dd.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\3f9627bf-626a-4da7.jpeg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\3f9627bf-626a-4da7.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\43000c88-c19c-48db-98e4-9a6eb9b7a6e8.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\43000c88-c19c-48db-98e4-9a6eb9b7a6e8.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\498a4275-90e6-4b8d-8ce1-6a3f46a2fb4f.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\498a4275-90e6-4b8d-8ce1-6a3f46a2fb4f.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\4c86357e-1eb5-4446-90d3-3864f392c77a.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\4c86357e-1eb5-4446-90d3-3864f392c77a.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\50d6fe1e-1022-4344.png",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\50d6fe1e-1022-4344.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\523c59b0-d00c-4c32-a49c-68cc3ccc408a.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\523c59b0-d00c-4c32-a49c-68cc3ccc408a.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\5c17fcaa-b50d-4d2d-8315-6439ee01d7cc.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\5c17fcaa-b50d-4d2d-8315-6439ee01d7cc.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\62fad98f-e383-4b35-a28f-7052eb633a15.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\62fad98f-e383-4b35-a28f-7052eb633a15.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\6b81979c-f2f3-4c36-b043-6a8c377a3425.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\6b81979c-f2f3-4c36-b043-6a8c377a3425.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\717eb4f4-26ce-474e.jpeg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\717eb4f4-26ce-474e.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\777bb422-b87e-4e5c-a491-69aecbad5aad.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\777bb422-b87e-4e5c-a491-69aecbad5aad.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\79829f1a-9dc3-4e20-b162-b79c0ca6bb98.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\79829f1a-9dc3-4e20-b162-b79c0ca6bb98.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\7c63eaa7-4bc6-413e-a402-87c75e999c4a.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\7c63eaa7-4bc6-413e-a402-87c75e999c4a.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\83afb070-9ccd-4ef9-9f0f-b65816dce467.png",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\83afb070-9ccd-4ef9-9f0f-b65816dce467.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\83f6ef26-6f55-4292-b03b-7423a0b1c904.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\83f6ef26-6f55-4292-b03b-7423a0b1c904.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\8e84c499-3fcf-4c43-82d4-5725e79e7f09.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\8e84c499-3fcf-4c43-82d4-5725e79e7f09.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\923ded2e-7da7-42d9-b0bd-629e68f179ea.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\923ded2e-7da7-42d9-b0bd-629e68f179ea.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\a0878abd-deb7-485c-ba5d-4dcdcf48aaee.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\a0878abd-deb7-485c-ba5d-4dcdcf48aaee.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\b3b1ac8a-52ce-4825-9e46-93e67384eb3c.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\b3b1ac8a-52ce-4825-9e46-93e67384eb3c.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\b652dd38-70e9-4ce3.jpeg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\b652dd38-70e9-4ce3.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\bc72836b-b325-4556-b967-da241dfcf313.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\bc72836b-b325-4556-b967-da241dfcf313.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\bce8c09d-56a9-4834-9b2e-48488ee7abab.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\bce8c09d-56a9-4834-9b2e-48488ee7abab.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\d4af6db0-e631-4bc7-9f17-db1cae762531.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\d4af6db0-e631-4bc7-9f17-db1cae762531.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\default_device.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\default_device.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\f0ad4e87-10be-46e8.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\f0ad4e87-10be-46e8.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\f947839c-dfd3-4845-a403-08de78c291e7.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\f947839c-dfd3-4845-a403-08de78c291e7.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\fcfbb47f-ff04-4046-935d-0fd77c8713f2.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\fcfbb47f-ff04-4046-935d-0fd77c8713f2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\01b9aa3a-4b90-49b8.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\01b9aa3a-4b90-49b8.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\054500e2-eefe-4ca8-a044-6a79d4778c41.mp4",
+      "PackagePath": "staticwebassets\\upload\\show_material\\054500e2-eefe-4ca8-a044-6a79d4778c41.mp4"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\08c0d0bb-4300-4edd-a4d1-504bd0676c1f.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\08c0d0bb-4300-4edd-a4d1-504bd0676c1f.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\09cd6142-fce0-4d79.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\09cd6142-fce0-4d79.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\1b87c102-dfd6-4e0c.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\1b87c102-dfd6-4e0c.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\21920804-7e2b-4e14-be6c-de53307f6d97.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\21920804-7e2b-4e14-be6c-de53307f6d97.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\23bc373e-21a3-4d61.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\23bc373e-21a3-4d61.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\2695414c-d0f0-409f-abb0-96a460f9c8bc.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\2695414c-d0f0-409f-abb0-96a460f9c8bc.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\32ea7c52-b1de-4fa9-b76a-6db1de94033c.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\32ea7c52-b1de-4fa9-b76a-6db1de94033c.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\38424385-9c54-414d-a0d2-b0bcebb6581b.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\38424385-9c54-414d-a0d2-b0bcebb6581b.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4a4bf8df-3595-452f-8347-e2ecd4354f82_1000107155.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\4a4bf8df-3595-452f-8347-e2ecd4354f82_1000107155.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4bf73194-d422-495b-a3ba-3f8c2ba0f83e.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\4bf73194-d422-495b-a3ba-3f8c2ba0f83e.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4e542590-2fbe-45c0-88d9-979b09a5c869.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\4e542590-2fbe-45c0-88d9-979b09a5c869.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4ea33c90-5e28-40b4.mp4",
+      "PackagePath": "staticwebassets\\upload\\show_material\\4ea33c90-5e28-40b4.mp4"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\53d772d8-4987-4be2-8150-7168bc69dc68.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\53d772d8-4987-4be2-8150-7168bc69dc68.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\545fd0bc-9d24-4233-ad83-871b0d0b9df4_1000107155.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\545fd0bc-9d24-4233-ad83-871b0d0b9df4_1000107155.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\549d07ab-9f93-4e46-8293-593fb32cde21_default.txt",
+      "PackagePath": "staticwebassets\\upload\\show_material\\549d07ab-9f93-4e46-8293-593fb32cde21_default.txt"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\611495bc-ed44-40bd.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\611495bc-ed44-40bd.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\6184fd3d-1187-4e5a.JPG",
+      "PackagePath": "staticwebassets\\upload\\show_material\\6184fd3d-1187-4e5a.JPG"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\62e82891-a557-48e9-ba0c-04f9049ffccf.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\62e82891-a557-48e9-ba0c-04f9049ffccf.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\6a90f1ec-3780-4ede.JPG",
+      "PackagePath": "staticwebassets\\upload\\show_material\\6a90f1ec-3780-4ede.JPG"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\7a216dfd-ebda-4c86.mp4",
+      "PackagePath": "staticwebassets\\upload\\show_material\\7a216dfd-ebda-4c86.mp4"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\7eb36561-2976-4b06-8d0e-8203be34d4ec.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\7eb36561-2976-4b06-8d0e-8203be34d4ec.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\82e6135e-b4d3-4de1.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\82e6135e-b4d3-4de1.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\8e49c2b8-0884-4e59-a050-3b8361bf003e.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\8e49c2b8-0884-4e59-a050-3b8361bf003e.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\9177ca38-5328-491d.jpeg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\9177ca38-5328-491d.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\99e9f961-ce5d-43cc.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\99e9f961-ce5d-43cc.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\9f3a3003-6bca-45a1.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\9f3a3003-6bca-45a1.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\a1d4a81e-485b-41be-bff0-a06e5fc3aaca.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\a1d4a81e-485b-41be-bff0-a06e5fc3aaca.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\a29b76c1-5c66-41f4-a718-f6e69c6af151.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\a29b76c1-5c66-41f4-a718-f6e69c6af151.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\a29e405f-a10d-498a.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\a29e405f-a10d-498a.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\af49470f-5413-4dbf-8a7f-8a8df587ac18.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\af49470f-5413-4dbf-8a7f-8a8df587ac18.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\b7ca10aa-0194-45fe.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\b7ca10aa-0194-45fe.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\beca98d5-40bf-4438-98f2-1a712d593f26_1000107155.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\beca98d5-40bf-4438-98f2-1a712d593f26_1000107155.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\bf51d29d-a5aa-442e-a8f8-a9dcba2fc368.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\bf51d29d-a5aa-442e-a8f8-a9dcba2fc368.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\bf9c3e50-43a5-4175.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\bf9c3e50-43a5-4175.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\c1e72985-8adf-4635-b575-133671cfa2ea.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\c1e72985-8adf-4635-b575-133671cfa2ea.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\c8d99463-016f-46b6.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\c8d99463-016f-46b6.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\c8e2943e-ade2-46fc.jpeg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\c8e2943e-ade2-46fc.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\cef75e9b-c192-4417.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\cef75e9b-c192-4417.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\d9895d5a-7e56-4705.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\d9895d5a-7e56-4705.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\dac51c58-0413-4aa8.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\dac51c58-0413-4aa8.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\def54818-f730-4195-bbbc-10a013fb02c4_1000107155.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\def54818-f730-4195-bbbc-10a013fb02c4_1000107155.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e1d1a099-3b85-47e0-9b60-f06cef73a644_1000107155.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\e1d1a099-3b85-47e0-9b60-f06cef73a644_1000107155.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e583962a-d56d-4855-8b34-12cfd456b340.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\e583962a-d56d-4855-8b34-12cfd456b340.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e8d1060f-8aff-4826.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\e8d1060f-8aff-4826.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e8d9beb7-df95-406b.mp4",
+      "PackagePath": "staticwebassets\\upload\\show_material\\e8d9beb7-df95-406b.mp4"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\44f77814-f791-4c0f.JPG",
+      "PackagePath": "staticwebassets\\upload\\user\\photo\\44f77814-f791-4c0f.JPG"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\69463a5a-1efa-4a5a.jpeg",
+      "PackagePath": "staticwebassets\\upload\\user\\photo\\69463a5a-1efa-4a5a.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\default_photo_user.jpg",
+      "PackagePath": "staticwebassets\\upload\\user\\photo\\default_photo_user.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.MediaPlus.props",
+      "PackagePath": "build\\MediaPlus.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.MediaPlus.props",
+      "PackagePath": "buildMultiTargeting\\MediaPlus.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.MediaPlus.props",
+      "PackagePath": "buildTransitive\\MediaPlus.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

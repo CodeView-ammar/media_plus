@@ -1,0 +1,38 @@
+@model MediaPlus.Models.ViewModels.AdGroupViewModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Create" asp-controller="AdGroup" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">@Localizer["addnew"]</h2>
+                <hr class="colorgraph">
+
+				<div class="form-group">
+                    <label asp-for="GroupName">@Localizer["name"]</label>
+                    <input asp-for="GroupName" type="text" class="form-control input-lg" placeholder="@Localizer["name"]" tabindex="1">
+                    <span asp-validation-for="GroupName" class="text-danger"></span>
+				</div>
+				
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="AdGroup" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+ 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

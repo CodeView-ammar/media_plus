@@ -1,0 +1,111 @@
+@model MediaPlus.Models.ViewModels.LicenseViewModel
+
+
+@{
+    ViewData["Title"] = "Edit License";
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form" asp-action="Edit" asp-controller="License">
+            <br>
+            <h2 class="text-center">@Localizer["edithead"]</h2>
+            <hr class="colorgraph">
+                           <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">@Localizer["enddate"]</span>
+                                <input onchange="CheckAndJustifyDate('e')" asp-for="LicPeriod.LicEndAt" type="date" id="time_end" class="form-control input-lg" placeholder="License End" tabindex="2">
+                                <span asp-validation-for="LicPeriod.LicEndAt" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">@Localizer["startdate"]</span>
+                                <input onchange="CheckAndJustifyDate('s')" asp-for="LicPeriod.LicStartAt" type="date" id="time_start" class="form-control input-lg" placeholder="License Start" tabindex="1">
+                                <span asp-validation-for="LicPeriod.LicStartAt" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+			    </div>
+               
+			
+                <div style="display: none;" class="invisible">
+                    <input asp-for="LicCdate"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="LicIsactive"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="LicId"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="LicUserNo"  class="d-none" type="text" />
+                </div>
+                <div style="" class="invisible">
+                    <input asp-for="LicDeviceNo"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="LicPeriod.LicCustCode"  class="d-none" type="text" />
+                </div>
+            <div asp-validation-summary="All" class="text-danger"></div>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="License" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var dtToday = new Date();
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+
+            var minDate= year + '-' + month + '-' + day;
+
+            document.getElementById('time_start').setAttribute('min', minDate);
+            document.getElementById('time_end').setAttribute('min', minDate);
+        }); 
+        
+
+function CheckAndJustifyDate(input){
+    
+    var time_start = document.getElementById('time_start').value;
+    var time_end = document.getElementById('time_end').value;
+
+    if(input == 'e'){
+        if(time_start == ''){
+            document.getElementById('time_start').setAttribute('value', time_end);
+        }
+    }else if(input == 's'){
+        document.getElementById('time_end').setAttribute('min', time_start);
+        }
+}
+
+          
+
+    </script>
+
+}

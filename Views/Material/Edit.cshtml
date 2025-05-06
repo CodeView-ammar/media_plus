@@ -1,0 +1,142 @@
+@model MediaPlus.Models.ViewModels.MaterialViewModel
+
+
+@{
+    ViewData["Title"] = "Edit Material";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Edit" asp-controller="Material" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">@Localizer["edithead"]</h2>
+                <hr class="colorgraph">
+                <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input asp-for="MatShowNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="1">
+                        <span asp-validation-for="MatShowNameAr" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input asp-for="MatShowNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
+                        <span asp-validation-for="MatShowNameEn" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div  class="form-group">
+                         <select id="selectType" onchange="ToggleDivs(event)" class="form-control border-radius" tabindex="1" asp-for="MatTypeId" asp-items="@(new SelectList(ViewBag.TypeSelectedList, "Value", "Text"))">  
+                        </select> 
+                        <span asp-validation-for="MatTypeId" class="text-danger"></span>
+                    </div>
+				</div>
+			</div>
+            
+            <div id="attachedFile" style="display: none;" class="form-group">
+                <input asp-for="MatFile.attachedMaterialFile"   id="attachedFileChild" class="form-control input-lg" placeholder="@Localizer["attachedfile"]" tabindex="4" type="file" />
+                <span asp-validation-for="MatFile" class="text-danger"></span>
+                <span asp-validation-for="MatFile.attachedMaterialFile" class="text-danger"></span>
+			</div>
+
+            <div id="txtarea" style="display: none;"  class="form-group">
+                <textarea id="txtareachild" style="height: 200px;" asp-for="MatFile.attachedText"  class="form-control input-lg" placeholder="@Localizer["disorlink"]" tabindex="4" type="text" ></textarea>
+                <span asp-validation-for="MatFile" class="text-danger"></span>
+                <span asp-validation-for="MatFile.attachedText" class="text-danger"></span>
+			</div>
+
+                <div style="display: none;" class="invisible">
+                    <input asp-for="MatId"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="MatCdate"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="MatByuserId"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="MatIsactive"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="MatCustCode"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="MatFilePath"  class="d-none" type="text" />
+                </div>
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="Material" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit"value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+ 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+<script>
+
+$('#selectType').ready(function() {
+
+    var selectDropDown = document.getElementById('selectType');
+    var attachfile = document.getElementById('attachedFile');
+    var attachfileChild = document.getElementById('attachedFileChild');
+    var txtarea = document.getElementById('txtarea');
+    var txtareachild = document.getElementById('txtareachild');
+
+    if (selectDropDown.selectedIndex == 0 || selectDropDown.selectedIndex == 1) {
+        txtarea.style.display = "none";
+        txtareachild.value = '';
+        attachfile.style.display = "block";
+    } else if(selectDropDown.selectedIndex == 2 || selectDropDown.selectedIndex == 3) {
+        txtarea.style.display = "block";
+        attachfileChild.value = '';
+        attachfile.style.display = "none";
+    }else{
+        txtarea.style.display = "none";
+        attachfile.style.display = "none";
+        attachfileChild.value = '';
+        txtareachild.value = '';
+    }
+});
+
+
+
+function ToggleDivs(event){
+    //toggle div
+    
+    var attachfile = document.getElementById('attachedFile');
+    var attachfileChild = document.getElementById('attachedFileChild');
+    var txtarea = document.getElementById('txtarea');
+    var txtareachild = document.getElementById('txtareachild');
+
+    if (event.target.selectedIndex == 0 || event.target.selectedIndex == 1) {
+        txtarea.style.display = "none";
+        txtareachild.value = '';
+        attachfile.style.display = "block";
+    } else if(event.target.selectedIndex == 2 || event.target.selectedIndex == 3) {
+        txtarea.style.display = "block";
+        attachfileChild.value = '';
+        attachfile.style.display = "none";
+    }
+}   
+                    
+
+</script>
+
+}

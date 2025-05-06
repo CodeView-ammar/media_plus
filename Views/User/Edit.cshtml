@@ -1,0 +1,84 @@
+@model MediaPlus.Models.ViewModels.UserViewModel
+
+
+@{
+    ViewData["Title"] = "Edit User";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form" asp-action="Edit" asp-controller="User" enctype="multipart/form-data">
+            <div asp-validation-summary="All"></div>
+                <br>
+                <h2 class="text-center">@Localizer["edithead"]</h2>
+                <hr class="colorgraph">
+                <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input asp-for="UserNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="1">
+                        <span asp-validation-for="UserNameAr" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input asp-for="UserNameEn" type="text"  class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
+                        <span asp-validation-for="UserNameEn" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+
+			<div class="form-group">
+				<input asp-for="UserPhoto" type="file" class="form-control input-lg" placeholder="User Photo" tabindex="4">
+				<span asp-validation-for="UserPhoto" class="text-danger"></span>
+            </div>
+
+            <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <select class="form-control border-radius" asp-for="UserRoleId" asp-items="@(new SelectList(ViewBag.RoleSelectedList, "Value", "Text"))">   
+                        </select> 
+                        <span asp-validation-for="UserRoleId" class="text-danger"></span>	
+                    </div>
+				</div>
+			</div>
+
+            
+                <div style="display: none;" class="invisible">
+                    <input asp-for="UserId"  class="d-none" type="text" />
+                </div>
+                <div  style="display: none;" class="invisible">
+                    <input asp-for="UserLoginName"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="UserCdate"  class="d-none" type="text" />
+                </div>
+                  <div style="display: none;" class="invisible">
+                    <input asp-for="UserPhotoPath"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                    <input asp-for="UserPassword"  class="d-none" type="text" />
+                </div>
+
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="User" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+            
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

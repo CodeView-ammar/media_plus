@@ -1,0 +1,109 @@
+@model MediaPlus.Models.ViewModels.CustomerViewModel
+
+
+@{
+    ViewData["Title"] = "Edit Customer";
+
+}
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form" asp-action="Edit" asp-controller="Customer" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">@Localizer["edithead"]</h2>
+                <hr class="colorgraph">
+                <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input asp-for="CustNameAr" type="text"  class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="1">
+                        <span asp-validation-for="CustNameAr" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input asp-for="CustNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
+                        <span asp-validation-for="CustNameEn" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+            <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input asp-for="CustVatNo" type="text" class="form-control input-lg" placeholder="@Localizer["vatnumber"]" tabindex="1">
+					    <span asp-validation-for="CustVatNo" class="text-danger"></span>
+                    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input asp-for="CustTrNo" type="text" class="form-control input-lg" placeholder="@Localizer["trnumber"]" tabindex="2">
+					    <span asp-validation-for="CustTrNo" class="text-danger"></span>
+                    </div>
+				</div>
+			</div>
+			<div class="form-group">
+				<input asp-for="CustEmail" type="email" class="form-control input-lg" placeholder="@Localizer["email"]" tabindex="4">
+				<span asp-validation-for="CustEmail" class="text-danger"></span>
+            </div>
+            <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                        <input asp-for="CustMobileNo" type="text" class="form-control input-lg" placeholder="@Localizer["mobie"]" tabindex="1">
+				        <span asp-validation-for="CustMobileNo" class="text-danger"></span>
+                    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input asp-for="CustTel" type="text" class="form-control input-lg" placeholder="@Localizer["telephone"]" tabindex="2">
+				        <span asp-validation-for="CustTel" class="text-danger"></span>
+                    </div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+                    </div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">
+						<input asp-for="CustLogo" type="file" class="form-control input-lg" placeholder="Attached Logo" tabindex="6">
+				        <span asp-validation-for="CustLogo" class="text-danger"></span>
+                    </div>
+				</div>
+			</div>
+	
+
+ 			<div style="display: none;" class="invisible">
+                    <input asp-for="CustState"  class="d-none" type="text" /> 
+            </div>
+            <div style="display: none;" class="invisible">
+                    <input asp-for="CustCdate"  class="d-none" type="text" /> 
+            </div>
+            <div style="display: none;" class="invisible">
+                    <input asp-for="CustId"  class="d-none" type="text" />
+            </div>
+            <div style="display: none;" class="invisible">
+                    <input asp-for="CustCode"  class="d-none" type="text" />
+            </div>
+            <div style="display: none;" class="invisible">
+                    <input asp-for="CustLogoPath"  class="d-none" type="text" />
+            </div>
+			
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="Customer" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

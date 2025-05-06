@@ -1,0 +1,84 @@
+@model MediaPlus.Models.ViewModels.AdGroupViewModel
+
+
+@{
+    ViewData["Title"] = "Edit Group";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Edit" asp-controller="AdGroup" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">@Localizer["edithead"]</h2>
+                <hr class="colorgraph">
+
+                <div class="form-group">
+                    <label asp-for="GroupName">@Localizer["name"]</label>
+                    <input asp-for="GroupName" type="text" class="form-control input-lg" placeholder="@Localizer["name"]" tabindex="1">
+                        <span asp-validation-for="GroupName" class="text-danger"></span>
+                </div>
+
+
+                <div style="display: none;" class="invisible">
+                        <input asp-for="GroupIsactive"  class="d-none" type="text" /> 
+                </div> 
+                <div style="display: none;" class="invisible">
+                        <input asp-for="GroupCustCode"  class="d-none" type="text" /> 
+                </div>
+                <div style="display: none;" class="invisible">
+                        <input asp-for="GroupByUserid"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                        <input asp-for="GroupCdate"  class="d-none" type="text" />
+                </div>
+                <div style="display: none;" class="invisible">
+                        <input asp-for="GroupId"  class="d-none" type="text" />
+                </div>
+               
+                
+			
+			    <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <a asp-action="Index" asp-controller="AdGroup" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">Return</a>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <input type="submit" class="btn btn-success btn-block btn-lg"></input>
+                    </div>
+                </div>
+		</form>
+	</div>
+    </div>
+</div>
+
+ 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.getElementById('toggle').addEventListener('click', (e) => 
+        {
+            
+            var togglebtn = document.getElementById('toggle');
+            var attachfile = document.getElementById('attachedFile');
+            var attachfileChild = document.getElementById('attachedFileChild');
+            var txtarea = document.getElementById('txtarea');
+            var txtareachild = document.getElementById('txtareachild');
+
+
+          if (txtarea.style.display !== "none") {
+                txtarea.style.display = "none";
+                txtareachild.value = '';
+                attachfile.style.display = "block";
+            } else {
+                txtarea.style.display = "block";
+                attachfileChild.value = '';
+                attachfile.style.display = "none";
+            }
+        
+        })
+                    
+    </script>
+
+}

@@ -1,0 +1,193 @@
+@model MediaPlus.Models.ViewModels.ShowCreationViewModel
+
+
+@{
+    var tempDataZone = ViewData["Zones"] as Zone[,];
+    var Index = 0;
+    var Index2 = 0;
+}
+
+<div class="container">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+            <br>
+            <h3 class="text-center">@Localizer["customshowdetails"]  <strong>@Localizer["template"] @(ViewBag.CurrentShowIndex + 1)</strong></h3>
+		    <form role="form" asp-action="Create" method="get" asp-controller="ShowDetail" >
+                               
+                <hr class="colorgraph">
+
+
+                @for(var i = 0; i < @ViewBag.NumberRow; i++){
+                    <div class="row">
+                        @for(var j = 0; j < @ViewBag.NumberColumn; j++){
+                                <div class="bordered" style="height: @tempDataZone[@i,@j].ZoneHeight%; width: @tempDataZone[@i,@j].ZoneWidth%; float:left;">
+                                    <br>
+                                    <div class="form-group text-center">
+
+                                        <Label><h3>@tempDataZone[@i,@j].ZoneName</h3></Label>
+                                        <div style="display: none;" class="invisible">
+                                            <input asp-for="@Model.showDetail[@Index].ShowDetailsZoneId" value="@tempDataZone[@i,@j].ZoneId"  class="d-none" type="text" />
+                                        </div>
+
+                                        <br>
+
+                                         
+                                    <select id="materialSelect_@Index"
+                                            class="form-control border-radius mt-2"
+                                            tabindex="1"
+                                            asp-for="@Model.showDetail[Index].ShowDetailsFileId"
+                                            asp-items="@(new SelectList(ViewBag.MaterialSelectedList, "Value", "Text"))"
+                                            onchange="handleFileSelect(this, @Index)">
+                                        <option value="0" selected="selected">@Localizer["selectfile"]</option>
+                                    </select>
+                                        <span asp-validation-for="@Model.showDetail[@Index].ShowDetailsFileId" class="text-danger"></span>
+                                        
+                                        <input style="display: none;" class="invisible d-none" asp-for="@Model.showDetail[@Index].ShowDetailsShowid" value="@ViewBag.CurrentShowId" type="text" />
+
+                                    </div>
+                                </div>
+                            
+                            Index++;
+                        }
+                    </div>
+                }
+
+                <style>
+                .simulation-wrapper {
+                    position: relative;
+                    width: 100%;
+                    max-width: 1000px;
+                    aspect-ratio: 16 / 9;
+                    margin: 40px auto;
+                }
+
+                .simulation-screen {
+                    position: absolute;
+                    top: 5%;
+                    left: 14.5%;
+                    width: 69%;
+                    height: 75%;
+                    background-color: #000;
+                    z-index: 1;
+                    overflow: hidden;
+                }
+                .zone-preview {
+                    position: absolute;
+                    padding: 0;
+                    margin: 0;
+                    overflow: hidden;
+                }
+
+                .zone-preview .material-content {
+                    width: 100%;
+                    height: 100%;
+                }
+
+                .material-content img,
+                .material-content video {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    display: block;
+                }
+
+                .overlay-frame {
+                    width: 100%;
+                    height: 100%;
+                    background: url('/img/displayscreen/outdoor_screen.png') no-repeat center center;
+                    background-size: contain;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                    pointer-events: none;
+                }
+            </style>
+
+            <!-- ÇáÍÇæíÉ -->
+            <div class="simulation-wrapper">
+    
+                <!-- ÔÇÔÉ ÇáÚÑÖ ÇáÏÇÎáíÉ -->
+                <div class="simulation-screen">
+                    @for (var i = 0; i < ViewBag.NumberRow; i++)
+                    {
+                        for (var j = 0; j < ViewBag.NumberColumn; j++)
+                        {
+                            var zone = tempDataZone[i, j];
+                            var top = 0;
+                            var left = 0;
+
+                            for (var ii = 0; ii < i; ii++) top += tempDataZone[ii, 0].ZoneHeight;
+                            for (var jj = 0; jj < j; jj++) left += tempDataZone[i, jj].ZoneWidth;
+
+                            <div class="zone-preview"
+                                 style="top:@top%; left:@left%; width:@zone.ZoneWidth%; height:@zone.ZoneHeight%;">
+                                <div id="materialPath_@Index2" class="material-path material-content"></div>
+                            </div>
+
+                            Index2++;
+                        }
+                    }
+                </div>
+
+                <!-- ÕæÑÉ ÇáÅØÇÑ -->
+                <div class="overlay-frame"></div>
+            </div>
+
+			<hr class="colorgraph">
+			<div class="row">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+			</div>
+		</form>
+	</div>
+</div>
+
+
+ 
+<script>
+    function handleFileSelect(selectElement, index) {
+        const selectedValue = selectElement.value;
+
+        if (selectedValue !== "0") {
+            fetch('/Material/GetMaterialPath?id=' + selectedValue)
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById("materialPath_" + index);
+                    if (container && data.path) {
+                        const parts = data.path.split(',');
+                        const fileName = parts[0].trim();
+                        const fileType = parts[1]?.trim().toLowerCase();
+
+                        const fileUrl = `/upload/show_material/${fileName}`;
+                        container.innerHTML = "";
+
+                        if (fileType.startsWith("image/")) {
+                            const img = document.createElement("img");
+                            img.src = fileUrl;
+                            img.alt = "Preview";
+                            img.style.maxWidth = "100%";
+                            img.style.height = "auto";
+                            container.appendChild(img);
+                        } else if (fileType.startsWith("video/")) {
+                            const video = document.createElement("video");
+                            video.src = fileUrl;
+                            video.controls = true;
+                            video.style.width = "100%";
+                            container.appendChild(video);
+                        } else {
+                            const text = document.createElement("p");
+                            text.innerText = fileUrl;
+                            container.appendChild(text);
+                        }
+                    }
+                })
+                .catch(error => {
+                    console.error("Error fetching path:", error);
+                });
+        }
+    }
+</script>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

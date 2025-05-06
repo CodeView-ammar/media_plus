@@ -1,0 +1,83 @@
+@model MediaPlus.Models.ViewModels.LoginViewModel
+
+@{
+    Layout = "";
+}
+<!DOCTYPE html>
+<html class="no-js sidebar-large"> <!--<![endif]-->
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+    <!-- BEGIN META SECTION -->
+    <meta charset="utf-8">
+    <title>@Localizer["signin"]</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="" name="description" />
+    <meta content="themes-lab" name="author" />
+    <!-- END META SECTION -->
+    <!-- BEGIN MANDATORY STYLE -->
+    <link href="~/css/icons/icons.min.css" rel="stylesheet">
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/plugins.min.css" rel="stylesheet">
+    <link href="~/css/style.min.css" rel="stylesheet">
+    <!-- END  MANDATORY STYLE -->
+    <!-- BEGIN PAGE LEVEL STYLE -->
+    <link href="~/css/animate-custom.css" rel="stylesheet">
+    <!-- END PAGE LEVEL STYLE -->
+    <script src="~/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+</head>
+
+<body class="login fade-in" data-page="login" dir="rtl">
+    <!-- BEGIN LOGIN BOX -->
+    <div class="container" id="login-block">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-sm-offset-3 col-md-offset-4">
+                <div class="login-box clearfix animated flipInY">
+                    <div class="page-icon animated bounceInDown">
+                        <img src="~/img/account/user-icon.png" alt="Key icon">
+                    </div>
+                    <div class="login-logo">
+                        <a href="#?login-theme-3">
+                            <img src="~/img/account/login-logo.png" alt="Company Logo">
+                        </a>
+                    </div>
+                    <hr>
+                    <div class="login-form">
+                        <!-- BEGIN ERROR BOX -->
+                        <div class="alert alert-danger hide">
+                            <button type="button" class="close" data-dismiss="alert">×</button>
+                            <h4>!خطأ</h4>
+                            رسالة الخطأ
+                        </div>
+                        <!-- END ERROR BOX -->
+                        <form asp-action="Login" asp-controller="Account" method="post">
+                            
+                            <input type="text" asp-for="Username" placeholder="@Localizer["username"]" class="input-field form-control user" />
+                            <input type="password" asp-for="Password" placeholder="@Localizer["password"]" class="input-field form-control password" />
+                            <input type="text" asp-for="CompanyCode" placeholder="@Localizer["custcode"]" class="input-field user" />
+                            <button type="submit" class="btn btn-login">@Localizer["login"]</button>
+                        </form>
+
+                        <div asp-validation-summary="All" class="text-danger text-center"></div>
+                        
+                        
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </div>
+    <!-- END LOCKSCREEN BOX -->
+    <!-- BEGIN MANDATORY SCRIPTS -->
+    <script src="~/plugins/jquery-1.11.js"></script>
+    <script src="~/plugins/jquery-migrate-1.2.1.js"></script>
+    <script src="~/plugins/jquery-ui/jquery-ui-1.10.4.min.js"></script>
+    <script src="~/plugins/bootstrap/bootstrap.min.js"></script>
+    <!-- END MANDATORY SCRIPTS -->
+    <!-- BEGIN PAGE LEVEL SCRIPTS -->
+    <script src="~/plugins/backstretch/backstretch.min.js"></script>
+    <script src="~/js/account.js"></script>
+    <!-- END PAGE LEVEL SCRIPTS -->
+</body>
+
+</html>

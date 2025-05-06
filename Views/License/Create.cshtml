@@ -1,0 +1,113 @@
+@model MediaPlus.Models.ViewModels.LicenseViewModel
+
+@{
+    ViewData["Title"] = "Add License";
+}
+
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form" asp-action="Create" asp-controller="License">
+            <br>
+            <h2 class="text-center">@Localizer["addnew"]</h2>
+            <hr class="colorgraph">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">@Localizer["enddate"]</span>
+                                <input onchange="CheckAndJustifyDate('e')" asp-for="LicPeriod.LicEndAt" type="date" id="time_end" class="form-control input-lg" placeholder="License End" tabindex="2">
+                                <span asp-validation-for="LicPeriod.LicEndAt" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <div class="input-group">
+                                <span class="input-group-addon">@Localizer["startdate"]</span>
+                                <input onchange="CheckAndJustifyDate('s')" asp-for="LicPeriod.LicStartAt" type="date" id="time_start" class="form-control input-lg" placeholder="License Start" tabindex="1">
+                                <span asp-validation-for="LicPeriod.LicStartAt" class="text-danger"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div asp-validation-summary="All" class="text-danger text-center"></div>
+			    </div>
+                
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div  class="form-group">
+                            <select onchange="ToggleDivs(event)" id="selectType" class="form-control border-radius" tabindex="1" asp-for="LicPeriod.LicCustCode" asp-items="@(new SelectList(ViewBag.CustomerSelectedList, "Value", "Text"))">  
+                                <option value="">@Localizer["selectcustomer"]</option>  
+                            </select> 
+                            <span asp-validation-for="LicPeriod.LicCustCode" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+			<div class="form-group">
+                <label asp-for="LicMachineNo">@Localizer["machineno"]</label>
+                <input asp-for="LicMachineNo" class="form-control" />
+                <span asp-validation-for="LicMachineNo" class="text-danger"></span>
+            </div>
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="License" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function() {
+            var dtToday = new Date();
+            var month = dtToday.getMonth() + 1;
+            var day = dtToday.getDate();
+            var year = dtToday.getFullYear();
+            if(month < 10)
+                month = '0' + month.toString();
+            if(day < 10)
+                day = '0' + day.toString();
+
+            var minDate= year + '-' + month + '-' + day;
+
+            document.getElementById('time_start').setAttribute('min', minDate);
+            document.getElementById('time_end').setAttribute('min', minDate);
+        }); 
+        
+
+function CheckAndJustifyDate(input){
+    
+    var time_start = document.getElementById('time_start').value;
+    var time_end = document.getElementById('time_end').value;
+
+    if(input == 'e'){
+        if(time_start == ''){
+            document.getElementById('time_start').setAttribute('value', time_end);
+        }
+    }else if(input == 's'){
+        document.getElementById('time_end').setAttribute('min', time_start);
+        }
+}
+
+          
+
+    </script>
+
+}

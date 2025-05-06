@@ -1,0 +1,94 @@
+@model MediaPlus.Models.ViewModels.ShowTemplateViewModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Create" asp-controller="ShowTemplate">
+                <br>
+                <h2 class="text-center">@Localizer["addnew"]
+                    </h2>
+                <hr class="colorgraph">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            
+
+                            <input asp-for="TempNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="6">
+                            <span asp-validation-for="TempNameAr" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input asp-for="TempNameEng" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="6">
+                            <span asp-validation-for="TempNameEng" class="text-danger"></span>
+                        </div>
+                    </div>
+			    </div>
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input asp-for="TempRowNo" type="number" class="form-control input-lg" placeholder="@Localizer["numrow"]" tabindex="6">
+                            <span asp-validation-for="TempRowNo" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input asp-for="TempColNo" type="number" class="form-control input-lg" placeholder="@Localizer["numcol"]" tabindex="6">
+                            <span asp-validation-for="TempColNo" class="text-danger"></span>
+                        </div>
+                    </div>
+			    </div>
+
+
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="ShowTemplate" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        document.getElementById('toggle').addEventListener('click', (e) => 
+        {
+            
+            var togglebtn = document.getElementById('toggle');
+            var attachfile = document.getElementById('attachedFile');
+            var attachfileChild = document.getElementById('attachedFileChild');
+            var txtarea = document.getElementById('txtarea');
+            var txtareachild = document.getElementById('txtareachild');
+
+
+          if (txtarea.style.display !== "none") {
+                togglebtn.value = "switch to add file"
+                txtarea.style.display = "none";
+                txtareachild.value = '';
+                attachfile.style.display = "block";
+            } else {
+                togglebtn.value = "switch to add link or description"
+                txtarea.style.display = "block";
+                attachfileChild.value = '';
+                attachfile.style.display = "none";
+            }
+        
+        })
+                    
+    </script>
+
+}

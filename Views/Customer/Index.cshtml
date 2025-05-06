@@ -1,0 +1,155 @@
+@model IEnumerable<CustomerViewModel>
+
+    <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content">
+            <div class="page-title"> <i class="icon-custom-left"></i>
+                <h3 class="text-center"><strong>@Localizer["customers"]</strong></h3>
+                <hr>
+            </div>
+            <a style="float: left;" asp-action="Create" asp-controller="Customer" class="btn btn-primary" role="button">
+                @Localizer["addnewhead"]
+                <i class="fa fa-plus"></i>
+            </a>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <div id="Print">
+                                    <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                        <thead class="no-bd">
+                                            <tr>
+                                                <th><strong>@Localizer["customer"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["custcode"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["cdate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["udate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["state"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["photo"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["actions"]</strong>
+                                                </th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="no-bd-y">
+                                                @foreach(var Customer in Model){
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            @if(@Customer.CustNameAr == "null"){
+                                                                @Customer.CustNameEn 
+                                                            }else{
+                                                                @Customer.CustNameAr
+                                                            }                                                
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @Customer.CustCode
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @Customer.CustCdate?.ToString("dd/MM/yyyy")
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @Customer.CustUdate?.ToString("dd/MM/yyyy")
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @if(@Customer.CustState){
+                                                                <button onclick='ToggleOnAndOff(event,"@Customer.CustId")'  class="btn btn-sm btn-success" controll="Customer" >
+                                                                    @Localizer["on"]
+                                                                    <i class="bi bi-power" style="pointer-events: none;"></i>
+
+                                                                </button>
+                                                                }else{
+                                                                <button onclick='ToggleOnAndOff(event,"@Customer.CustId")'  class="btn btn-sm btn-danger"  controll="Customer">
+                                                                    @Localizer["off"]
+                                                                    <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                                </button>
+                                                            }
+                                                        </td>
+                                                        <td class="text-center">
+                                                    @if (!string.IsNullOrEmpty(Customer.CustLogoPath))
+                                                    {
+                                                        var logoParts = Customer.CustLogoPath.Split(",");
+
+                                                        // Check if the array has at least two elements
+                                                        if (logoParts.Length > 1 &&
+                                                        (logoParts[1] == "image/jpeg" ||
+                                                        logoParts[1] == "image/png" ||
+                                                        logoParts[1] == "image/jpg"))
+                                                        {
+                                                            <a href="/Customer/Download/?Id=@(Customer.CustId)">
+                                                                <img src="~/upload/customer/photo/@(logoParts[0])" width="75" height="75" alt="preview" />
+                                                            </a>
+                                                        }
+                                                    }
+                                                        </td>
+                                                        <td  class="text-center">
+                                                            <div style="float:left;" >
+                                                                <a asp-action="Edit" asp-controller="Customer" asp-route-id="@Customer.CustId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
+                                        
+                                                                <button type="button" id="DeleteButton"  class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onclick='MoveTheIdToModal("@Customer.CustNameAr","@Customer.CustNameEn","@Customer.CustId")'>
+                                                                    @Localizer["delete"]
+                                                                </button>
+                                                            </div>
+                                                        </td>
+                                                    </tr>
+                                                }
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
+      </div>
+      <div class="modal-body text-center">
+            <div>
+                @Localizer["deletemodalbody"]
+            </div>
+            <div>
+                <br>
+                 <strong id="customerName"></strong>
+            </div>
+      </div>
+      <div class="modal-footer">
+        <form id="DeleteForm" method="post" asp-action="Delete">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+    
+    <script type="text/javascript">
+         function MoveTheIdToModal(...params){
+            var elem = document.getElementById("DeleteForm")
+            var elemValue = elem.getAttribute('action').split('/');
+            var nameElem = document.getElementById("customerName")
+            customerName.innerHTML = params[0] == "null" ?  params[1] : params[0];
+            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + params[2];
+            elem.setAttribute("action", newhref); 
+        }
+
+    </script>
+}

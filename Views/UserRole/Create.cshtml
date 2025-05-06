@@ -1,0 +1,51 @@
+@model MediaPlus.Models.ViewModels.RoleViewModel
+
+@{
+    ViewData["Title"] = "Add Role";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Create" asp-controller="UserRole" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">@Localizer["addhead"]</h2>
+                <hr class="colorgraph">
+
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label asp-for="RoleNameEn">@Localizer["nameer"]</label>
+                            <input asp-for="RoleNameEn" type="text"  class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
+                            <span asp-validation-for="RoleNameEn" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">                        
+                            <label asp-for="RoleNameAr">@Localizer["namear"]</label>
+                            <input asp-for="RoleNameAr" type="text"  class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="1">
+                            <span asp-validation-for="RoleNameAr" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="UserRole" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" class="btn btn-success btn-block btn-lg" value="@Localizer["submit"]"> 
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+
+           
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

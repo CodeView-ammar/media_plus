@@ -1,0 +1,59 @@
+@model MediaPlus.Models.ViewModels.ShowCreationViewModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+            <form role="form" asp-action="CreateConfirmation" asp-controller="Show">
+                <br>
+                <h2 class="text-center">@Localizer["customeshow"]</h2>
+                <hr class="colorgraph">
+
+
+                @for (var i = 0; i < @ViewBag.NumberOfShows; i++)
+                {
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-4 col-md-4">
+                            <div class="form-group">
+                                <label asp-for="@Model.show[@i].ShowTemplateId">@Localizer["selecttemplate"]</label>
+                                <select class="form-control border-radius" asp-for="@Model.show[@i].ShowTemplateId" asp-items="@(new SelectList(ViewBag.TemplateSelectedList, "Value", "Text"))">
+                                    <option value="">@Localizer["selecttemplate"]</option>
+                                </select>
+                                <span asp-validation-for="@Model.show[@i].ShowTemplateId" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-5 col-md-5">
+                            <div class="form-group">
+                                <label asp-for="@Model.show[@i].ShowTime">@Localizer["showtimesecond"]</label>
+                                <input value="" asp-for="@Model.show[@i].ShowTime" type="number" class="form-control input-lg" placeholder="@Localizer["showtimesecond"]" tabindex="1">
+                                <span asp-validation-for="@Model.show[@i].ShowTime" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="col-xs-12 col-sm-3 col-md-3">
+                            <div class="text-center">
+                                <h3>@Localizer["show"] @(@i + 1)</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                }
+
+                <hr class="colorgraph">
+                <div class="row">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+
+}

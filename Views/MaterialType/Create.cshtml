@@ -1,0 +1,70 @@
+@model MediaPlus.Models.ViewModels.MaterialTypeViewModel
+
+@{
+    ViewData["Title"] = "Add Material Type";
+}
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Create" asp-controller="MaterialType" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">Create New Material Type</h2>
+                <hr class="colorgraph">
+                <div class="row">
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					<div class="form-group">                        
+                        <input asp-for="MtypeNameAr" type="text" class="form-control input-lg" placeholder="MaterialType Arabic Name" tabindex="1">
+                        <span asp-validation-for="MtypeNameAr" class="text-danger"></span>
+					</div>
+				</div>
+				<div class="col-xs-12 col-sm-6 col-md-6">
+					@* <div class="form-group">
+						@if(!ViewBag.isEnglishCulture){
+							<select asp-for="MtypeNameAr" 
+									class="form-control border-radius"
+									asp-items="Html.GetEnumSelectList<MaterialTypesAr>()">
+								<option>-- اختر عنصرا --</option>
+							</select>
+							<span asp-validation-for="MtypeNameAr" class="text-danger"></span>
+						}else{
+							<select asp-for="MtypeNameEn" 
+									class="form-control border-radius"
+									asp-items="Html.GetEnumSelectList<MaterialTypesEn>()">
+								<option>-- Select type --</option>
+							</select>
+                        <span asp-validation-for="MtypeNameEn" class="text-danger"></span>
+						}
+					</div> *@
+					<div class="form-group">
+						<input asp-for="MtypeNameEn" type="text" class="form-control input-lg" placeholder="MaterialType English Name" tabindex="2">
+                        <span asp-validation-for="MtypeNameEn" class="text-danger"></span>
+					</div>
+				</div>
+			</div>
+ 
+            
+            
+
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="MaterialType" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">Return</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" class="btn btn-success btn-block btn-lg"></input>
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+
+               
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

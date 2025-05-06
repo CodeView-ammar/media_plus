@@ -1,0 +1,46 @@
+@model MediaPlus.Models.ViewModels.UserPermissionViewModel
+
+@{
+    ViewData["Title"] = "Add New Permission";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Create" asp-controller="UserPermission">
+                <br>
+                <h2 class="text-center">@Localizer["addhead"]</h2>
+                <hr class="colorgraph">
+                    <div class="row">
+                        <div class="col-xs-12 col-md-6">
+                            <input asp-for="PermNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="4">
+                            <span asp-validation-for="PermNameAr" class="text-danger"></span>                        
+                        </div>
+                        <div class="col-xs-12 col-md-6">
+                            <input asp-for="PermNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="4">
+                            <span asp-validation-for="PermNameEn" class="text-danger"></span>     
+                        </div>
+                    </div>
+
+
+                <hr class="colorgraph">
+
+                <div class="row">
+                    <div class="col-xs-12 col-md-6">
+                        <a asp-action="Index" asp-controller="UserPermission" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                    </div>
+                    <div class="col-xs-12 col-md-6">
+                        <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                    </div>
+                </div>
+		</form>
+	</div>
+    </div>
+</div>
+
+
+               
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

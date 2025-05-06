@@ -1,0 +1,117 @@
+@model MediaPlus.Models.ViewModels.UserViewModel
+@using System.Text.Json
+
+
+@{
+    ViewData["Title"] = "Add User";
+    var currentUser = JsonSerializer.Deserialize<User>(Context.Session.GetString("UserObject")!);
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+            <form role="form" asp-action="Create" asp-controller="User" enctype="multipart/form-data">
+                <br>
+                <h2 class="text-center">@Localizer["addnew"]</h2>
+                <hr class="colorgraph">
+
+                <div class="row">
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="UserNameEn">@Localizer["nameer"]</label>
+                            <input asp-for="UserNameEn" type="text" class="form-control input-lg" tabindex="2">
+                            <span asp-validation-for="UserNameEn" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="UserNameAr">@Localizer["namear"]</label>
+                            <input asp-for="UserNameAr" type="text" class="form-control input-lg" tabindex="1">
+                            <span asp-validation-for="UserNameAr" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="ConfirmPassword">@Localizer["confirmpassword"]</label>
+                            <input asp-for="ConfirmPassword" type="password" class="form-control input-lg" tabindex="4">
+                            <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                        </div>
+                    </div>
+              
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="UserPassword">@Localizer["password"]</label>
+                            <input asp-for="UserPassword" type="password" class="form-control input-lg" tabindex="3">
+                            <span asp-validation-for="UserPassword" class="text-danger"></span>
+                        </div>
+                    </div>
+
+
+                
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="UserLoginName">@Localizer["loginname"]</label>
+                            <input asp-for="UserLoginName" type="text" class="form-control input-lg" tabindex="5">
+                            <span asp-validation-for="UserLoginName" class="text-danger"></span>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label asp-for="UserPhoto">@Localizer["photo"]</label>
+                            <input asp-for="UserPhoto" type="file" class="form-control input-lg" tabindex="6">
+                            <span asp-validation-for="UserPhoto" class="text-danger"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    @if (currentUser.UserCustCode != "SuperAdmin")
+                    {
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="UserRoleId">@Localizer["selectrole"]</label>
+                                <select class="form-control border-radius" asp-for="UserRoleId" asp-items="@(new SelectList(ViewBag.RoleSelectedList, "Value", "Text"))">
+                                    <option value="">@Localizer["selectrole"]</option>
+                                </select>
+                                <span asp-validation-for="UserRoleId" class="text-danger"></span>
+                            </div>
+                        </div>
+                    }
+
+                    @if (currentUser.UserCustCode == "SuperAdmin")
+                    {
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <label asp-for="UserCustCode">@Localizer["selectcustomer"]</label>
+                                <select class="form-control border-radius" asp-for="UserCustCode" asp-items="@(new SelectList(ViewBag.CustomerSelectedList, "Value", "Text"))">
+                                    <option value="">@Localizer["selectcustomer"]</option>
+                                </select>
+                                <span asp-validation-for="UserCustCode" class="text-danger"></span>
+                            </div>
+                        </div>
+                    }
+                </div>
+
+                <hr class="colorgraph">
+                <div class="row">
+                    <div class="col-md-6">
+                        <a asp-action="Index" asp-controller="User" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                    </div>
+                    <div class="col-md-6">
+                        <input type="submit" class="btn btn-success btn-block btn-lg" value="@Localizer["submit"]" tabindex="8">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

@@ -1,0 +1,65 @@
+@model IEnumerable<UserRole>
+
+    <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content">
+            <div class="page-title"> <i class="icon-custom-left"></i>
+                <h3 class="text-center"><strong>@Localizer["permissionrole"]</strong></h3>
+            </div>
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <div id="Print">
+                                    <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                        <thead class="no-bd">
+                                             <tr>
+                                                <th><strong>@Localizer["namear"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["nameer"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["cdate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["udate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["actions"]</strong>
+                                                </th>
+                                                
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-center no-bd-y">
+                                            @foreach(var role in Model){
+                                                <tr>
+                                                    <td class="text-center">
+                                                            @role.RoleNameAr
+                                                    </td>
+                                                    <td class="text-center">
+                                                            @role.RoleNameEn
+                                                    </td>
+                                                    <td class="text-center">
+                                                        @role.RoleCdate.ToString("dd/MM/yyyy")
+                                                    </td>
+                                                    <td class="text-center">
+                                                        @role.RoleUdate?.ToString("dd/MM/yyyy")
+                                                    </td>
+                                                 
+                                                    <td class="text-center">
+                                                        <a asp-action="EditRolePermission" asp-controller="UserRole" asp-route-id="@role.RoleId" class="btn btn-primary" type="button">@Localizer["adjustpermission"]</a>
+  
+                                                    </td>
+                                                </tr>
+                                                }
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+

@@ -1,0 +1,152 @@
+@model IEnumerable<AdGroupViewModel>
+
+
+@{
+    ViewBag.Title = "Index";
+    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+}
+ 
+    <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content">
+            <div class="page-title"> <i class="icon-custom-left"></i>
+                <h3 class="text-center"><strong>@Localizer["Groups"]</strong></h3>
+            </div>
+            <br>
+            <br>
+            @if(currentUser.UserPermissions.Contains("group.create") ){
+                <a style="float: left;" asp-action="Create" asp-controller="AdGroup" class="btn btn-primary" role="button">
+                    @Localizer["addnewhead"]
+                    <i class="fa fa-plus"></i>
+                </a>
+            }
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <div id="Print">
+                                        <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                        <thead class="no-bd">
+                                            <tr>
+                                                <th><strong>@Localizer["name"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["customer"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["username"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["cdate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["udate"]</strong>
+                                                </th>
+                                                @if(currentUser.UserPermissions.Contains("group.update")  ){
+                                                    <th><strong>@Localizer["state"]</strong>
+                                                    </th>
+                                                }
+                                                 @if(currentUser.UserPermissions.Contains("group.update") 
+                                                || currentUser.UserPermissions.Contains("group.delete") 
+                                                 ){
+                                                    <th><strong>@Localizer["actions"]</strong>
+                                                    </th>
+                                                }
+                                            </tr>
+                                        </thead>
+                                        <tbody class="no-bd-y">
+                                                @foreach(var AdGroup in Model){
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            @AdGroup.GroupName                                        
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @AdGroup.GroupCustomerName
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @AdGroup.GroupUserName
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @AdGroup.GroupCdate.Value.ToString("dd/MM/yyyy")
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @AdGroup.GroupUdate.Value.ToString("dd/MM/yyyy")
+                                                        </td>
+                                                        @if(currentUser.UserPermissions.Contains("group.update") ){
+                                                            <td class="text-center">
+                                                                @if(@AdGroup.GroupIsactive){
+                                                                    <button onclick='ToggleOnAndOff(event,"@AdGroup.GroupId")'  class="btn btn-sm btn-success" controll="AdGroup" >
+                                                                        @Localizer["on"]
+                                                                        <i class="bi bi-power" style="pointer-events: none;"></i>
+
+                                                                    </button>
+                                                                    }else{
+                                                                    <button onclick='ToggleOnAndOff(event,"@AdGroup.GroupId")'  class="btn btn-sm btn-danger"  controll="AdGroup">
+                                                                        @Localizer["off"]
+                                                                        <i class="bi bi-power" style="pointer-events: none;"></i>
+
+                                                                    </button>
+                                                                }
+                                                            </td>
+                                                        }
+                                                        @if(currentUser.UserPermissions.Contains("group.update") 
+                                                        || currentUser.UserPermissions.Contains("group.delete") 
+                                                         ){
+                                                            <td style="float:left;">
+                                                            @if(currentUser.UserPermissions.Contains("group.update") ){
+                                                                <a asp-action="Edit" asp-controller="AdGroup" asp-route-id="@AdGroup.GroupId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
+                                                            }
+                                                            @if(currentUser.UserPermissions.Contains("group.delete") ){
+                                                                <button type="button" id="DeleteButton" onclick="MoveTheIdToModal(@AdGroup.GroupId)" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                                                    @Localizer["delete"]
+                                                                </button>
+                                                            }
+                                                            </td>
+                                                        }
+                                                    </tr>
+                                                }
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
+ 
+      </div>
+      <div class="modal-body text-center">
+       @Localizer["deletemodalbody"]
+      </div>
+      <div class="modal-footer">
+        <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="AdGroup" asp-route-id="">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+@section Scripts{
+    <script>
+         function MoveTheIdToModal(CustId){
+            var elem = document.getElementById("DeleteForm")
+            var elemValue = elem.getAttribute('action').split('/');
+            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
+            elem.setAttribute("action", newhref); 
+        }
+    </script>
+}
+
+

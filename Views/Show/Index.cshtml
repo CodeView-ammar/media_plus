@@ -1,0 +1,209 @@
+@model IEnumerable<Show>
+
+@{
+    ViewBag.Title = "Index";
+    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+
+}
+
+    <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content">
+            <div class="page-title"> <i class="icon-custom-left"></i>
+                <h3 class="text-center"><strong>@Localizer["shows"]</strong></h3>
+            </div>
+            <br>
+            <br>
+            @if(currentUser.UserPermissions.Contains("show.create")
+             ){
+                <a style="float: left;" asp-action="Create" asp-controller="ShowSetting" class="btn btn-primary" role="button">
+                   @Localizer["addnewhead"]
+                <i class="fa fa-plus"></i></a>
+            }
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <div id="Print">
+                                        <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                        <thead class="no-bd">
+                                            <tr>
+                                                <th><strong>@Localizer["codeshow"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["showtime"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["showtemplate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["showorder"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["cdate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["udate"]</strong>
+                                                </th>
+                                                @if(currentUser.UserPermissions.Contains("show.update")
+                                                 ){
+                                                    <th><strong>@Localizer["state"]</strong>
+                                                    </th>
+                                                }
+                                                @if(currentUser.UserPermissions.Contains("show.update")
+                                                ||currentUser.UserPermissions.Contains("show.delete")
+                                                 ){
+                                                <th>
+                                                    <strong>@Localizer["delete"]</strong>
+                                                </th>
+                                                }
+@*                                                 <th>
+                                                    <strong>@Localizer["delete"]</strong>
+                                                </th> *@
+                                            </tr>
+                                        </thead>
+                                        <tbody class="no-bd-y">
+                                                @foreach(var show in Model){
+                                                    <tr>
+                                                        <td class="text-center">
+                                                            @show.ShowCode
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @show.ShowTime
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @show.ShowTemplateId
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @show.ShowOrder
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @show.ShowCdate?.ToString("dd/MM/yyyy")
+                                                        </td>
+                                                        <td class="text-center">
+                                                            @show.ShowUdate?.ToString("dd/MM/yyyy")
+                                                        </td>
+
+                                                @if (currentUser.UserPermissions.Contains("show.update"))
+                                                {
+                                                    <td class="text-center">
+                                                        <button type="button" id="DeleteButton" onclick="ToggleShow('@show.ShowId')" class="btn btn-success">
+                                                            @if (@show.ShowIsactive == 1)
+                                                            {
+                                                                @Localizer["on"]
+                                                            }
+                                                            else
+                                                            {
+                                                                @Localizer["off"]
+                                                            }
+                                                            <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                        </button>
+                                                    </td>
+                                                }
+                                                  @*  <td class="text-center">
+                                                      <a asp-action="Edit" 
+                                                      asp-controller="Show" 
+                                                      asp-route-id="@show.ShowId" 
+                                                      class="btn btn-primary" 
+                                                      type="button"
+                                                      >@Localizer["edit"]</a>
+                                                      </td>
+ *@
+                                                @if (currentUser.UserPermissions.Contains("show.delete")
+                                               )
+                                                {
+                                                    <td class="text-center">
+                                                        <button type="button" id="DeleteButton" onclick="MoveTheIdToDeleteModal('@show.ShowCode')" class="btn btn-danger" data-toggle="modal" data-target="#DeleteModal">
+                                                            @Localizer["delete"]
+                                                        </button>
+                                                    </td>
+                                                }
+                                                    </tr>
+                                                }
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmtoggle"]</h5>
+ 
+      </div>
+      <div class="modal-body text-center">
+       @Localizer["confirtogglemodal"]
+      </div>
+      <div class="modal-footer">
+        <form id="ToggleForm" method="get" asp-action="Toggle" asp-controller="Show" >
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="deleteModalLabel">@Localizer["confirmdelete"]</h5>
+ 
+      </div>
+      <div class="modal-body text-center">
+       @Localizer["confirmdeletemodal"]
+      </div>
+      <div class="modal-footer">
+        <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="ShowSetting" asp-route-id="">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+@section Scripts{
+    <script>
+        function ToggleShow(CustId) {
+            var elem = document.getElementById("ToggleForm");
+            var elemValue = elem.getAttribute('action').split('/');
+            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
+            elem.setAttribute("action", newhref);
+
+            //  ‰›Ì– «·⁄„·Ì… „»«‘—…
+            elem.submit(); // √Ê Ì„ﬂ‰ﬂ «” Œœ«„ fetch/AJAX · ‰›Ì– «·⁄„·Ì… Õ”» «·Õ«Ã…
+        }
+         function MoveTheIdToModal(CustId){
+            debugger
+            var elem = document.getElementById("ToggleForm")
+            var elemValue = elem.getAttribute('action').split('/');
+            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
+            elem.setAttribute("action", newhref); 
+        }
+
+
+        function MoveTheIdToDeleteModal(CustId){
+            debugger
+            var elem = document.getElementById("DeleteForm")
+            var elemValue = elem.getAttribute('action').split('/');
+            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
+            elem.setAttribute("action", newhref); 
+        }
+    </script>
+}
+
+

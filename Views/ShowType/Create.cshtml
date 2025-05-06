@@ -1,0 +1,47 @@
+@model MediaPlus.Models.ViewModels.ShowTypeViewModel
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+		    <form role="form"asp-action="Create" asp-controller="ShowType">
+                <br>
+                <h2 class="text-center">@Localizer["addnew"]</h2>
+                <hr class="colorgraph">
+
+				<div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input asp-for="ShowTypeNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="6">
+                            <span asp-validation-for="ShowTypeNameAr" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <input asp-for="ShowTypeNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="6">
+                            <span asp-validation-for="ShowTypeNameEn" class="text-danger"></span>
+                        </div>
+                    </div>
+			    </div>
+
+            
+			<hr class="colorgraph">
+			<div class="row">
+				<div class="col-xs-12 col-md-6">
+                    <a asp-action="Index" asp-controller="ShowType" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                </div>
+				<div class="col-xs-12 col-md-6">
+                    <input type="submit" class="btn btn-success btn-block btn-lg" value="@Localizer["submit"]">
+                </div>
+			</div>
+		</form>
+	</div>
+    </div>
+</div>
+
+ 
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+
+}

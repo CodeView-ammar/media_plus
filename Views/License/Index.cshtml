@@ -1,0 +1,140 @@
+@model IEnumerable<LicenseViewModel>
+
+
+    <!-- BEGIN MAIN CONTENT -->
+        <div id="main-content">
+            <div class="page-title"> <i class="icon-custom-left"></i>
+                <h3 class="text-center"><strong>@Localizer["license"]</strong></h3>
+            </div>
+            <br>
+            <br>
+                <a style="float: left;" asp-action="Create" asp-controller="License" class="btn btn-primary" role="button">
+                    @Localizer["addnewhead"]
+                    <i class="fa fa-plus"></i>
+                </a>
+            
+            <br>
+            <br>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
+                            <div class="row">
+                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                                    <div id="Print">
+                                        <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                        <thead class="no-bd">
+                                            <tr>
+                                                <th><strong>@Localizer["customer"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["startdate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["enddate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["device"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["cdate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["udate"]</strong>
+                                                </th>
+                                                <th><strong>@Localizer["state"]</strong>
+                                                </th>
+                                                <th>@Localizer["machineno"]</th>
+                                                <th><strong>@Localizer["actions"]</strong>
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody class="no-bd-y">
+                                            
+                                                @foreach(var license in Model){
+                                                    <tr>
+                                                    <td class="text-center">
+                                                        @license.LicCustomerName
+                                                    </td>
+                                                    <td class="text-center">
+                                                        @license.LicPeriod?.LicStartAt.ToString("dd/MM/yyyy")
+                                                    </td>
+                                                    <td class="text-center">
+                                                        @license.LicPeriod?.LicEndAt.ToString("dd/MM/yyyy")
+                                                    </td>
+                                                    <td class="text-center">
+                                                        @license.LicDeviceNo
+                                                    </td>
+                                                    <td class="text-center">
+                                                        @license.LicCdate.ToString("dd/MM/yyyy")
+                                                    </td>
+                                                   <td class="text-center">
+                                                        @license.LicUdate.ToString("dd/MM/yyyy")
+                                                    </td>
+                                                    <td>@license.LicMachineNo</td>
+                                                    <td class="text-center">
+                                                        @if(license.LicIsactive){
+                                                            <button  class="btn btn-sm btn-success" disabled>
+                                                                ON
+                                                                <i class="bi bi-power" style="pointer-events: none;"></i>
+
+                                                            </button>
+                                                        }else{
+                                                            <a class="btn btn-sm btn-danger" disabled>
+                                                                OFF
+                                                                <i class="bi bi-power" style="pointer-events: none;"></i>
+
+                                                            </a>
+                                                        }
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <a asp-action="Edit" asp-controller="License" asp-route-id="@license.LicId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
+ | 
+                                                    <button type="button" id="DeleteButton" onclick="MoveTheIdToModal(@license.LicId)" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
+                                                        @Localizer["delete"]
+                                                    </button>
+                                                    </td>
+                                                    </tr>
+                                                }
+                                        </tbody>
+                                    </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
+ 
+      </div>
+      <div class="modal-body text-center">
+       @Localizer["deletemodalbody"]
+      </div>
+      <div class="modal-footer">
+        <form id="DeleteForm" method="post" asp-action="Delete" asp-controller="License" asp-route-id="">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+        </form>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+@section Scripts{
+    <script>
+        function MoveTheIdToModal(CustId){
+            var elem = document.getElementById("DeleteForm")
+            var elemValue = elem.getAttribute('action').split('/');
+            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
+            elem.setAttribute("action", newhref); 
+        }
+    </script>
+}

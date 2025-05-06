@@ -1,0 +1,1547 @@
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\appsettings.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Humanizer.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.CopyComplete
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en_US\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\appsettings.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\EPPlus.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\EPPlus.Interfaces.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\EPPlus.System.Drawing.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Humanizer.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.barcodes.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.forms.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.io.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.kernel.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.layout.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.pdfa.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\itext.sign.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.IO.RecyclableMemoryStream.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Drawing.Common.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\net7.0\System.Security.Cryptography.Pkcs.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\ar_SA\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\en_US\MediaPlus.resources.cs
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.csproj.CopyComplete
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\muham\OneDrive\Desktop\MediaPlus-test\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\muham\OneDrive\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\appsettings.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Humanizer.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en_US\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\HP\Desktop\Workspace\MediaPlus\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\appsettings.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Humanizer.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\en_US\MediaPlus.resources.cs
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\HP\Desktop\Mohamed\Workspace\MediaPlus\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\appsettings.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Humanizer.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\User\Documents\Visual Studio 2019\project\MediaPlus\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\appsettings.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Humanizer.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+C:\Users\User\Documents\Visual Studio 2022\projects\MediaPlus\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\appsettings.json
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Humanizer.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\refint\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.pdb
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\appsettings.Development.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\appsettings.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\MediaPlus.exe
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\MediaPlus.deps.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\MediaPlus.pdb
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Azure.Core.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Azure.Identity.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Humanizer.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Mono.TextTemplating.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.CodeDom.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Drawing.Common.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Memory.Data.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Runtime.Caching.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Security.Permissions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\System.Windows.Extensions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets.build.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets.development.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\staticwebassets.pack.json
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\ref\MediaPlus.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\bin\Debug\net7.0\en_US\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\en_US\MediaPlus.resources.cs
+C:\Users\user\Documents\Visual Studio 2022\projects\media_plus\obj\Debug\net7.0\en_US\MediaPlus.resources.dll
+D:\media_plus\bin\Debug\net7.0\MediaPlus.dll
+D:\media_plus\bin\Debug\net7.0\appsettings.Development.json
+D:\media_plus\bin\Debug\net7.0\appsettings.json
+D:\media_plus\bin\Debug\net7.0\MediaPlus.staticwebassets.runtime.json
+D:\media_plus\bin\Debug\net7.0\MediaPlus.exe
+D:\media_plus\bin\Debug\net7.0\MediaPlus.deps.json
+D:\media_plus\bin\Debug\net7.0\MediaPlus.runtimeconfig.json
+D:\media_plus\bin\Debug\net7.0\MediaPlus.pdb
+D:\media_plus\bin\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+D:\media_plus\bin\Debug\net7.0\en-US\MediaPlus.resources.dll
+D:\media_plus\bin\Debug\net7.0\Azure.Core.dll
+D:\media_plus\bin\Debug\net7.0\Azure.Identity.dll
+D:\media_plus\bin\Debug\net7.0\BCrypt.Net-Next.dll
+D:\media_plus\bin\Debug\net7.0\Humanizer.dll
+D:\media_plus\bin\Debug\net7.0\Localization.AspNetCore.TagHelpers.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.JsonPatch.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.Mvc.Razor.Extensions.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.AspNetCore.Razor.Language.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.Bcl.AsyncInterfaces.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.CodeAnalysis.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.CodeAnalysis.CSharp.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.CodeAnalysis.Razor.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.Data.SqlClient.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.SqlServer.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.Identity.Client.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.Identity.Client.Extensions.Msal.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Abstractions.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.JsonWebTokens.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Logging.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.IdentityModel.Tokens.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.SqlServer.Server.dll
+D:\media_plus\bin\Debug\net7.0\Microsoft.Win32.SystemEvents.dll
+D:\media_plus\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\media_plus\bin\Debug\net7.0\Newtonsoft.Json.dll
+D:\media_plus\bin\Debug\net7.0\Newtonsoft.Json.Bson.dll
+D:\media_plus\bin\Debug\net7.0\System.CodeDom.dll
+D:\media_plus\bin\Debug\net7.0\System.Configuration.ConfigurationManager.dll
+D:\media_plus\bin\Debug\net7.0\System.Drawing.Common.dll
+D:\media_plus\bin\Debug\net7.0\System.IdentityModel.Tokens.Jwt.dll
+D:\media_plus\bin\Debug\net7.0\System.Linq.Dynamic.Core.dll
+D:\media_plus\bin\Debug\net7.0\System.Memory.Data.dll
+D:\media_plus\bin\Debug\net7.0\System.Runtime.Caching.dll
+D:\media_plus\bin\Debug\net7.0\System.Security.Cryptography.ProtectedData.dll
+D:\media_plus\bin\Debug\net7.0\System.Security.Permissions.dll
+D:\media_plus\bin\Debug\net7.0\System.Windows.Extensions.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+D:\media_plus\bin\Debug\net7.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
+D:\media_plus\obj\Debug\net7.0\MediaPlus.csproj.AssemblyReference.cache
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.ar_SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Error.NotFound.en_US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Account.Login.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdDevice.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.AdGroup.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Customer.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Dashboard.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.License.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Material.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Shared._Layout.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowContent.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowDetail.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowSetting.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowTemplate.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.ShowType.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.Show.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserPermission.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.EditRolePermission.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.UserRole.RolesPermission.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Create.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Edit.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.ar-SA.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.Resources.Views.User.Index.en-US.resources
+D:\media_plus\obj\Debug\net7.0\MediaPlus.csproj.GenerateResource.cache
+D:\media_plus\obj\Debug\net7.0\MediaPlus.GeneratedMSBuildEditorConfig.editorconfig
+D:\media_plus\obj\Debug\net7.0\MediaPlus.AssemblyInfoInputs.cache
+D:\media_plus\obj\Debug\net7.0\MediaPlus.AssemblyInfo.cs
+D:\media_plus\obj\Debug\net7.0\MediaPlus.csproj.CoreCompileInputs.cache
+D:\media_plus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
+D:\media_plus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
+D:\media_plus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
+D:\media_plus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
+D:\media_plus\obj\Debug\net7.0\MediaPlus.sourcelink.json
+D:\media_plus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
+D:\media_plus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
+D:\media_plus\obj\Debug\net7.0\staticwebassets.build.json
+D:\media_plus\obj\Debug\net7.0\staticwebassets.development.json
+D:\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props
+D:\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.build.MediaPlus.props
+D:\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.buildMultiTargeting.MediaPlus.props
+D:\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.buildTransitive.MediaPlus.props
+D:\media_plus\obj\Debug\net7.0\staticwebassets.pack.json
+D:\media_plus\obj\Debug\net7.0\scopedcss\bundle\MediaPlus.styles.css
+D:\media_plus\obj\Debug\net7.0\MediaPlus.csproj.Up2Date
+D:\media_plus\obj\Debug\net7.0\MediaPlus.dll
+D:\media_plus\obj\Debug\net7.0\refint\MediaPlus.dll
+D:\media_plus\obj\Debug\net7.0\MediaPlus.pdb
+D:\media_plus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
+D:\media_plus\obj\Debug\net7.0\ref\MediaPlus.dll

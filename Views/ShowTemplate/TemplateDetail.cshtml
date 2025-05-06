@@ -1,0 +1,129 @@
+@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Template Details</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" />
+</head>
+<body>
+    <br>
+<h2 class="text-center">Upload the show content</h2>
+<hr>
+    <div class="container text-center">
+        <div class="row align-items-start">
+
+            <div class="col">
+                <div class="container py-5">
+
+                            <form biaction="/file/post" id="FileUploader1"  class="dropzone dz-clickable border rounded bg-light p-3">
+                                <div class="dz-default dz-message text-center">
+                                    <i class="bi bi-cloud-arrow-up-fill" style="font-size: 2rem;"></i>
+                                    <div class="mt-3">Drop files here or click to upload.</div>
+                                </div>
+                            </form>
+
+                </div>
+            </div>
+
+            <div class="col">
+               <div class="container py-5">
+
+                            <form biaction="/file/post" id="FileUploader2" class="dropzone dz-clickable border rounded bg-light p-3">
+                                <div class="dz-default dz-message text-center">
+                                    <i class="bi bi-cloud-arrow-up-fill" style="font-size: 2rem;"></i>
+                                    <div class="mt-3">Drop files here or click to upload.</div>
+                                </div>
+                            </form>
+            
+ 
+                </div>
+            </div>
+
+           <div class="col">
+                <div class="container py-5">
+                    
+                            <form biaction="/file/post" id="FileUploader3" class="dropzone dz-clickable border rounded bg-light p-3">
+                                <div class="dz-default dz-message text-center">
+                                    <i class="bi bi-cloud-arrow-up-fill" style="font-size: 2rem;"></i>
+                                    <div class="mt-3">Drop files here or click to upload.</div>
+                                </div>
+                            </form>
+                        </div>
+      
+            </div>
+        </div>
+
+        <div class="row align-items-end">
+          <div class="col">
+                <div class="container py-5">
+                    
+                            <form biaction="/file/post" id="FileUploader4" class="dropzone dz-clickable border rounded bg-light p-3">
+                                <div class="dz-default dz-message text-center">
+                                    <i class="bi bi-cloud-arrow-up-fill" style="font-size: 2rem;"></i>
+                                    <div class="mt-3">Drop files here or click to upload.</div>
+                                </div>
+                            </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+<script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script>
+  Dropzone.autoDiscover = false;
+
+  // Dropzone configuration
+  var myDropzone = new Dropzone("#FileUploader1", {
+      url: "/file/post", 
+      paramName: "file",
+      maxFilesize: 20, // MB
+      maxFiles: 1,
+      acceptedFiles: 'image/*',
+      dictDefaultMessage: "Drag files here or click to upload.",
+      clickable: true 
+  });
+   var myDropzone = new Dropzone("#FileUploader2", {
+      url: "/file/post", 
+      paramName: "file",
+      maxFilesize: 20, // MB
+      maxFiles: 1,
+      acceptedFiles: 'image/*',
+      dictDefaultMessage: "Drag files here or click to upload.",
+      clickable: true 
+  });
+   var myDropzone = new Dropzone("#FileUploader3", {
+      url: "/file/post", 
+      paramName: "file",
+      maxFilesize: 20, // MB
+      maxFiles: 1,
+      acceptedFiles: 'image/*',
+      dictDefaultMessage: "Drag files here or click to upload.",
+      clickable: true 
+  });
+   var myDropzone = new Dropzone("#FileUploader4", {
+      url: "/file/post", 
+      paramName: "file",
+      maxFilesize: 20, // MB
+      maxFiles: 1,
+      acceptedFiles: 'image/*',
+      dictDefaultMessage: "Drag files here or click to upload.",
+      clickable: true 
+  });
+  
+</script>
+</body>
+</html>
