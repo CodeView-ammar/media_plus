@@ -1528,7 +1528,6 @@ D:\media_plus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cs
 D:\media_plus\obj\Debug\net7.0\MediaPlus.MvcApplicationPartsAssemblyInfo.cache
 D:\media_plus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cache
 D:\media_plus\obj\Debug\net7.0\MediaPlus.RazorAssemblyInfo.cs
-D:\media_plus\obj\Debug\net7.0\MediaPlus.sourcelink.json
 D:\media_plus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.dll
 D:\media_plus\obj\Debug\net7.0\en-US\MediaPlus.resources.dll
 D:\media_plus\obj\Debug\net7.0\staticwebassets.build.json
@@ -1545,3 +1544,14 @@ D:\media_plus\obj\Debug\net7.0\refint\MediaPlus.dll
 D:\media_plus\obj\Debug\net7.0\MediaPlus.pdb
 D:\media_plus\obj\Debug\net7.0\MediaPlus.genruntimeconfig.cache
 D:\media_plus\obj\Debug\net7.0\ref\MediaPlus.dll
+D:\media_plus\bin\Debug\net7.0\MediaPlus.staticwebassets.endpoints.json
+D:\media_plus\bin\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+D:\media_plus\bin\Debug\net7.0\en_US\MediaPlus.resources.dll
+D:\media_plus\obj\Debug\net7.0\ar-SA\MediaPlus.resources.cs
+D:\media_plus\obj\Debug\net7.0\en-US\MediaPlus.resources.cs
+D:\media_plus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.cs
+D:\media_plus\obj\Debug\net7.0\ar_SA\MediaPlus.resources.dll
+D:\media_plus\obj\Debug\net7.0\en_US\MediaPlus.resources.cs
+D:\media_plus\obj\Debug\net7.0\en_US\MediaPlus.resources.dll
+D:\media_plus\obj\Debug\net7.0\staticwebassets.build.endpoints.json
+D:\media_plus\obj\Debug\net7.0\staticwebassets\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssetEndpoints.props

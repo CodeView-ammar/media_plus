@@ -1,0 +1,197 @@
+@using MediaPlus.Services
+@model UserSessionModel
+
+<div class="user-panel d-flex align-items-center mb-3 pb-3 border-bottom">
+    <div class="image">
+        <img src="~/img/avatars/avatar2.png" class="img-circle elevation-2" alt="User Image">
+    </div>
+    <div class="info">
+        <span class="username d-block">
+            @if (Model != null)
+            {
+                @(Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US" 
+                    ? Model.UserNameEn 
+                    : Model.UserNameAr)
+            }
+            else
+            {
+                @Localizer["Guest"]
+            }
+        </span>
+        <span class="role">@(Model?.RoleName ?? "")</span>
+    </div>
+</div>
+
+<ul class="nav nav-pills flex-column">
+    <li class="nav-item">
+        <a asp-action="Index" asp-controller="Dashboard" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <span>@Localizer["dashboard"]</span>
+        </a>
+    </li>
+
+    @if (Model?.UserCustCode == "SuperAdmin")
+    {
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#customersSubmenu" role="button" aria-expanded="false" aria-controls="customersSubmenu">
+                <i class="nav-icon fas fa-users"></i>
+                <span>@Localizer["customers"]</span>
+                <i class="fas fa-angle-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="customersSubmenu">
+                <ul class="nav nav-pills flex-column sub-menu">
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="Customer" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["display"]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#licensesSubmenu" role="button" aria-expanded="false" aria-controls="licensesSubmenu">
+                <i class="nav-icon fas fa-key"></i>
+                <span>@Localizer["licenses"]</span>
+                <i class="fas fa-angle-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="licensesSubmenu">
+                <ul class="nav nav-pills flex-column sub-menu">
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="License" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["display"]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    }
+
+    @if (Model?.UserCustCode == "SuperAdmin" || Model?.RoleName == "administrator")
+    {
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#usersSubmenu" role="button" aria-expanded="false" aria-controls="usersSubmenu">
+                <i class="nav-icon fas fa-user-cog"></i>
+                <span>@Localizer["users"]</span>
+                <i class="fas fa-angle-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="usersSubmenu">
+                <ul class="nav nav-pills flex-column sub-menu">
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="User" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["users"]</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="UserRole" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["roles"]</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-action="RolesPermission" asp-controller="UserRole" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["Adjust Roles Permission"]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    }
+
+    @if (Model?.UserPermissions.Contains("material.read") == true)
+    {
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#materialsSubmenu" role="button" aria-expanded="false" aria-controls="materialsSubmenu">
+                <i class="nav-icon fas fa-box"></i>
+                <span>@Localizer["materials"]</span>
+                <i class="fas fa-angle-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="materialsSubmenu">
+                <ul class="nav nav-pills flex-column sub-menu">
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="Material" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["materials"]</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a asp-action="Index" asp-controller="MaterialType" class="nav-link">
+                            <i class="nav-icon fas fa-circle"></i>
+                            <span>@Localizer["material types"]</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    }
+
+    @if (Model?.UserPermissions.Contains("group.read") == true || Model?.UserPermissions.Contains("device.read") == true)
+    {
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#devicesGroupsSubmenu" role="button" aria-expanded="false" aria-controls="devicesGroupsSubmenu">
+                <i class="nav-icon fas fa-desktop"></i>
+                <span>@Localizer["Devices&Groups"]</span>
+                <i class="fas fa-angle-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="devicesGroupsSubmenu">
+                <ul class="nav nav-pills flex-column sub-menu">
+                    @if (Model?.UserPermissions.Contains("device.read") == true)
+                    {
+                        <li class="nav-item">
+                            <a asp-action="Index" asp-controller="AdDevice" class="nav-link">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <span>@Localizer["Devices"]</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Model?.UserPermissions.Contains("group.read") == true)
+                    {
+                        <li class="nav-item">
+                            <a asp-action="Index" asp-controller="AdGroup" class="nav-link">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <span>@Localizer["Groups"]</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+    }
+
+    @if (Model?.UserPermissions.Contains("show.read") == true || Model?.UserPermissions.Contains("showtemplate.read") == true)
+    {
+        <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="collapse" href="#showsSubmenu" role="button" aria-expanded="false" aria-controls="showsSubmenu">
+                <i class="nav-icon fas fa-tv"></i>
+                <span>@Localizer["Shows"]</span>
+                <i class="fas fa-angle-down ms-auto"></i>
+            </a>
+            <div class="collapse" id="showsSubmenu">
+                <ul class="nav nav-pills flex-column sub-menu">
+                    @if (Model?.UserPermissions.Contains("show.read") == true)
+                    {
+                        <li class="nav-item">
+                            <a asp-action="Index" asp-controller="Show" class="nav-link">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <span>@Localizer["Shows"]</span>
+                            </a>
+                        </li>
+                    }
+                    @if (Model?.UserPermissions.Contains("showtemplate.read") == true)
+                    {
+                        <li class="nav-item">
+                            <a asp-action="Index" asp-controller="ShowTemplate" class="nav-link">
+                                <i class="nav-icon fas fa-circle"></i>
+                                <span>@Localizer["Show Template"]</span>
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </div>
+        </li>
+    }
+</ul>

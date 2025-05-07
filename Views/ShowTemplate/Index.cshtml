@@ -1,8 +1,11 @@
+@using MediaPlus.Services
+@using Newtonsoft.Json
 @model IEnumerable<ShowTemplateViewModel>
 
 @{
     ViewBag.Title = "Index";
-    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+    var userObject = Context.Session.GetString("UserObject");
+    UserSessionModel currentUser = userObject != null ? JsonConvert.DeserializeObject<UserSessionModel>(userObject) : new UserSessionModel();
 
 }
 
@@ -269,39 +272,39 @@ $(document).ready( function () {
                 NestedData += "<div class=\"row\">";
                 NestedData += "<div class=\"form-group col\">";
 
-                // Checkbox áÍÇáÉ ÇáÇßÊÝ
+                // Checkbox ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 NestedData += `<div class=\"col-xs-4 col-sm-2 col-md-2   \">`;
                 NestedData += `<input type="checkbox" id="TempDetails_${i}__IsActive " name="TempDetails[${i}].IsActive" class="form-control text-center" tabindex="6" ${x.tempIsactive ? 'checked' : ''} onclick="toggleState(this, ${i})"/>`;
-                            NestedData += `<label for="TempDetails_${i}__IsActive" class="form-control text-center">${x.tempIsactive == 1 ? 'äÔØ' : 'ÛíÑ äÔØ'}</label>`;
+                            NestedData += `<label for="TempDetails_${i}__IsActive" class="form-control text-center">${x.tempIsactive == 1 ? 'ï¿½ï¿½ï¿½' : 'ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½'}</label>`;
                     NestedData += `<input type="hidden" id="TempDetails_${i}__IsActiveHidden" name="TempDetails[${i}].IsActiveHidden" value="${x.tempIsactive ? 1 : 0}"/>`; // Hidden input
                     NestedData += `</div>`;
 
-                // ÍÞá ÇÑÊÝÇÚ ÇáãäØÞÉ
+                // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 NestedData += "<div class=\"col-xs-4 col-sm-2 col-md-2\">";
                 NestedData += `<input type="number" id="TempDetails_${i}__TempZoneHeight" name="TempDetails[${i}].TempZoneHeight" class="form-control text-center" value="${x.tempZoneHeight}" tabindex="6"/>`;
                 NestedData += "</div>";
 
-                // ÍÞá ÚÑÖ ÇáãäØÞÉ
+                // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 NestedData += "<div class=\"col-xs-4 col-sm-2 col-md-2\">";
                 NestedData += `<input type="number" id="TempDetails_${i}__TempZoneWidth" name="TempDetails[${i}].TempZoneWidth" class="form-control text-center" value="${x.tempZoneWidth}" tabindex="6"/>`;
                 NestedData += "</div>";
 
-                // ÇÓã ÇáãäØÞÉ
+                // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 NestedData += "<div class=\"col-xs-4 col-sm-2 col-md-2\">";
                 NestedData += `<input class=\"form-control text-center\" tabindex="6" value="Zone ${i + 1}" disabled />`;
                 NestedData += "</div>";
 
-                // ßæÏ ÇáãäØÞÉ
+                // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 NestedData += "<div class=\"col-xs-4 col-sm-2 col-md-2\">";
                 NestedData += `<input id="TempDetails_${i}__TempZoneCode" name="TempDetails[${i}].TempZoneCode" class="form-control text-center" tabindex="6" value="${x.tempZoneCode}" disabled />`;
                 NestedData += "</div>";
 
-                // ÑÞã ÇáãäØÞÉ
+                // ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
                 NestedData += "<div class=\"col-xs-4 col-sm-2 col-md-2\">";
                 NestedData += `<input class=\"form-control text-center\" tabindex="6" value="${i + 1}" disabled/>`;
                 NestedData += "</div>";
 
-                // ÊÝÇÕíá ÇáãäØÞÉ (ãÎÝí)
+                // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ (ï¿½ï¿½ï¿½ï¿½)
                 NestedData += `<div style="display: none;" class="invisible"><input value="${x.tempDetail}" id="TempDetails_${i}__TempDetail" name="TempDetails[${i}].TempDetail" class="d-none" type="text" /></div>`;
                 NestedData += "</div></div>";
                 i++;
@@ -314,12 +317,12 @@ $(document).ready( function () {
 }
 
 function toggleState(checkbox, index) {
-    // ÊÍÞÞ ãä ÍÇáÉ checkbox æÊÛííÑ ÇáÞíãÉ ÇáãÎÝíÉ
+    // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ checkbox ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     const isActive = checkbox.checked;
     const hiddenInput = document.getElementById(`TempDetails_${index}__IsActiveHidden`);
     
     if (hiddenInput) {
-        hiddenInput.value = isActive ? 1 : 0; // ÊÍÏíË ÇáÞíãÉ ÇáãÎÝíÉ
+        hiddenInput.value = isActive ? 1 : 0; // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     }
 }
 });

@@ -1,8 +1,11 @@
+@using MediaPlus.DBModels
+@using MediaPlus.Services
+@using Newtonsoft.Json
 @model IEnumerable<Show>
 
 @{
     ViewBag.Title = "Index";
-    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
 
 }
 
@@ -184,8 +187,8 @@
             var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
             elem.setAttribute("action", newhref);
 
-            // ÊäİíĞ ÇáÚãáíÉ ãÈÇÔÑÉ
-            elem.submit(); // Ãæ íãßäß ÇÓÊÎÏÇã fetch/AJAX áÊäİíĞ ÇáÚãáíÉ ÍÓÈ ÇáÍÇÌÉ
+            // ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+            elem.submit(); // ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ fetch/AJAX ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
         }
          function MoveTheIdToModal(CustId){
             debugger

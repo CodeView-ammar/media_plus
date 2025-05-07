@@ -19,7 +19,7 @@ builder.Services.AddDbContext<MediaPlusDbContext>(options =>
 
 // Add scoped services
 builder.Services.AddScoped<UnitOfWork>();
-builder.Services.AddHttpContextAccessor(); // ÇáÃÝÖá ÇÓÊÎÏÇã åÐÇ ÈÏáÇð ãä AddTransient
+builder.Services.AddHttpContextAccessor(); // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ AddTransient
 
 // Configure session
 builder.Services.AddDistributedMemoryCache();
@@ -83,7 +83,11 @@ app.UseStatusCodePagesWithReExecute("/Error/{0}");
 
 // Map routes
 app.MapControllerRoute(
+    name: "app",
+    pattern: "app/{controller=Dashboard}/{action=Index}/{id?}");
+
+app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Dashboard}/{action=Index}/{id?}");
+    pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();

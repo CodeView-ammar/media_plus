@@ -1,0 +1,46 @@
+@using MediaPlus.Services
+@model UserSessionModel
+
+<li class="nav-item dropdown user-menu">
+    <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        <img src="~/img/avatars/avatar2.png" alt="User Avatar" class="user-image img-circle">
+        <span class="d-none d-md-inline">
+            @if (Model != null)
+            {
+                @(Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US" 
+                    ? Model.UserNameEn 
+                    : Model.UserNameAr)
+            }
+            else
+            {
+                @Localizer["Guest"]
+            }
+        </span>
+    </a>
+    <ul class="dropdown-menu dropdown-menu-end user-dropdown" aria-labelledby="userDropdown">
+        <li class="user-header text-center p-3">
+            <img src="~/img/avatars/avatar2.png" class="img-circle elevation-2" alt="User Image">
+            <p class="mt-2 mb-0">
+                @if (Model != null)
+                {
+                    @(Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US" 
+                        ? Model.UserNameEn 
+                        : Model.UserNameAr)
+                    <small>@Model.RoleName</small>
+                }
+                else
+                {
+                    @Localizer["Guest"]
+                }
+            </p>
+        </li>
+        <li class="user-footer d-flex justify-content-between p-2">
+            <a href="extra_profile.html" class="btn btn-outline-secondary">
+                <i class="fas fa-user me-1"></i> @Localizer["profile"]
+            </a>
+            <a asp-action="Logout" asp-controller="Account" class="btn btn-outline-danger">
+                <i class="fas fa-sign-out-alt me-1"></i> @Localizer["logout"]
+            </a>
+        </li>
+    </ul>
+</li>

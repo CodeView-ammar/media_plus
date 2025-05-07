@@ -16,6 +16,7 @@ using Microsoft.Extensions.Logging;
 namespace MediaPlus.Controllers
 {
     [AllowAnonymous]
+
     public class AccountController : Controller
     {
 

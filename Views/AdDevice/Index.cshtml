@@ -1,9 +1,11 @@
+@using MediaPlus.Services
+@using Newtonsoft.Json
 @model IEnumerable<AdDeviceViewModel>
 
 @{
     ViewBag.Title = "Index";
     string[] avaiablePhotoExtension =  { "jpg", "png" , "jpeg"};
-    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
 
 }
 

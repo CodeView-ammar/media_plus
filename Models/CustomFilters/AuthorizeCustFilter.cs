@@ -18,7 +18,7 @@ namespace MediaPlus.Models.CustomFilters
             if(context.HttpContext.Session.GetObject<Customer>("CustomerObject") == null 
                 && context.HttpContext.Session.GetObject<User>("UserObject") == null)
             {
-                context.Result = new RedirectResult("/Account/Login");
+                context.Result = new RedirectResult("app/Account/Login");
             }
         }
         

@@ -57,7 +57,7 @@ namespace MediaPlus.Models.ViewModels
 
     public class ResetPasswordViewModel{
         [Required]
-        public required string Token{get; set;}
+   public required string Token{get; set;}
 
         [Required]
         [EmailAddress]

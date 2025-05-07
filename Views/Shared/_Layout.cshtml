@@ -1,398 +1,197 @@
-﻿@using System.Text.Json
+@using System.Text.Json
 @using MediaPlus.Services
 
 @{
     var _isEnglishCulture = Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US";
-    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+    UserSessionModel? currentUser = null; // Initialize to null
+    try
+    {
+        var userObject = Context.Session.GetString("UserObject");
+        if (!string.IsNullOrEmpty(userObject))
+        {
+            currentUser = JsonSerializer.Deserialize<UserSessionModel>(userObject);
+        }
+    }
+    catch (JsonException ex)
+    {
+        // Log the exception details, handle the error appropriately
+        // For example:
+        // _logger.LogError(ex, "Error deserializing UserObject from session.");
+        currentUser = null; // Ensure currentUser is null in case of error
+    }
+
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
 }
 
-
 <!DOCTYPE html>
-<html class="no-js sidebar-large" >
+<html lang="@(_isEnglishCulture ? "en" : "ar")" dir="@(_isEnglishCulture ? "ltr" : "rtl")">
 
-    <head>
-        <!-- BEGIN META SECTION -->
-        <meta charset="utf-8">
-        <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
-        <meta name="Mohamed Saied" content="width=device-width, initial-scale=1">
-        <meta content="website" name="description" />
-        <meta content="themes-lab" name="mohamed saied" />
-        <!-- END META SECTION -->
+<head>
+    <!-- META SECTION -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="MediaPlus - Digital Media Management System">
+    <meta name="author" content="Mohamed Saied">
 
-        <!-- BEGIN MANDATORY STYLE -->
-        <link href="~/css/icons/icons.min.css" rel="stylesheet">
-        <link href="~/css/bootstrap.min.css" rel="stylesheet">
-        <link href="~/css/plugins.min.css" rel="stylesheet">
-        <link href="~/css/style.min.css" rel="stylesheet">
-        <link href="~/css/site.css" rel="stylesheet">
+    <title>@ViewData["Title"] - MediaPlus</title>
 
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-        <!-- BEGIN PAGE LEVEL STYLE -->
-        <link href="~/plugins/metrojs/metrojs.css" rel="stylesheet">
+    <!-- DataTables CSS -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
+    
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="~/css/site.css">
+    
+    @if (!_isEnglishCulture)
+    {
+        <!-- RTL Support for Bootstrap -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+    }
+</head>
 
-        <!-- BEGIN CDN STYLE -->    
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css" integrity="sha384-4LISF5TTJX/fLmGSxO53rV4miRxdg84mZsxmO8Rx5jGtp/LbrixFETvWa5a6sESd" crossorigin="anonymous">
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet" >
-        <!-- END CDN LEVEL STYLE -->
-    </head>
-
-    <body data-page="dashboard" dir="rtl">
-        <!-- BEGIN TOP MENU -->
-        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+<body class="d-flex flex-column min-vh-100">
+    <!-- HEADER -->
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
-                <div class="navbar-header">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#sidebar">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a id="menu-medium" class="sidebar-toggle tooltips">
-                        <i class="fa fa-outdent"></i>
-                    </a>
-                    <a class="navbar-brand" asp-action="Index" asp-controller="Dashboard" >
-                        <img src="~/img/logo.png" alt="logo" width="79" height="26">
-                    </a>
-                </div>
-                <div class="navbar-center">@Localizer["dashboard"]</div>
+                <!-- LOGO -->
+                <a class="navbar-brand" asp-action="Index" asp-controller="Dashboard">
+                    <span class="logo-text">MediaPlus</span>
+                </a>
                 
-                <div class="navbar-collapse collapse">
-                    <!-- BEGIN TOP NAVIGATION MENU -->
-                        <!-- BEGIN USER DROPDOWN --> 
+                <!-- MOBILE TOGGLE -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fas fa-bars"></i>
+                </button>
                 
-                    <ul class="nav navbar-nav pull-right header-menu">
-                        <li class="dropdown" id="user-header">
-                            <a href="#" class="dropdown-toggle c-white" data-toggle="dropdown" data-hover="dropdown" data-close-others="true">
-                                <img src="~/img/avatars/avatar2.png" alt="user avatar" width="30" class="p-r-5">
-                                <span class="username">
-                                    @if(_isEnglishCulture){
-                                        @currentUser!.UserNameEn
-                                    }else{
-                                        @currentUser!.UserNameAr
-                                    }
-                                    
-                                </span>
+                <!-- TOP NAVBAR -->
+                <div class="collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                        <!-- LANGUAGE SWITCHER -->
+                        <li class="nav-item">
+                            <a class="nav-link" asp-controller="Dashboard" asp-action="SetLanguage"
+                               asp-route-returnUrl="@returnUrl">
+                                <i class="fas fa-language"></i>
+                                <span class="d-none d-sm-inline ms-2">@Localizer["Change Language"]</span>
                             </a>
-                            <ul class="dropdown-menu">
+                        </li>
+                        
+                        <!-- NOTIFICATIONS -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                <i class="fas fa-bell"></i>
+                                <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">3</span>
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="notificationsDropdown">
+                                <li class="dropdown-header">
+                                    @Localizer["Notifications"]
+                                </li>
+                                <li><hr class="dropdown-divider"></li>
                                 <li>
-                                    <a href="extra_profile.html">
-                                        <i class="glyph-icon flaticon-account"></i> @Localizer["profile"]
+                                    <a class="dropdown-item" href="#">
+                                        <div class="notification-item">
+                                            <div class="icon bg-primary text-white rounded-circle">
+                                                <i class="fas fa-user-plus"></i>
+                                            </div>
+                                            <div class="content">
+                                                <p class="message">@Localizer["New user registered"]</p>
+                                                <p class="time">5 @Localizer["minutes ago"]</p>
+                                            </div>
+                                        </div>
                                     </a>
                                 </li>
-                                
-                                <li class="dropdown-footer clearfix">
-                                    <a href="javascript:;" class="toggle_fullscreen" title="Fullscreen">
-                                    <i class="glyph-icon flaticon-fullscreen3"></i>
-                                    </a>
-                                   
-                                    <a asp-action="Logout" asp-controller="Account" title="Logout">
-                                    <i class="fa fa-power-off"></i>
+                                <li><hr class="dropdown-divider"></li>
+                                <li>
+                                    <a class="dropdown-item text-center" href="#">
+                                        @Localizer["View all notifications"]
                                     </a>
                                 </li>
                             </ul>
-                                @*                                
-                                <a asp-action="Login" asp-controller="Account" class="btn btn-outline-dark">@Localizer["login"]</a>
-                                 *@
                         </li>
+                        
+                        <!-- USER PROFILE -->
+                        <partial name="_UserProfilePartial" model="@currentUser" />
                     </ul>
                 </div>
             </div>
         </nav>
-        <!-- END TOP MENU -->
+    </header>
 
-        <!-- BEGIN WRAPPER -->
-        <div id="wrapper">
-            <!-- BEGIN MAIN SIDEBAR -->
-            <nav id="sidebar">
-                <div id="main-menu">
-                    <ul class="sidebar-nav">
-                        <li class="current active hasSub">
-                            <a asp-action="Index" asp-controller="Dashboard"><i class="fa fa-dashboard"></i><span class="sidebar-text">@Localizer["dashboard"]</span></a>
-                        </li>
-                        @if(currentUser.UserCustCode == "SuperAdmin"){      
-                            <li >
-                                <a href="#"><i class="glyph-icon flaticon-ui-elements2"></i><span class="sidebar-text">@Localizer["customers"]</span><span class="fa arrow"></span></a>
-                                <ul class="submenu collapse">
-                                
-                                    <li class="current"> 
-                                        <a asp-action="Index" asp-controller="Customer"><span class="sidebar-text">@Localizer["display"]</span></a>
-                                    </li>
-                            
-                                </ul>
-                            </li>
-                    
-
-                        <li>
-                            <a href="#"><i class="glyph-icon flaticon-panels"></i><span class="sidebar-text">@Localizer["licenses"]</span><span class="fa arrow"></span></a>
-                            <ul class="submenu collapse">
-                                <li>
-                                    <a asp-action="Index" asp-controller="License"><span class="sidebar-text">@Localizer["display"]</span></a>
-                                </li>
-
-                            </ul>
-                        </li>
-
-                        }
-                        @if(currentUser.UserCustCode == "SuperAdmin" ||  currentUser.RoleName == "administrator"){      
-                            <li>
-                                <a href="#"><i class="glyph-icon flaticon-account"></i><span class="sidebar-text">@Localizer["users"]</span><span class="fa arrow"></span></a>
-                                <ul class="submenu collapse">
-                                    <li>
-                                        <a asp-action="Index" asp-controller="User"><span class="sidebar-text">@Localizer["users"]</span></a>
-                                    </li>
-                                    <li>
-                                        <a asp-action="Index" asp-controller="UserRole"><span class="sidebar-text">@Localizer["roles"]</span></a>
-                                    </li>
-                                    @* <li>
-                                        <a asp-action="Index" asp-controller="UserPermission"><span class="sidebar-text">@Localizer["Permissions"]</span></a>
-                                    </li> *@
-                                    <li>
-                                        <a asp-action="RolesPermission" asp-controller="UserRole"><span class="sidebar-text">@Localizer["Adjust Roles Permission"]</span></a>
-                                    </li>
-                                </ul>
-                            </li>
-                        }
-                        @if(currentUser.UserPermissions.Contains("material.read")  ){
-                        
-                            <li>
-                                <a href="#"><i class="glyph-icon flaticon-world30"></i><span class="sidebar-text">@Localizer["materials"]</span><span class="fa arrow"></span></a>
-                                <ul class="submenu collapse">
-                                    <li>
-                                        <a asp-action="Index" asp-controller="Material"><span class="sidebar-text">@Localizer["materials"]</span></a>
-                                    </li>
-                                    @* <li>
-                                        <a asp-action="Index" asp-controller="MaterialType"><span class="sidebar-text">@Localizer["materialtype"]</span></a>
-                                    </li> *@
-                                </ul>
-                            </li>
-
-                        }
-                        @if(currentUser.UserPermissions.Contains("group.read")
-                        || currentUser.UserPermissions.Contains("device.read")
-                         ){
-                            <li>
-                                <a href="#"><i class="glyph-icon flaticon-tables"></i><span class="sidebar-text">@Localizer["Devices&Groups"]</span><span class="fa arrow"></span></a>
-                                <ul class="submenu collapse">
-                                    @if(currentUser.UserPermissions.Contains("device.read")  ){
-                                        <li>
-                                            <a asp-action="Index" asp-controller="AdDevice"><span class="sidebar-text">@Localizer["Devices"]</span></a>
-                                        </li>
-                                    }
-                                    @if(currentUser.UserPermissions.Contains("group.read")  ){
-                                        <li>
-                                            <a asp-action="Index" asp-controller="AdGroup"><span class="sidebar-text">@Localizer["Groups"]</span></a>
-                                        </li>
-                                    } 
-                                </ul>
-                            </li>
-                        }
-                         @if(currentUser.UserPermissions.Contains("show.read")|| currentUser.UserPermissions.Contains("showtemplate.read")   ){
-                            <li>
-                                <a href="#"><i class="glyph-icon flaticon-tables"></i><span class="sidebar-text">@Localizer["Shows"]</span><span class="fa arrow"></span></a>
-                                <ul class="submenu collapse">
-                                    @if(currentUser.UserPermissions.Contains("show.read")
-                                     ){
-                                        <li>
-                                            <a asp-action="Index" asp-controller="Show"><span class="sidebar-text">@Localizer["Shows"]</span></a>
-                                        </li>
-                                    }
-                                    @if(currentUser.UserPermissions.Contains("showtemplate.read")
-                                     ){
-                                        <li>
-                                            <a asp-action="Index" asp-controller="ShowTemplate"><span class="sidebar-text">@Localizer["Show Template"]</span></a>
-                                        </li>
-                                    }
-                                    @* <li>
-                                        <a asp-action="Index" asp-controller="ShowType"><span class="sidebar-text">@Localizer["Show Type"]</span></a>
-                                    </li> *@
-                                    @* <li>
-                                        <a asp-action="TemplateDetail" asp-controller="ShowTemplate"><span class="sidebar-text">@Localizer["Template Detail"]</span></a>
-                                    </li> *@
-                                </ul>
-                            </li>
-                        }
-
-                    </ul>
-                </div>
-                <div class="footer-widget">
-                    <img src="~/img/gradient.png" alt="gradient effet" class="sidebar-gradient-img" />
-                
-                    <div class="sidebar-footer clearfix">
-                        <a class="pull-left toggle_fullscreen" href="#" rel="tooltip" data-placement="top" data-original-title="Fullscreen"><i class="glyph-icon flaticon-fullscreen3"></i></a>
-                        <a class="pull-left toggle_language" rel="tooltip" data-placement="top" asp-controller="Dashboard" 
-                                                                                                asp-action="SetLanguage"    
-                                                                                                asp-route-returnUrl="@returnUrl"    
-                                                                                                method="get">
-                            <i class="bi bi-translate"></i>
-                        </a>
-                       
-                        <a asp-action="Logout" asp-controller="Account" class="pull-left" rel="tooltip" data-placement="top" data-original-title="Logout"><i class="fa fa-power-off"></i></a>
-                    </div> 
-                </div>
-            </nav>
-            <!-- END MAIN SIDEBAR -->
-            
-            <!-- BEGIN TOP MENU -->
-
-            <div class="min-vh-100">
-                @RenderBody()
-            </div>
-
-        <br>
-        <br>
+    <!-- MAIN CONTAINER -->
+    <div class="container-fluid flex-grow-1">
         <div class="row">
-            <div class="container">
-                <div class="text-center">
-                    <div class="footer mt-auto">
-                        <div class="copyright">@Localizer["copyright"] ©</div>
+            <!-- SIDEBAR -->
+            <aside class="sidebar collapse d-lg-block" id="mainSidebar">
+                <div class="sidebar-sticky">
+                    <partial name="_NavigationPartial" model="@currentUser" />
+                </div>
+            </aside>
+
+            <!-- MAIN CONTENT -->
+            <main class="main-content ms-sm-auto">
+                <div class="content-wrapper">
+                    <div class="content-header">
+                        <div class="container-fluid">
+                            <div class="row mb-2">
+                                <div class="col-sm-6">
+                                    <h1 class="m-0">@ViewData["Title"]</h1>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ol class="breadcrumb float-sm-end">
+                                        <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="Index">@Localizer["Home"]</a></li>
+                                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
+                    <div class="content">
+                        <div class="container-fluid">
+                            @RenderBody()
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer mt-auto py-3">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <span class="text-muted">&copy; @DateTime.Now.Year - MediaPlus</span>
+                </div>
+                <div class="col-md-6 text-end">
+                    <span class="text-muted">@Localizer["Version"]: 2.0</span>
                 </div>
             </div>
         </div>
+    </footer>
 
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    
+    <!-- Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
+    <!-- DataTables JS -->
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
 
-        <!-- BEGIN MANDATORY SCRIPTS -->
-        <script src="~/plugins/jquery-1.11.js"></script>
-        <script src="~/plugins/jquery-migrate-1.2.1.js"></script>
-        <script src="~/plugins/jquery-ui/jquery-ui-1.10.4.min.js"></script>
-        <script src="~/plugins/bootstrap/bootstrap.min.js"></script>
-        <script src="~/plugins/bootstrap-dropdown/bootstrap-hover-dropdown.min.js"></script>
-        <script src="~/plugins/bootstrap-select/bootstrap-select.js"></script>
-        <script src="~/plugins/icheck/icheck.js"></script>
-        <script src="~/plugins/mcustom-scrollbar/jquery.mCustomScrollbar.concat.min.js"></script>
-        <script src="~/plugins/nprogress/nprogress.js"></script>
-        <script src="~/plugins/charts-sparkline/sparkline.min.js"></script>
-        <script src="~/plugins/breakpoints/breakpoints.js"></script>
-        <script src="~/plugins/numerator/jquery-numerator.js"></script>
-        <script src="~/plugins/modernizr/modernizr-2.6.2-respond-1.1.0.min.js"></script>
-        <!-- END MANDATORY SCRIPTS -->
-        <!-- BEGIN PAGE LEVEL SCRIPTS -->
-        
-        <script src="~/plugins/metrojs/metrojs.min.js"></script>
-        <script src='~/plugins/fullcalendar/moment.min.js'></script>
-        <script src='~/plugins/fullcalendar/fullcalendar.min.js'></script>
-        <script src="~/plugins/simple-weather/jquery.simpleWeather.min.js"></script>
-        <script src="~/plugins/google-maps/markerclusterer.js"></script>
-        <script src="~/plugins/charts-flot/jquery.flot.js"></script>
-        <script src="~/plugins/charts-flot/jquery.flot.animator.min.js"></script>
-        <script src="~/plugins/charts-flot/jquery.flot.resize.js"></script>
-        <script src="~/plugins/charts-flot/jquery.flot.time.min.js"></script>
-        <script src="~/plugins/charts-morris/raphael.min.js"></script>
-        <script src="~/plugins/charts-morris/morris.min.js"></script>
-        <script src="~/plugins/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>
-        <script src="~/js/calendar.js"></script>
-        <script src="~/js/application.js"></script>
-        <script src="~/js/site.js"></script>
-        <script src="~/js/checkbox.js"></script>
-        <!-- END  PAGE LEVEL SCRIPTS -->
+    <!-- Custom Scripts -->
+    <script src="~/js/site.js"></script>
+    <script src="~/js/dashboard.js"></script>
 
-        <!-- Datatable CDNS -->
-        <link href="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.css" rel="stylesheet">
-        <script src="https://cdn.datatables.net/v/dt/dt-1.13.8/datatables.min.js"></script>
-        <link href="https://cdn.datatables.net/v/dt/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.css" rel="stylesheet">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/pdfmake.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.2.7/vfs_fonts.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
-        <script src="https://cdn.datatables.net/v/dt/b-2.4.2/b-html5-2.4.2/b-print-2.4.2/datatables.min.js"></script>
-        <script src="https://cdn.datatables.net/staterestore/1.3.0/js/dataTables.stateRestore.min.js"></script>
-        <script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
-        <script src="~/js/vfs_fonts.js"></script>
-        
-        <script type="text/javascript">
-          
-        $(document).ready( function () {
-            var table = $("#Datatable").DataTable({
-                "pageLength": 50,
-                dom: "Bfrtip",
-                "buttons": ['print' ,
-                        'excelHtml5',
-                    {
-                extend: "pdfHtml5",
-                orientation: 'portrait',
-                pageSize: 'A4',
-                exportOptions: {
-                    orthogonal: "myExport",
-                    columns: [5 ,4, 3, 2, 1, 0],
-                    },
-                customize: function(doc) {
-                    doc.defaultStyle.font = "arial";
-                },
-                    }
-                ],
-                columnDefs: [
-                {
-                    targets: "hiddenCols",
-                    visible: false,
-                    render: function(data, type, row) {
-                    if (type = 'myExport') {
-                        return data.split(' ').reverse().join(' ');
-                    }
-                        return data;
-                    }
-                }
-                ]
-            });
-        });
-
-
-        pdfMake.fonts = {
-                        arial: {
-                            normal: 'arial.ttf',
-                            bold: 'arial.ttf',
-                            italics: 'arial.ttf',
-                            bolditalics: 'arial.ttf'
-                        }
-                    };
-
-
-
-
-function ToggleOnAndOff(event, id){
-
-        if(event.target.innerHTML.indexOf("On") > -1){
-            event.target.innerHTML = "";
-            event.target.innerHTML = "Off <i class=\"bi bi-power\" style=\"pointer-events: none;\"></i>";
-            event.target.classList.remove("btn-success");
-            event.target.classList.add("btn-danger");
-        }else if(event.target.innerHTML.indexOf("غير نشط") > -1 ){
-            event.target.innerHTML = "";
-            event.target.innerHTML = " نشط <i class=\"bi bi-power\" style=\"pointer-events: none;\"></i>";
-            event.target.classList.remove("btn-danger");
-            event.target.classList.add("btn-success");
-        }else if(event.target.innerHTML.indexOf("Off") > -1){
-            event.target.innerHTML = "";
-            event.target.innerHTML = "On <i class=\"bi bi-power\" style=\"pointer-events: none;\"></i>";
-            event.target.classList.remove("btn-danger");
-            event.target.classList.add("btn-success");
-        }else{
-            event.target.innerHTML = "";
-            event.target.innerHTML = " غير نشط <i class=\"bi bi-power\" style=\"pointer-events: none;\"></i>";
-            event.target.classList.remove("btn-success");
-            event.target.classList.add("btn-danger");
-        }
-
-        var _controller = event.target.getAttribute('controll');
-
-        //Create AJAX request
-        $.ajax({
-                url: '/' + _controller + '/ToggleState/' + id,
-                type: 'GET',
-                cache: false,
-                data: { Id: id  },
-                success: function (data) {
-                    }
-                });
-    }
-
-        </script>
-        @RenderSection("Scripts", required: false)
-    </body>
-
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
 </html>
-
-
-
-
-

@@ -17,6 +17,206 @@
       "PackagePath": "staticwebassets\\js\\dataTables.dataTables.min.js"
     },
     {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\css\\animate.css",
+      "PackagePath": "staticwebassets\\assets\\css\\animate.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\css\\swiper-bundle.min.css",
+      "PackagePath": "staticwebassets\\assets\\css\\swiper-bundle.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\404.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\404.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\about\\about-image-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about-image-01.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\about\\about-image-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\about\\about-image-02.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\article-author-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\article-author-01.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\article-author-02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\article-author-02.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\article-author-03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\article-author-03.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\article-author-04.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\article-author-04.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\author-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\author-01.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\bannder-ad.png",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\bannder-ad.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\blog-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-01.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\blog-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-02.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\blog-03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-03.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\blog-details-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-details-01.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\blog-footer-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-footer-01.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\blog-footer-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\blog-footer-02.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\dotted-shape.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\dotted-shape.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\blog\\quote-bg.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\blog\\quote-bg.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\ayroui-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\ayroui-white.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\ayroui.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\ayroui.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\graygrids-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\graygrids-white.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\graygrids.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\graygrids.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\lineicons-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\lineicons-white.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\lineicons.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\lineicons.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\tailgrids-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\tailgrids-white.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\tailgrids.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\tailgrids.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\uideck-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\uideck-white.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\brands\\uideck.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\brands\\uideck.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\favicon.png",
+      "PackagePath": "staticwebassets\\assets\\images\\favicon.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\footer\\shape-1.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\shape-1.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\footer\\shape-3.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\footer\\shape-3.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\hero\\brand.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\brand.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\hero\\hero-image.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\hero\\hero-image.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\logo\\favicon.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\favicon.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\logo\\logo-white.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\logo-white.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\logo\\logo.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\logo\\logo.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\team\\dotted-shape.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\dotted-shape.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\team\\shape-2.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\shape-2.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\team\\team-01.png",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\team-01.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\team\\team-02.png",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\team-02.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\team\\team-03.png",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\team-03.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\team\\team-04.png",
+      "PackagePath": "staticwebassets\\assets\\images\\team\\team-04.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\testimonials\\author-01.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\author-01.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\testimonials\\author-02.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\author-02.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\testimonials\\author-03.jpg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\author-03.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\images\\testimonials\\icon-star.svg",
+      "PackagePath": "staticwebassets\\assets\\images\\testimonials\\icon-star.svg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\js\\main.js",
+      "PackagePath": "staticwebassets\\assets\\js\\main.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\js\\swiper-bundle.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\swiper-bundle.min.js"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\assets\\js\\wow.min.js",
+      "PackagePath": "staticwebassets\\assets\\js\\wow.min.js"
+    },
+    {
       "Id": "D:\\media_plus\\wwwroot\\css\\animate-custom.css",
       "PackagePath": "staticwebassets\\css\\animate-custom.css"
     },
@@ -171,6 +371,10 @@
     {
       "Id": "D:\\media_plus\\wwwroot\\css\\plugins.min.css",
       "PackagePath": "staticwebassets\\css\\plugins.min.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\css\\saas.css",
+      "PackagePath": "staticwebassets\\css\\saas.css"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\css\\site.css",
@@ -1253,6 +1457,14 @@
       "PackagePath": "staticwebassets\\plugins\\wizard\\wizard.js"
     },
     {
+      "Id": "D:\\media_plus\\wwwroot\\src\\css\\tailwind.css",
+      "PackagePath": "staticwebassets\\src\\css\\tailwind.css"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\src\\input.css",
+      "PackagePath": "staticwebassets\\src\\input.css"
+    },
+    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\customer\\photo\\1f75137c-1225-4bad.jpeg",
       "PackagePath": "staticwebassets\\upload\\customer\\photo\\1f75137c-1225-4bad.jpeg"
     },
@@ -1585,10 +1797,6 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\e8d1060f-8aff-4826.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e8d9beb7-df95-406b.mp4",
-      "PackagePath": "staticwebassets\\upload\\show_material\\e8d9beb7-df95-406b.mp4"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\44f77814-f791-4c0f.JPG",
       "PackagePath": "staticwebassets\\upload\\user\\photo\\44f77814-f791-4c0f.JPG"
     },
@@ -1599,6 +1807,10 @@
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\default_photo_user.jpg",
       "PackagePath": "staticwebassets\\upload\\user\\photo\\default_photo_user.jpg"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props",

@@ -1,0 +1,215 @@
+﻿@{
+    ViewData["Title"] = "إعدادات الجدول الزمني";
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-header bg-white d-flex align-items-center py-3">
+        <i class="fas fa-clock text-primary me-2"></i>
+        <h5 class="card-title mb-0">@Localizer["إعدادات الجدول الزمني"]</h5>
+    </div>
+    <div class="card-body p-4">
+        <form id="timelineSettingsForm">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <div class="d-flex align-items-center">
+                        <div class="timeline-icon-wrapper me-3">
+                            <i class="fas fa-calendar-alt text-primary"></i>
+                        </div>
+                        <h6 class="mb-0">@Localizer["خطة الجدول الزمني"]</h6>
+                    </div>
+                </div>
+
+                <!-- Name Section -->
+                <div class="col-md-6 mb-4">
+                    <label class="form-label text-muted">@Localizer["الاسم"]</label>
+                    <input type="text" class="form-control" placeholder="@Localizer["خطة الشهر التسويقية"]" />
+                </div>
+
+                <!-- Allow Overlap Section -->
+                <div class="col-md-6 mb-4">
+                    <label class="form-label text-muted">@Localizer["السماح بالتداخل"]</label>
+                    <select class="form-select">
+                        <option value="yes">@Localizer["نعم"]</option>
+                        <option value="no">@Localizer["لا"]</option>
+                    </select>
+                </div>
+
+                <div class="col-12">
+                    <hr />
+                </div>
+
+                <!-- First Timeline Section -->
+                <div class="col-12 mb-3">
+                    <div class="timeline-section">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6><i class="fas fa-clock text-primary me-2"></i> @Localizer["الجدول الزمني 1"]</h6>
+                            <button type="button" class="btn btn-link text-danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                        
+                        <div class="row">
+                            <!-- Order -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["الترتيب"]</label>
+                                <input type="number" class="form-control" value="1" min="1" />
+                            </div>
+                            
+                            <!-- Sequence -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["التسلسل"]</label>
+                                <select class="form-select">
+                                    <option value="time-based">@Localizer["تتبع الوقت"]</option>
+                                    <option value="end-of-week">@Localizer["نهاية الأسبوع"]</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Time -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["الوقت"]</label>
+                                <select class="form-select">
+                                    <option value="custom">@Localizer["مخصص"]</option>
+                                    <option value="all-day">@Localizer["طوال اليوم"]</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-md-3 mb-3">
+                                <!-- Empty spacer column -->
+                            </div>
+                            
+                            <!-- Start Time -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["وقت البداية"]</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="11:00 PM" />
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-clock"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <!-- End Time -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["وقت النهاية"]</label>
+                                <div class="input-group">
+                                    <input type="text" class="form-control" value="11:10 PM" />
+                                    <button class="btn btn-outline-secondary" type="button">
+                                        <i class="fas fa-clock"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label class="form-label text-muted">@Localizer["عند التكرار"]</label>
+                                <div class="d-flex flex-wrap days-selection">
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="daySaturday" checked>
+                                        <label class="form-check-label" for="daySaturday">@Localizer["السبت"]</label>
+                                    </div>
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="daySunday" checked>
+                                        <label class="form-check-label" for="daySunday">@Localizer["الأحد"]</label>
+                                    </div>
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="dayMonday" checked>
+                                        <label class="form-check-label" for="dayMonday">@Localizer["الإثنين"]</label>
+                                    </div>
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="dayTuesday" checked>
+                                        <label class="form-check-label" for="dayTuesday">@Localizer["الثلاثاء"]</label>
+                                    </div>
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="dayWednesday" checked>
+                                        <label class="form-check-label" for="dayWednesday">@Localizer["الأربعاء"]</label>
+                                    </div>
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="dayThursday" checked>
+                                        <label class="form-check-label" for="dayThursday">@Localizer["الخميس"]</label>
+                                    </div>
+                                    <div class="form-check me-4 mb-2">
+                                        <input class="form-check-input" type="checkbox" id="dayFriday" checked>
+                                        <label class="form-check-label" for="dayFriday">@Localizer["الجمعة"]</label>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <button type="button" class="btn btn-outline-primary">
+                                    <i class="fas fa-calendar-day me-1"></i> @Localizer["تاريخ محدد"]
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <hr />
+                </div>
+                
+                <!-- Second Timeline Section -->
+                <div class="col-12 mb-3">
+                    <div class="timeline-section">
+                        <div class="d-flex justify-content-between align-items-center mb-3">
+                            <h6><i class="fas fa-clock text-primary me-2"></i> @Localizer["الجدول الزمني 2"]</h6>
+                            <button type="button" class="btn btn-link text-danger"><i class="fas fa-trash"></i></button>
+                        </div>
+                        
+                        <div class="row">
+                            <!-- Order -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["الترتيب"]</label>
+                                <input type="number" class="form-control" value="1" min="1" />
+                            </div>
+                            
+                            <!-- Sequence -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["التسلسل"]</label>
+                                <select class="form-select">
+                                    <option value="end-of-week">@Localizer["عرض نهاية السنة"]</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Time -->
+                            <div class="col-md-3 mb-3">
+                                <label class="form-label text-muted">@Localizer["الوقت"]</label>
+                                <select class="form-select">
+                                    <option value="all-day">@Localizer["طوال اليوم"]</option>
+                                </select>
+                            </div>
+                            
+                            <div class="col-12 mb-3">
+                                <label class="form-label text-muted">@Localizer["عند التكرار"]</label>
+                                <div class="d-flex flex-wrap days-selection">
+                                    <!-- Days selection checkboxes would be here -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-12">
+                    <hr />
+                </div>
+                
+                <!-- Fill Timeline Gaps -->
+                <div class="col-md-6 mb-4">
+                    <label class="form-label text-muted">@Localizer["ملء فجوات الجدول الزمني باستخدام"]</label>
+                    <select class="form-select">
+                        <option value="loop">@Localizer["تكرار التسلسل"]</option>
+                    </select>
+                </div>
+                
+                <div class="col-12 d-flex justify-content-end mt-3">
+                    <button type="button" class="btn btn-danger me-2">@Localizer["حذف الجدول الزمني"]</button>
+                    <button type="submit" class="btn btn-primary">@Localizer["تحديث"]</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        $(document).ready(function() {
+            // Initialize any plugins or form validation here
+        });
+    </script>
+}

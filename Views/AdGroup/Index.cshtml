@@ -1,9 +1,11 @@
+@using MediaPlus.Services
+@using Newtonsoft.Json
 @model IEnumerable<AdGroupViewModel>
 
 
 @{
     ViewBag.Title = "Index";
-    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
 }
  
     <!-- BEGIN MAIN CONTENT -->
@@ -13,7 +15,7 @@
             </div>
             <br>
             <br>
-            @if(currentUser.UserPermissions.Contains("group.create") ){
+            @if(currentUser?.UserPermissions?.Contains("group.create") == true){
                 <a style="float: left;" asp-action="Create" asp-controller="AdGroup" class="btn btn-primary" role="button">
                     @Localizer["addnewhead"]
                     <i class="fa fa-plus"></i>

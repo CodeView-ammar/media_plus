@@ -1,65 +1,55 @@
-@model MediaPlus.Models.ViewModels.MaterialTypeViewModel
-
+@model MaterialTypeViewModel
 
 @{
-    ViewData["Title"] = "Edit Material Type";
+    ViewData["Title"] = Localizer["Edit Material Type"];
 }
 
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">@Localizer["Edit Material Type"]</h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" asp-controller="MaterialType" method="post">
+            <input type="hidden" asp-for="MtypeId" />
+            <input type="hidden" asp-for="MtypeIsActive" />
+            <input type="hidden" asp-for="MtypeCdate" />
+            <input type="hidden" asp-for="MtypeUserId" />
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
-		    <form role="form"asp-action="Edit" asp-controller="MaterialType">
-                <br>
-                <h2 class="text-center">Edit Material Type</h2>
-                <hr class="colorgraph">
-                <div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="form-group">                        
-                        <input asp-for="MtypeNameAr" type="text"  class="form-control input-lg" placeholder="MaterialType Arabic Name" tabindex="1">
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="MtypeNameAr" class="form-label">@Localizer["Arabic Name"]</label>
+                        <input asp-for="MtypeNameAr" class="form-control" placeholder="@Localizer["Enter material type name in Arabic"]" />
                         <span asp-validation-for="MtypeNameAr" class="text-danger"></span>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="form-group">
-						<input asp-for="MtypeNameEn" type="text" class="form-control input-lg" placeholder="MaterialType English Name" tabindex="2">
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="MtypeNameEn" class="form-label">@Localizer["English Name"]</label>
+                        <input asp-for="MtypeNameEn" class="form-control" placeholder="@Localizer["Enter material type name in English"]" />
                         <span asp-validation-for="MtypeNameEn" class="text-danger"></span>
-					</div>
-				</div>
-			</div>
+                    </div>
+                </div>
+            </div>
 
-
-                <div class="invisible">
-                    <input asp-for="MtypeIsActive"  class="d-none" type="text" />
+            <hr />
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <a asp-action="Index" class="btn btn-secondary w-100">
+                        <i class="fas fa-arrow-left me-1"></i> @Localizer["Back to List"]
+                    </a>
                 </div>
-                <div class="invisible">
-                    <input asp-for="MtypeId"  class="d-none" type="text" />
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-success w-100">
+                        <i class="fas fa-save me-1"></i> @Localizer["Save Changes"]
+                    </button>
                 </div>
-                  <div class="invisible">
-                    <input asp-for="MtypeCdate"  class="d-none" type="text" />
-                </div>
-                <div class="invisible">
-                    <input asp-for="MtypeUserId"  class="d-none" type="text" />
-                </div>
-			<hr class="colorgraph">
-			<div class="row">
-				<div class="col-xs-12 col-md-6">
-                    <a asp-action="Index" asp-controller="MaterialType" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">Return</a>
-                </div>
-				<div class="col-xs-12 col-md-6">
-                    <input type="submit" class="btn btn-success btn-block btn-lg"></input>
-                </div>
-			</div>
-		</form>
-	</div>
+            </div>
+        </form>
     </div>
 </div>
 
-
-
-
-
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <partial name="_ValidationScriptsPartial" />
 }

@@ -1,8 +1,10 @@
+@using MediaPlus.Services
+@using Newtonsoft.Json
 @model IEnumerable<MaterialViewModel>
 
 @{
     ViewBag.Title = "Index";
-    var currentUser = JsonSerializer.Deserialize<UserSessionModel>(Context.Session.GetString("UserObject")!);
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
     string[] avaiablePhotoExtension =  { "image/jpg", "image/png" , "image/gif" , "image/jpeg" ,"image/bmp"};
     string[] avaiableVedioExtension =  {".mov", ".wmv" , ".flv" , ".avi" ,".webm",".webm",".mkv",".mp4"};
 }
