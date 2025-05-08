@@ -1,3 +1,7 @@
 mediaplus_db.sql
 */upload
 *.vs
+
+*/bin
+Debug
+.dll
