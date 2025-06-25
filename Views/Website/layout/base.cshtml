@@ -1,48 +1,1441 @@
-﻿@* Views/Shared/_AdminLayout.cshtml *@
+
+@using System.Text.Json
+@using MediaPlus.Services
+
+@{
+    var _isEnglishCulture = Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US";
+    var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
+}
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="@(_isEnglishCulture ? "en" : "ar")" dir="@(_isEnglishCulture ? "ltr" : "rtl")">
+
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - My Website</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="SmartScreen - نظام إدارة الشاشات الرقمية الذكية المتطور">
+    <meta name="author" content="SmartScreen Technologies">
+    <meta name="keywords" content="شاشات ذكية, إدارة المحتوى الرقمي, الإعلان الرقمي, SmartScreen">
+    <title>@ViewData["Title"] - SmartScreen Pro</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom Styles -->
+    <style>
+        :root {
+            --primary-color: #667eea;
+            --primary-dark: #5a67d8;
+            --primary-light: #a5b4fc;
+            --secondary-color: #764ba2;
+            --accent-color: #f093fb;
+            --accent-secondary: #4facfe;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+            --info-color: #06b6d4;
+            --light-color: #f8fafc;
+            --dark-color: #1a202c;
+            --gray-color: #718096;
+            --gray-light: #e2e8f0;
+            --white-color: #ffffff;
+            --shadow-color: rgba(102, 126, 234, 0.15);
+            --gradient-primary: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            --gradient-accent: linear-gradient(135deg, var(--accent-secondary) 0%, var(--accent-color) 100%);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: @(_isEnglishCulture ? "'Inter', 'Poppins', sans-serif" : "'Cairo', sans-serif");
+            line-height: 1.6;
+            color: var(--dark-color);
+            overflow-x: hidden;
+            background: #fafbff;
+        }
+
+        /* Header Styles */
+        .navbar {
+            background: rgba(255, 255, 255, 0.95) !important;
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+            padding: 1rem 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .navbar.scrolled {
+            background: rgba(255, 255, 255, 0.98) !important;
+            box-shadow: 0 8px 40px rgba(102, 126, 234, 0.12);
+        }
+
+        .navbar-brand {
+            font-size: 2.2rem;
+            font-weight: 900;
+            background: var(--gradient-primary);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            font-weight: 600;
+            color: var(--dark-color) !important;
+            transition: all 0.3s ease;
+            position: relative;
+            padding: 0.7rem 1.2rem !important;
+            border-radius: 8px;
+            margin: 0 0.2rem;
+        }
+
+        .nav-link:hover {
+            color: var(--primary-color) !important;
+            background: rgba(102, 126, 234, 0.08);
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero-section {
+            min-height: 100vh;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="25" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="50" cy="50" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="25" cy="75" r="1" fill="rgba(255,255,255,0.05)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.05)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .hero-floating-elements {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .floating-screen {
+            position: absolute;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(10px);
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .floating-screen:nth-child(1) {
+            width: 80px;
+            height: 50px;
+            top: 20%;
+            right: 10%;
+            animation-delay: 0s;
+        }
+
+        .floating-screen:nth-child(2) {
+            width: 60px;
+            height: 40px;
+            top: 60%;
+            right: 20%;
+            animation-delay: 2s;
+        }
+
+        .floating-screen:nth-child(3) {
+            width: 100px;
+            height: 60px;
+            top: 80%;
+            left: 15%;
+            animation-delay: 4s;
+        }
+
+        @@keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(3deg); }
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-title {
+            font-size: 4.5rem;
+            font-weight: 900;
+            color: white;
+            margin-bottom: 1.5rem;
+            line-height: 1.1;
+            letter-spacing: -1px;
+        }
+
+        .hero-subtitle {
+            font-size: 1.8rem;
+            color: rgba(255, 255, 255, 0.95);
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.85);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 90%;
+        }
+
+        /* Button Styles */
+        .btn-primary-custom {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 1));
+            color: var(--primary-color);
+            border: none;
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.3);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 18px 50px rgba(255, 255, 255, 0.4);
+            background: white;
+            color: var(--primary-color);
+        }
+
+        .btn-outline-custom {
+            background: transparent;
+            color: white;
+            border: 2px solid rgba(255, 255, 255, 0.6);
+            padding: 1.2rem 3rem;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border-radius: 50px;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .btn-outline-custom:hover {
+            background: rgba(255, 255, 255, 0.15);
+            border-color: white;
+            transform: translateY(-3px);
+            color: white;
+            box-shadow: 0 12px 35px rgba(255, 255, 255, 0.2);
+        }
+
+        /* Features Section */
+        .features-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #fafbff 0%, #f1f5f9 100%);
+            position: relative;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 5rem;
+        }
+
+        .section-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            color: var(--dark-color);
+            margin-bottom: 1.5rem;
+            position: relative;
+            letter-spacing: -1px;
+        }
+
+        .section-subtitle {
+            font-size: 1.3rem;
+            color: var(--gray-color);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 3.5rem 2.5rem;
+            border-radius: 24px;
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.08);
+            transition: all 0.4s ease;
+            border: 1px solid rgba(102, 126, 234, 0.08);
+            height: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient-primary);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .feature-card:hover {
+            transform: translateY(-15px);
+            box-shadow: 0 25px 70px rgba(102, 126, 234, 0.15);
+            border-color: var(--primary-color);
+        }
+
+        .feature-icon {
+            width: 90px;
+            height: 90px;
+            background: var(--gradient-primary);
+            border-radius: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2.5rem;
+            color: white;
+            font-size: 2.2rem;
+            position: relative;
+        }
+
+        .feature-icon::after {
+            content: '';
+            position: absolute;
+            inset: -2px;
+            background: var(--gradient-primary);
+            border-radius: inherit;
+            z-index: -1;
+            opacity: 0.3;
+            filter: blur(8px);
+        }
+
+        .feature-title {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1.2rem;
+        }
+
+        .feature-description {
+            color: var(--gray-color);
+            line-height: 1.8;
+            font-size: 1.05rem;
+        }
+
+        /* SmartScreen Capabilities Section */
+        .capabilities-section {
+            padding: 120px 0;
+            background: white;
+            position: relative;
+        }
+
+        .capability-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            margin-top: 4rem;
+        }
+
+        .capability-item {
+            padding: 2.5rem;
+            border-radius: 20px;
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(102, 126, 234, 0.1);
+        }
+
+        .capability-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.12);
+        }
+
+        .capability-icon {
+            width: 70px;
+            height: 70px;
+            background: var(--gradient-accent);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .capability-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .capability-description {
+            color: var(--gray-color);
+            line-height: 1.7;
+        }
+
+        /* Stats Section */
+        .stats-section {
+            padding: 120px 0;
+            background: var(--gradient-primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .stats-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><defs><pattern id="dots" width="50" height="50" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="2" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="1000" height="1000" fill="url(%23dots)"/></svg>') repeat;
+        }
+
+        .stat-item {
+            text-align: center;
+            color: white;
+            position: relative;
+            z-index: 2;
+        }
+
+        .stat-number {
+            font-size: 4rem;
+            font-weight: 900;
+            margin-bottom: 0.5rem;
+            display: block;
+        }
+
+        .stat-label {
+            font-size: 1.3rem;
+            font-weight: 500;
+            opacity: 0.95;
+        }
+
+        /* Use Cases Section */
+        .use-cases-section {
+            padding: 120px 0;
+            background: linear-gradient(135deg, #fafbff 0%, #f1f5f9 100%);
+        }
+
+        .use-case-card {
+            background: white;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 15px 50px rgba(102, 126, 234, 0.08);
+            transition: all 0.4s ease;
+            height: 100%;
+        }
+
+        .use-case-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 70px rgba(102, 126, 234, 0.15);
+        }
+
+        .use-case-image {
+            height: 250px;
+            background: var(--gradient-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 4rem;
+            position: relative;
+        }
+
+        .use-case-content {
+            padding: 2.5rem;
+        }
+
+        .use-case-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--dark-color);
+            margin-bottom: 1rem;
+        }
+
+        .use-case-description {
+            color: var(--gray-color);
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .use-case-features {
+            list-style: none;
+            padding: 0;
+        }
+
+        .use-case-features li {
+            padding: 0.5rem 0;
+            color: var(--gray-color);
+            position: relative;
+            padding-left: 1.5rem;
+        }
+
+        .use-case-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--success-color);
+            font-weight: bold;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            padding: 120px 0;
+            background: white;
+        }
+
+        .contact-form {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+            padding: 4rem;
+            border-radius: 24px;
+            box-shadow: 0 20px 60px rgba(102, 126, 234, 0.1);
+            border: 1px solid rgba(102, 126, 234, 0.08);
+        }
+
+        .form-control {
+            border: 2px solid #e2e8f0;
+            border-radius: 12px;
+            padding: 1.2rem;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+
+        .form-control:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25);
+            outline: none;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 80px 0 40px;
+            position: relative;
+        }
+
+        .footer::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: var(--gradient-primary);
+        }
+
+        .footer-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            color: white;
+        }
+
+        .footer-link {
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            margin-bottom: 0.8rem;
+            padding: 0.3rem 0;
+        }
+
+        .footer-link:hover {
+            color: var(--primary-light);
+            transform: translateX(@(_isEnglishCulture ? "8px" : "-8px"));
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .social-link {
+            width: 45px;
+            height: 45px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .social-link:hover {
+            background: var(--gradient-primary);
+            transform: translateY(-3px);
+            color: white;
+        }
+
+        /* Responsive Design */
+        @@media (max-width: 768px) {
+            .hero-title {
+                font-size: 3rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.4rem;
+            }
+            
+            .section-title {
+                font-size: 2.5rem;
+            }
+            
+            .feature-card, .use-case-card {
+                margin-bottom: 2rem;
+            }
+
+            .stat-number {
+                font-size: 3rem;
+            }
+
+            .contact-form {
+                padding: 2.5rem;
+            }
+        }
+
+        /* RTL Styles */
+        @@if (!_isEnglishCulture) {
+            .hero-content, .section-header {
+                text-align: right;
+            }
+            
+            .feature-card, .capability-item, .use-case-content {
+                text-align: right;
+            }
+        }
+
+        /* Loading Animation */
+        .loading-shimmer {
+            background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+            background-size: 200% 100%;
+            animation: shimmer 1.5s infinite;
+        }
+
+        @@keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+
+        /* Scroll to top button */
+        .scroll-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient-primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .scroll-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .scroll-to-top:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.3);
+            color: white;
+        }
+    </style>
 </head>
+
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">My Website</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <i class="fas fa-desktop me-2"></i>SmartScreen Pro
+            </a>
+            
+            <button class="navbar-toggler border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fas fa-bars text-primary"></i>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">@(_isEnglishCulture ? "Home" : "الرئيسية")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">@(_isEnglishCulture ? "Features" : "المميزات")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#capabilities">@(_isEnglishCulture ? "Capabilities" : "الإمكانيات")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#use-cases">@(_isEnglishCulture ? "Use Cases" : "حالات الاستخدام")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">@(_isEnglishCulture ? "Contact" : "تواصل معنا")</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-primary-custom text-white px-4 ms-2" asp-controller="Account" asp-action="Login">
+                            <i class="fas fa-sign-in-alt me-2"></i>@(_isEnglishCulture ? "Admin Panel" : "لوحة الإدارة")
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-floating-elements">
+            <div class="floating-screen"></div>
+            <div class="floating-screen"></div>
+            <div class="floating-screen"></div>
+        </div>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-up">
+                    <div class="hero-content">
+                        <h1 class="hero-title">
+                            @if (_isEnglishCulture)
+                            {
+                                <text>Next-Gen Smart Screen Management Platform</text>
+                            }
+                            else
+                            {
+                                <text>منصة إدارة الشاشات الذكية من الجيل القادم</text>
+                            }
+                        </h1>
+                        <p class="hero-subtitle">
+                            @if (_isEnglishCulture)
+                            {
+                                <text>Revolutionizing Digital Display Control</text>
+                            }
+                            else
+                            {
+                                <text>ثورة في التحكم بالشاشات الرقمية</text>
+                            }
+                        </p>
+                        <p class="hero-description">
+                            @if (_isEnglishCulture)
+                            {
+                                <text>SmartScreen Pro delivers advanced digital signage management with AI-powered content optimization, real-time analytics, multi-location support, and cloud-based control for businesses of all sizes.</text>
+                            }
+                            else
+                            {
+                                <text>يوفر SmartScreen Pro إدارة متقدمة للافتات الرقمية مع تحسين المحتوى المدعوم بالذكاء الاصطناعي، وتحليلات في الوقت الفعلي، ودعم متعدد المواقع، وتحكم سحابي للشركات من جميع الأحجام.</text>
+                            }
+                        </p>
+                        <div class="d-flex gap-3 flex-wrap">
+                            <a href="#features" class="btn btn-primary-custom">
+                                <i class="fas fa-rocket me-2"></i>
+                                @(_isEnglishCulture ? "Explore Features" : "استكشف المميزات")
+                            </a>
+                            <a href="#capabilities" class="btn btn-outline-custom">
+                                <i class="fas fa-play me-2"></i>
+                                @(_isEnglishCulture ? "See Capabilities" : "شاهد الإمكانيات")
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5" data-aos="fade-left" data-aos-delay="200">
+                    <div class="text-center">
+                        <div style="font-size: 15rem; color: rgba(255,255,255,0.15); line-height: 1;">
+                            <i class="fas fa-tv"></i>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
-    </div>
-    <footer class="border-top footer text-muted">
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="features-section">
         <div class="container">
-            &copy; 2025 - My Website - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    @(_isEnglishCulture ? "Advanced SmartScreen Features" : "مميزات SmartScreen المتقدمة")
+                </h2>
+                <p class="section-subtitle">
+                    @(_isEnglishCulture ? "Comprehensive digital signage management with cutting-edge technology and user-friendly interface designed for professional display networks" : "إدارة شاملة للافتات الرقمية مع تقنية متطورة وواجهة سهلة الاستخدام مصممة لشبكات العرض الاحترافية")
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                        </div>
+                        <h3 class="feature-title">
+                            @(_isEnglishCulture ? "Cloud-Based Management" : "إدارة سحابية متطورة")
+                        </h3>
+                        <p class="feature-description">
+                            @(_isEnglishCulture ? "Centralized control of unlimited displays from anywhere in the world with enterprise-grade security and 99.9% uptime guarantee." : "تحكم مركزي في عدد لا محدود من الشاشات من أي مكان في العالم مع أمان على مستوى المؤسسات وضمان وقت تشغيل 99.9%.")
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <h3 class="feature-title">
+                            @(_isEnglishCulture ? "AI-Powered Analytics" : "تحليلات مدعومة بالذكاء الاصطناعي")
+                        </h3>
+                        <p class="feature-description">
+                            @(_isEnglishCulture ? "Advanced audience analysis, content performance tracking, and automated optimization recommendations powered by machine learning algorithms." : "تحليل متقدم للجمهور، تتبع أداء المحتوى، وتوصيات تحسين تلقائية مدعومة بخوارزميات التعلم الآلي.")
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="feature-title">
+                            @(_isEnglishCulture ? "Dynamic Content Engine" : "محرك المحتوى الديناميكي")
+                        </h3>
+                        <p class="feature-description">
+                            @(_isEnglishCulture ? "Create stunning visual content with built-in design studio, template library, and real-time content adaptation based on audience demographics." : "أنشئ محتوى بصري مذهل مع استوديو التصميم المدمج، مكتبة القوالب، وتكييف المحتوى في الوقت الفعلي بناءً على التركيبة السكانية للجمهور.")
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="feature-title">
+                            @(_isEnglishCulture ? "Multi-Location Support" : "دعم متعدد المواقع")
+                        </h3>
+                        <p class="feature-description">
+                            @(_isEnglishCulture ? "Manage screens across multiple locations, zones, and regions with hierarchical permission system and location-specific content scheduling." : "أدر الشاشات عبر مواقع ومناطق وأقاليم متعددة مع نظام صلاحيات هرمي وجدولة محتوى خاصة بكل موقع.")
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                        <h3 class="feature-title">
+                            @(_isEnglishCulture ? "Mobile Command Center" : "مركز القيادة المحمول")
+                        </h3>
+                        <p class="feature-description">
+                            @(_isEnglishCulture ? "Full-featured mobile app for iOS and Android with offline capabilities, push notifications, and emergency broadcast features." : "تطبيق محمول كامل المميزات لنظامي iOS وأندرويد مع قدرات عمل بدون اتصال، إشعارات فورية، ومميزات البث الطارئ.")
+                        </p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="feature-card">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="feature-title">
+                            @(_isEnglishCulture ? "Enterprise Security" : "أمان المؤسسات")
+                        </h3>
+                        <p class="feature-description">
+                            @(_isEnglishCulture ? "Military-grade encryption, SSO integration, role-based access control, and comprehensive audit logs for complete security compliance." : "تشفير بدرجة عسكرية، تكامل SSO، تحكم في الوصول القائم على الأدوار، وسجلات تدقيق شاملة للامتثال الأمني الكامل.")
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SmartScreen Capabilities Section -->
+    <section id="capabilities" class="capabilities-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    @(_isEnglishCulture ? "SmartScreen Capabilities" : "إمكانيات SmartScreen")
+                </h2>
+                <p class="section-subtitle">
+                    @(_isEnglishCulture ? "Discover the powerful capabilities that make SmartScreen the leading choice for digital signage management" : "اكتشف الإمكانيات القوية التي تجعل SmartScreen الخيار الأول لإدارة اللافتات الرقمية")
+                </p>
+            </div>
+            <div class="capability-grid">
+                <div class="capability-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="capability-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3 class="capability-title">
+                        @(_isEnglishCulture ? "4K Video Streaming" : "بث فيديو 4K")
+                    </h3>
+                    <p class="capability-description">
+                        @(_isEnglishCulture ? "Ultra-high definition video playback with hardware acceleration and adaptive bitrate streaming for optimal performance." : "تشغيل فيديو عالي الدقة مع تسريع الأجهزة وبث معدل البت التكيفي للأداء الأمثل.")
+                    </p>
+                </div>
+                <div class="capability-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="capability-icon">
+                        <i class="fas fa-calendar-alt"></i>
+                    </div>
+                    <h3 class="capability-title">
+                        @(_isEnglishCulture ? "Smart Scheduling" : "الجدولة الذكية")
+                    </h3>
+                    <p class="capability-description">
+                        @(_isEnglishCulture ? "Advanced content scheduling with dayparting, seasonal campaigns, and event-triggered content delivery." : "جدولة متقدمة للمحتوى مع تقسيم اليوم، الحملات الموسمية، وتسليم المحتوى المُشغل بالأحداث.")
+                    </p>
+                </div>
+                <div class="capability-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="capability-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="capability-title">
+                        @(_isEnglishCulture ? "Audience Detection" : "اكتشاف الجمهور")
+                    </h3>
+                    <p class="capability-description">
+                        @(_isEnglishCulture ? "AI-powered audience analysis including demographics, emotions, and engagement levels for targeted content delivery." : "تحليل الجمهور المدعوم بالذكاء الاصطناعي بما في ذلك التركيبة السكانية والمشاعر ومستويات المشاركة لتسليم المحتوى المستهدف.")
+                    </p>
+                </div>
+                <div class="capability-item" data-aos="fade-up" data-aos-delay="400">
+                    <div class="capability-icon">
+                        <i class="fas fa-sync-alt"></i>
+                    </div>
+                    <h3 class="capability-title">
+                        @(_isEnglishCulture ? "Synchronized Displays" : "الشاشات المتزامنة")
+                    </h3>
+                    <p class="capability-description">
+                        @(_isEnglishCulture ? "Perfect synchronization across multiple displays for video walls, coordinated campaigns, and seamless experiences." : "تزامن مثالي عبر شاشات متعددة لجدران الفيديو والحملات المنسقة والتجارب السلسة.")
+                    </p>
+                </div>
+                <div class="capability-item" data-aos="fade-up" data-aos-delay="500">
+                    <div class="capability-icon">
+                        <i class="fas fa-thermometer-half"></i>
+                    </div>
+                    <h3 class="capability-title">
+                        @(_isEnglishCulture ? "Environmental Monitoring" : "مراقبة البيئة")
+                    </h3>
+                    <p class="capability-description">
+                        @(_isEnglishCulture ? "Real-time monitoring of temperature, humidity, and ambient light with automatic display adjustments and alerts." : "مراقبة في الوقت الفعلي لدرجة الحرارة والرطوبة والضوء المحيط مع تعديلات وتنبيهات تلقائية للشاشة.")
+                    </p>
+                </div>
+                <div class="capability-item" data-aos="fade-up" data-aos-delay="600">
+                    <div class="capability-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="capability-title">
+                        @(_isEnglishCulture ? "Performance Analytics" : "تحليلات الأداء")
+                    </h3>
+                    <p class="capability-description">
+                        @(_isEnglishCulture ? "Comprehensive performance metrics, ROI tracking, and detailed reporting with customizable dashboards and alerts." : "مقاييس أداء شاملة، تتبع عائد الاستثمار، وتقارير مفصلة مع لوحات معلومات وتنبيهات قابلة للتخصيص.")
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="50000">0</div>
+                        <div class="stat-label">@(_isEnglishCulture ? "Active Displays" : "شاشة نشطة")</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="2500">0</div>
+                        <div class="stat-label">@(_isEnglishCulture ? "Enterprise Clients" : "عميل مؤسسي")</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="85">0</div>
+                        <div class="stat-label">@(_isEnglishCulture ? "Countries Served" : "دولة نخدمها")</div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-item">
+                        <div class="stat-number" data-count="99">0</div>
+                        <div class="stat-label">@(_isEnglishCulture ? "% System Uptime" : "% وقت تشغيل النظام")</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases Section -->
+    <section id="use-cases" class="use-cases-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    @(_isEnglishCulture ? "SmartScreen Use Cases" : "حالات استخدام SmartScreen")
+                </h2>
+                <p class="section-subtitle">
+                    @(_isEnglishCulture ? "Versatile solutions for every industry and application scenario" : "حلول متعددة الاستخدامات لكل صناعة وسيناريو تطبيق")
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="use-case-card">
+                        <div class="use-case-image">
+                            <i class="fas fa-shopping-cart"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3 class="use-case-title">
+                                @(_isEnglishCulture ? "Retail & Shopping Centers" : "التجزئة ومراكز التسوق")
+                            </h3>
+                            <p class="use-case-description">
+                                @(_isEnglishCulture ? "Transform your retail space with dynamic product promotion, real-time pricing updates, and targeted customer engagement." : "حوّل مساحتك التجارية مع ترويج المنتجات الديناميكي، تحديثات الأسعار في الوقت الفعلي، وتفاعل العملاء المستهدف.")
+                            </p>
+                            <ul class="use-case-features">
+                                <li>@(_isEnglishCulture ? "Dynamic pricing displays" : "شاشات الأسعار الديناميكية")</li>
+                                <li>@(_isEnglishCulture ? "Product promotion automation" : "أتمتة ترويج المنتجات")</li>
+                                <li>@(_isEnglishCulture ? "Queue management systems" : "أنظمة إدارة الطوابير")</li>
+                                <li>@(_isEnglishCulture ? "Interactive wayfinding" : "الإرشاد التفاعلي")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="use-case-card">
+                        <div class="use-case-image">
+                            <i class="fas fa-utensils"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3 class="use-case-title">
+                                @(_isEnglishCulture ? "Restaurants & Hospitality" : "المطاعم والضيافة")
+                            </h3>
+                            <p class="use-case-description">
+                                @(_isEnglishCulture ? "Enhance dining experiences with digital menu boards, promotional content, and real-time kitchen display systems." : "عزز تجارب تناول الطعام مع لوحات القوائم الرقمية، المحتوى الترويجي، وأنظمة عرض المطبخ في الوقت الفعلي.")
+                            </p>
+                            <ul class="use-case-features">
+                                <li>@(_isEnglishCulture ? "Digital menu boards" : "لوحات القوائم الرقمية")</li>
+                                <li>@(_isEnglishCulture ? "Kitchen display systems" : "أنظمة عرض المطبخ")</li>
+                                <li>@(_isEnglishCulture ? "Promotional campaigns" : "الحملات الترويجية")</li>
+                                <li>@(_isEnglishCulture ? "Table reservation displays" : "شاشات حجز الطاولات")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="use-case-card">
+                        <div class="use-case-image">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3 class="use-case-title">
+                                @(_isEnglishCulture ? "Corporate & Offices" : "الشركات والمكاتب")
+                            </h3>
+                            <p class="use-case-description">
+                                @(_isEnglishCulture ? "Improve internal communications with corporate announcements, meeting room displays, and employee engagement screens." : "حسّن الاتصالات الداخلية مع الإعلانات المؤسسية، شاشات قاعات الاجتماعات، وشاشات تفاعل الموظفين.")
+                            </p>
+                            <ul class="use-case-features">
+                                <li>@(_isEnglishCulture ? "Corporate communications" : "الاتصالات المؤسسية")</li>
+                                <li>@(_isEnglishCulture ? "Meeting room booking" : "حجز قاعات الاجتماعات")</li>
+                                <li>@(_isEnglishCulture ? "Employee announcements" : "إعلانات الموظفين")</li>
+                                <li>@(_isEnglishCulture ? "Emergency notifications" : "إشعارات الطوارئ")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="use-case-card">
+                        <div class="use-case-image">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3 class="use-case-title">
+                                @(_isEnglishCulture ? "Education & Campus" : "التعليم والحرم الجامعي")
+                            </h3>
+                            <p class="use-case-description">
+                                @(_isEnglishCulture ? "Create engaging learning environments with digital bulletin boards, event announcements, and campus navigation systems." : "أنشئ بيئات تعلم جذابة مع لوحات الإعلانات الرقمية، إعلانات الأحداث، وأنظمة التنقل في الحرم الجامعي.")
+                            </p>
+                            <ul class="use-case-features">
+                                <li>@(_isEnglishCulture ? "Digital bulletin boards" : "لوحات الإعلانات الرقمية")</li>
+                                <li>@(_isEnglishCulture ? "Event announcements" : "إعلانات الأحداث")</li>
+                                <li>@(_isEnglishCulture ? "Campus navigation" : "التنقل في الحرم الجامعي")</li>
+                                <li>@(_isEnglishCulture ? "Emergency alerts" : "تنبيهات الطوارئ")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="use-case-card">
+                        <div class="use-case-image">
+                            <i class="fas fa-hospital"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3 class="use-case-title">
+                                @(_isEnglishCulture ? "Healthcare & Medical" : "الرعاية الصحية والطبية")
+                            </h3>
+                            <p class="use-case-description">
+                                @(_isEnglishCulture ? "Streamline patient experience with waiting room information, appointment scheduling displays, and health awareness content." : "بسّط تجربة المرضى مع معلومات غرف الانتظار، شاشات جدولة المواعيد، ومحتوى التوعية الصحية.")
+                            </p>
+                            <ul class="use-case-features">
+                                <li>@(_isEnglishCulture ? "Patient information systems" : "أنظمة معلومات المرضى")</li>
+                                <li>@(_isEnglishCulture ? "Appointment displays" : "شاشات المواعيد")</li>
+                                <li>@(_isEnglishCulture ? "Health education content" : "محتوى التثقيف الصحي")</li>
+                                <li>@(_isEnglishCulture ? "Wayfinding systems" : "أنظمة الإرشاد")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="600">
+                    <div class="use-case-card">
+                        <div class="use-case-image">
+                            <i class="fas fa-plane"></i>
+                        </div>
+                        <div class="use-case-content">
+                            <h3 class="use-case-title">
+                                @(_isEnglishCulture ? "Transportation & Transit" : "النقل والمواصلات")
+                            </h3>
+                            <p class="use-case-description">
+                                @(_isEnglishCulture ? "Keep travelers informed with real-time departure information, delays, gate changes, and promotional content at airports and stations." : "حافظ على إعلام المسافرين بمعلومات المغادرة في الوقت الفعلي، التأخيرات، تغييرات البوابات، والمحتوى الترويجي في المطارات والمحطات.")
+                            </p>
+                            <ul class="use-case-features">
+                                <li>@(_isEnglishCulture ? "Flight information displays" : "شاشات معلومات الرحلات")</li>
+                                <li>@(_isEnglishCulture ? "Real-time updates" : "التحديثات في الوقت الفعلي")</li>
+                                <li>@(_isEnglishCulture ? "Digital advertising" : "الإعلان الرقمي")</li>
+                                <li>@(_isEnglishCulture ? "Navigation assistance" : "مساعدة التنقل")</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header" data-aos="fade-up">
+                <h2 class="section-title">
+                    @(_isEnglishCulture ? "Ready to Transform Your Displays?" : "مستعد لتحويل شاشاتك؟")
+                </h2>
+                <p class="section-subtitle">
+                    @(_isEnglishCulture ? "Contact our SmartScreen experts today and discover how we can revolutionize your digital signage strategy" : "تواصل مع خبراء SmartScreen اليوم واكتشف كيف يمكننا إحداث ثورة في استراتيجية اللافتات الرقمية الخاصة بك")
+                </p>
+            </div>
+            <div class="row">
+                <div class="col-lg-8 mx-auto" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-form">
+                        <form id="contactForm">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">@(_isEnglishCulture ? "Full Name" : "الاسم الكامل")</label>
+                                    <input type="text" class="form-control" placeholder="@(_isEnglishCulture ? "Enter your full name" : "أدخل اسمك الكامل")" required>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">@(_isEnglishCulture ? "Email Address" : "البريد الإلكتروني")</label>
+                                    <input type="email" class="form-control" placeholder="@(_isEnglishCulture ? "Enter your email address" : "أدخل بريدك الإلكتروني")" required>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">@(_isEnglishCulture ? "Company Name" : "اسم الشركة")</label>
+                                    <input type="text" class="form-control" placeholder="@(_isEnglishCulture ? "Enter your company name" : "أدخل اسم شركتك")">
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label class="form-label fw-bold">@(_isEnglishCulture ? "Industry" : "الصناعة")</label>
+                                    <select class="form-control">
+                                        <option>@(_isEnglishCulture ? "Select Industry" : "اختر الصناعة")</option>
+                                        <option>@(_isEnglishCulture ? "Retail" : "التجزئة")</option>
+                                        <option>@(_isEnglishCulture ? "Healthcare" : "الرعاية الصحية")</option>
+                                        <option>@(_isEnglishCulture ? "Education" : "التعليم")</option>
+                                        <option>@(_isEnglishCulture ? "Hospitality" : "الضيافة")</option>
+                                        <option>@(_isEnglishCulture ? "Transportation" : "النقل")</option>
+                                        <option>@(_isEnglishCulture ? "Corporate" : "مؤسسي")</option>
+                                        <option>@(_isEnglishCulture ? "Other" : "أخرى")</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-bold">@(_isEnglishCulture ? "Project Details" : "تفاصيل المشروع")</label>
+                                <textarea class="form-control" rows="4" placeholder="@(_isEnglishCulture ? "Tell us about your digital signage requirements, number of displays, locations, and any specific features you need..." : "أخبرنا عن متطلبات اللافتات الرقمية، عدد الشاشات، المواقع، وأي مميزات محددة تحتاجها...")" required></textarea>
+                            </div>
+                            <div class="text-center">
+                                <button type="submit" class="btn btn-primary-custom btn-lg">
+                                    <i class="fas fa-paper-plane me-2"></i>
+                                    @(_isEnglishCulture ? "Request Consultation" : "اطلب استشارة")
+                                </button>
+                                <p class="mt-3 text-muted">
+                                    @(_isEnglishCulture ? "Our team will contact you within 24 hours" : "سيتواصل معك فريقنا خلال 24 ساعة")
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="footer-title">
+                        <i class="fas fa-desktop me-2"></i>SmartScreen Pro
+                    </h3>
+                    <p class="text-muted mb-4">
+                        @(_isEnglishCulture ? "Leading the future of digital signage with intelligent display management solutions for businesses worldwide." : "نقود مستقبل اللافتات الرقمية بحلول إدارة الشاشات الذكية للشركات في جميع أنحاء العالم.")
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">@(_isEnglishCulture ? "Platform" : "المنصة")</h5>
+                    <a href="#features" class="footer-link">@(_isEnglishCulture ? "Features" : "المميزات")</a>
+                    <a href="#capabilities" class="footer-link">@(_isEnglishCulture ? "Capabilities" : "الإمكانيات")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Pricing" : "الأسعار")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "API Documentation" : "توثيق API")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Updates" : "التحديثات")</a>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">@(_isEnglishCulture ? "Solutions" : "الحلول")</h5>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Retail" : "التجزئة")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Healthcare" : "الرعاية الصحية")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Education" : "التعليم")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Corporate" : "المؤسسات")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Transportation" : "النقل")</a>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">@(_isEnglishCulture ? "Support" : "الدعم")</h5>
+                    <a href="#contact" class="footer-link">@(_isEnglishCulture ? "Contact Us" : "تواصل معنا")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Help Center" : "مركز المساعدة")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Live Chat" : "الدردشة المباشرة")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Training" : "التدريب")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "System Status" : "حالة النظام")</a>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h5 class="footer-title">@(_isEnglishCulture ? "Company" : "الشركة")</h5>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "About Us" : "حولنا")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Blog" : "المدونة")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Careers" : "الوظائف")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Partners" : "الشركاء")</a>
+                    <a href="#" class="footer-link">@(_isEnglishCulture ? "Press Kit" : "الصحافة")</a>
+                </div>
+            </div>
+            <hr class="my-4" style="border-color: rgba(255,255,255,0.1);">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="text-muted mb-0">
+                        &copy; @DateTime.Now.Year SmartScreen Pro. @(_isEnglishCulture ? "All rights reserved." : "جميع الحقوق محفوظة.")
+                    </p>
+                </div>
+                <div class="col-md-6 text-end">
+                    <div class="d-flex gap-3 justify-content-end">
+                        <a href="#" class="footer-link">@(_isEnglishCulture ? "Privacy Policy" : "سياسة الخصوصية")</a>
+                        <a href="#" class="footer-link">@(_isEnglishCulture ? "Terms of Service" : "شروط الخدمة")</a>
+                        <a href="@Url.Action("SetLanguage", "Dashboard", new { returnUrl = returnUrl })" class="footer-link">
+                            <i class="fas fa-language me-2"></i>
+                            @(_isEnglishCulture ? "العربية" : "English")
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+
+    <!-- Scroll to Top Button -->
+    <a href="#home" class="scroll-to-top" id="scrollToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100,
+            easing: 'ease-out-back'
+        });
+
+        // Navbar scroll effect
+        $(window).scroll(function() {
+            if ($(this).scrollTop() > 50) {
+                $('.navbar').addClass('scrolled');
+            } else {
+                $('.navbar').removeClass('scrolled');
+            }
+
+            // Scroll to top button
+            if ($(this).scrollTop() > 300) {
+                $('#scrollToTop').addClass('visible');
+            } else {
+                $('#scrollToTop').removeClass('visible');
+            }
+        });
+
+        // Smooth scrolling
+        $('a[href^="#"]').on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if (target.length) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top - 80
+                }, 1000, 'easeInOutQuart');
+            }
+        });
+
+        // Counter animation
+        function animateCounter() {
+            $('.stat-number').each(function() {
+                var $this = $(this);
+                var countTo = $this.attr('data-count');
+                
+                $({ countNum: $this.text() }).animate({
+                    countNum: countTo
+                }, {
+                    duration: 2500,
+                    easing: 'easeOutQuart',
+                    step: function() {
+                        $this.text(Math.floor(this.countNum).toLocaleString());
+                    },
+                    complete: function() {
+                        $this.text(parseInt(this.countNum).toLocaleString());
+                    }
+                });
+            });
+        }
+
+        // Trigger counter animation when stats section is in view
+        $(window).scroll(function() {
+            var statsSection = $('.stats-section');
+            if (statsSection.length) {
+                var statsTop = statsSection.offset().top;
+                var statsHeight = statsSection.height();
+                var windowTop = $(window).scrollTop();
+                var windowHeight = $(window).height();
+
+                if (windowTop + windowHeight > statsTop && windowTop < statsTop + statsHeight) {
+                    if (!statsSection.hasClass('animated')) {
+                        statsSection.addClass('animated');
+                        animateCounter();
+                    }
+                }
+            }
+        });
+
+        // Enhanced form submission
+        $('#contactForm').on('submit', function(e) {
+            e.preventDefault();
+            
+            // Add loading state
+            var submitBtn = $(this).find('button[type="submit"]');
+            var originalText = submitBtn.html();
+            submitBtn.html('<i class="fas fa-spinner fa-spin me-2"></i>@(_isEnglishCulture ? "Sending..." : "جاري الإرسال...")').prop('disabled', true);
+            
+            // Simulate form submission
+            setTimeout(function() {
+                submitBtn.html('<i class="fas fa-check me-2"></i>@(_isEnglishCulture ? "Message Sent!" : "تم الإرسال!")').removeClass('btn-primary-custom').addClass('btn-success');
+                
+                setTimeout(function() {
+                    submitBtn.html(originalText).prop('disabled', false).removeClass('btn-success').addClass('btn-primary-custom');
+                    $('#contactForm')[0].reset();
+                    
+                    // Show success message
+                    if (typeof Swal !== 'undefined') {
+                        Swal.fire({
+                            icon: 'success',
+                            title: '@(_isEnglishCulture ? "Thank you!" : "شكرًا لك!")',
+                            text: '@(_isEnglishCulture ? "We will contact you within 24 hours." : "سنتواصل معك خلال 24 ساعة.")',
+                            confirmButtonColor: 'var(--primary-color)'
+                        });
+                    } else {
+                        alert('@(_isEnglishCulture ? "Thank you for your message! We will get back to you soon." : "شكرًا لرسالتك! سنتواصل معك قريبًا.")');
+                    }
+                }, 2000);
+            }, 1500);
+        });
+
+        // Parallax effect for hero section
+        $(window).scroll(function() {
+            var scrolled = $(this).scrollTop();
+            var parallax = $('.hero-section');
+            var speed = scrolled * 0.5;
+            parallax.css('transform', 'translateY(' + speed + 'px)');
+        });
+
+        // Add easing function
+        $.easing.easeInOutQuart = function (x, t, b, c, d) {
+            if ((t/=d/2) < 1) return c/2*t*t*t*t + b;
+            return -c/2 * ((t-=2)*t*t*t - 2) + b;
+        };
+
+        $.easing.easeOutQuart = function (x, t, b, c, d) {
+            return -c * ((t=t/d-1)*t*t*t - 1) + b;
+        };
+
+        // Preloader
+        $(window).on('load', function() {
+            $('.preloader').fadeOut('slow');
+        });
+
+        // Mobile menu enhancement
+        $('.navbar-toggler').on('click', function() {
+            $(this).toggleClass('active');
+        });
+
+        // Add floating animation to feature cards
+        $('.feature-card, .capability-item, .use-case-card').hover(
+            function() {
+                $(this).addClass('animate__animated animate__pulse');
+            },
+            function() {
+                $(this).removeClass('animate__animated animate__pulse');
+            }
+        );
+    </script>
+
+    @RenderSection("Scripts", required: false)
 </body>
 </html>

@@ -1,4 +1,4 @@
-using System.Linq.Dynamic.Core;
+﻿using System.Linq.Dynamic.Core;
 using MediaPlus.DBModels;
 using MediaPlus.DBModels.Repository;
 using MediaPlus.Models.CustomFilters;
@@ -89,7 +89,7 @@ namespace MediaPlus.Controllers
             for(var i = 0; i < shows?.Count; i++)
             {
                 shows[i].ShowSettingId = showSetting?.ShowSettingId;
-                shows[i].ShowCode = showSetting?.ShowSettingShowcode;
+                shows[i].ShowCode = Guid.NewGuid().ToString("n").Substring(0, 8);
                 shows[i].ShowOrder = showOrder++;       
                 shows[i].ShowIsactive = 1;
                 shows[i].ShowCdate = DateTime.Now;
@@ -116,36 +116,47 @@ namespace MediaPlus.Controllers
         //======================================================================================
         // Show Toggle Part
         [HttpGet]
-       public IActionResult Toggle(int id) // ShowCode ID
-       {
+        [HttpGet]
+        public IActionResult Toggle(int id)
+        {
             var show = _ShowTb.EntitiesIQueryable().FirstOrDefault(c => c.ShowId == id);
-            
-            var currentOrder = show?.ShowOrder;
 
-            if(show.ShowIsactive == 1){
+            if (show == null)
+                return NotFound("Show not found");
+
+            var currentOrder = show.ShowOrder;
+
+            if (show.ShowIsactive == 1)
+            {
                 show.ShowIsactive = 0;
                 show.ShowUdate = DateTime.Now;
                 show.ShowOrder = 0;
                 _ShowTb.Update(show);
 
                 _ShowTb.EntitiesIQueryable()
-                        .Where(s=>s.ShowOrder > currentOrder)
-                        .ToList()
-                        .ForEach(s=>{
-                            s.ShowOrder = s.ShowOrder - 1;
-                            _ShowTb.Update(s);
-                        });
-            }else{
+                    .Where(s => s.ShowOrder > currentOrder)
+                    .ToList()
+                    .ForEach(s =>
+                    {
+                        s.ShowOrder = s.ShowOrder - 1;
+                        _ShowTb.Update(s);
+                    });
+            }
+            else
+            {
                 show.ShowIsactive = 1;
                 show.ShowUdate = DateTime.Now;
-                show.ShowOrder = _ShowTb.EntitiesIQueryable().Where(s=>s.ShowCode == show.ShowCode).Max(c=>c.ShowOrder) + 1;
+                show.ShowOrder = _ShowTb.EntitiesIQueryable()
+                                       .Where(s => s.ShowCode == show.ShowCode)
+                                       .Max(c => c.ShowOrder) + 1;
+
                 _ShowTb.Update(show);
             }
-  
-            return RedirectToAction("Index", "Show");
-       }
 
-         //======================================================================================
+            return Ok("success"); // ✅ هذا هو المطلوب
+        }
+
+        //======================================================================================
         // Show Delete Part
         [HttpGet]
         public IActionResult Delete(string showCode) // ShowCode ID
@@ -159,8 +170,18 @@ namespace MediaPlus.Controllers
             return RedirectToAction("Delete", "ShowDetail",new { showCode = showCode });   
         }
 
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public IActionResult DeleteConfirmed(int id)
+        {
+            var show = _ShowTb.EntitiesIQueryable().FirstOrDefault(s => s.ShowId == id);
+            if (show != null)
+            {
+                _ShowTb.Remove(show.ShowId);
+            }
+            return RedirectToAction("Index");
+        }
 
-       
         //======================================================================================
         private void ArrangeDropdownlistData()
         {

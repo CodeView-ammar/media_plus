@@ -1,132 +1,241 @@
-@model IEnumerable<UserPermissionViewModel>
+@using MediaPlus.Services
+@using Newtonsoft.Json
+@model IEnumerable<MaterialViewModel>
 
-    <!-- BEGIN MAIN CONTENT -->
-        <div id="main-content">
-            <div class="page-title"> <i class="icon-custom-left"></i>
-                <h3 class="text-center"><strong>@Localizer["userpermission"]</strong></h3>
-            </div>
-            <br>
-            <br>
-            <a style="float: left;" asp-action="Create" asp-controller="UserPermission" class="btn btn-primary" role="button">
-                @Localizer["addhead"]
-                <i class="fa fa-plus"></i>
-            </a>
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-                                    <div id="Print">
-                                    <table id="Datatable" class="table table-striped table-hover table-condensed">
-                                        <thead class="no-bd">
+@{
+    ViewBag.Title = @Localizer["materials"];
+
+
+
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
+
+    string[] avaiablePhotoExtension = { "image/jpg", "image/png", "image/gif", "image/jpeg", "image/bmp" };
+
+    string[] avaiableVedioExtension = { ".mov", ".wmv", ".flv", ".avi", ".webm", ".mkv", ".mp4" };
+}
+<style>
+    .main-content {
+        width: -webkit-fill-available;
+    }
+</style>
+
+<!-- BEGIN MAIN CONTENT -->
+<div id="main-content">
+    @if (currentUser.UserPermissions.Contains("material.create"))
+
+    {
+        <a style="float: left;" asp-action="Create" asp-controller="Material" class="btn btn-primary" role="button">
+            @Localizer["addbutton"]
+            <i class="fa fa-plus"></i>
+        </a>
+    }
+    <br />
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                            <div id="Print">
+                                <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                    <thead class="no-bd">
+                                        <tr>
+                                            <th><strong>@Localizer["name"]</strong></th>
+                                            <th><strong>@Localizer["customer"]</strong></th>
+                                            <th><strong>@Localizer["cdate"]</strong></th>
+                                            <th><strong>@Localizer["udate"]</strong></th>
+                                            @if (currentUser.UserPermissions.Contains("material.update"))
+
+                                            {
+                                                <th><strong>@Localizer["state"]</strong></th>
+                                            }
+                                            <th><strong>@Localizer["attachedfile"]</strong></th>
+                                            @if (currentUser.UserPermissions.Contains("material.update") || currentUser.UserPermissions.Contains("material.delete"))
+
+                                            {
+                                                <th><strong>@Localizer["actions"]</strong></th>
+                                            }
+                                        </tr>
+                                    </thead>
+                                    <tbody class="no-bd-y">
+                                        @foreach (var material in Model)
+
+                                        {
                                             <tr>
-                                                <th><strong>@Localizer["name"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["username"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["customer"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["cdate"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["udate"]</strong>                                               
-                                                </th>
-                                                <th><strong>@Localizer["state"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["actions"]</strong>
-                                                </th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="no-bd-y">
-                                                @foreach(var UserPermission in Model){
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            @if(@UserPermission.PermNameAr == "null"){
-                                                                <p>@UserPermission.PermNameEn</p>
-                                                            }else{
-                                                                 <p>@UserPermission.PermNameAr</p>
-                                                            }                                        
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @UserPermission.PermByUserName
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @UserPermission.PremCustomerName
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @UserPermission.PermCdate?.ToString("dd/MM/yyyy")
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @UserPermission.PermUdate?.ToString("dd/MM/yyyy")
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @if(@UserPermission.PermIsactive){
-                                                                    <button  onclick='ToggleOnAndOff(event,"@UserPermission.PermId")' class="btn btn-sm btn-success" controll="UserPermission" >
-                                                                        @Localizer["on"]
-                                                                        <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                <td class="text-center">
+                                                    @if (string.IsNullOrWhiteSpace(material.MatShowNameAr) || material.MatShowNameAr == "null")
 
-                                                                    </button>    
-                                                                    }else{
-                                                            
-                                                                        <button onclick='ToggleOnAndOff(event,"@UserPermission.PermId")' class="btn btn-sm btn-danger" controll="UserPermission" >
-                                                                            @Localizer["off"]
-                                                                            <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                    {
+                                                        @material.MatShowNameEn
+                                                    }
 
-                                                                        </button>
-                                                            }
-                                                        </td>
-                                                        <td class="text-center">
-                                                            <a asp-action="Edit" asp-controller="UserPermission" asp-route-id="@UserPermission.PermId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
- | 
-                                                            <button type="button" id="DeleteButton" onclick="MoveTheIdToModal(@UserPermission.PermId)" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                                                @Localizer["delete"]
+                                                    else
+
+                                                    {
+                                                        @material.MatShowNameAr
+                                                    }
+                                                </td>
+                                                <td class="text-center">@material.CustomerName</td>
+                                                <td class="text-center">@material.MatCdate?.ToString("dd/MM/yyyy")</td>
+                                                <td class="text-center">@material.MatUdate?.ToString("dd/MM/yyyy")</td>
+
+                                                @if (currentUser.UserPermissions.Contains("material.update"))
+
+                                                {
+                                                    <td class="text-center">
+                                                        @if (material.MatIsactive)
+
+                                                        {
+                                                            <button onclick='ToggleOnAndOff(event,"@material.MatId")' class="btn btn-sm btn-success" controll="Material">
+                                                                @Localizer["on"]
+                                                                <i class="bi bi-power" style="pointer-events: none;"></i>
                                                             </button>
-                                                        </td>
-                                                    </tr>
+                                                        }
+
+                                                        else
+
+                                                        {
+                                                            <button onclick='ToggleOnAndOff(event,"@material.MatId")' class="btn btn-sm btn-danger" controll="Material">
+                                                                @Localizer["off"]
+                                                                <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                            </button>
+                                                        }
+                                                    </td>
                                                 }
-                                        </tbody>
-                                    </table>
-                                    </div>
-                                </div>
+
+                                                <td class="text-center">
+                                                    @if (!string.IsNullOrEmpty(material.MatFilePath))
+
+                                                    {
+
+                                                        var parts = material.MatFilePath.Split(",");
+
+                                                        var fileName = parts[0];
+
+                                                        var fileType = parts.Length > 1 ? parts[1] : "";
+
+
+
+                                                        if (avaiablePhotoExtension.Contains(fileType))
+
+                                                        {
+                                                            <a href="/Material/Download/?Id=@(material.MatId)">
+                                                                <img src="~/upload/show_material/@(fileName)" width="75" height="75" alt="preview" />
+                                                            </a>
+                                                        }
+
+                                                        else if (material.MatFilePath.StartsWith("http"))
+
+                                                        {
+                                                            <a target="_blank" class="btn btn-dark" href="@material.MatFilePath" alt="visit hyperlink">Visit Link</a>
+                                                        }
+
+                                                        else if (material.MatFilePath.Contains("txt"))
+
+                                                        {
+                                                            <a class="btn btn-dark" href="/Material/Download/?Id=@(material.MatId)" alt="download attached file">
+                                                                <i class="bi bi-download"></i> @Localizer["discription"]
+                                                            </a>
+                                                        }
+
+                                                        else
+
+                                                        {
+                                                            <a class="btn btn-dark" href="/Material/Download/?Id=@(material.MatId)" alt="download attached file">
+                                                                <i class="bi bi-download"></i> @Localizer["video"]
+                                                            </a>
+                                                        }
+
+                                                    }
+                                                </td>
+
+                                                @if (currentUser.UserPermissions.Contains("material.update") || currentUser.UserPermissions.Contains("material.delete"))
+
+                                                {
+                                                    <td>
+                                                        <div class="btn-group" role="group">
+                                                            @if (currentUser.UserPermissions.Contains("material.update"))
+
+                                                            {
+                                                                <a asp-action="Edit" asp-controller="material" asp-route-id="@material.MatId" class="btn btn-sm btn-primary">
+                                                                    <i class="fas fa-edit"></i> @Localizer["Edit"]
+                                                                </a>
+                                                            }
+                                                            @if (currentUser.UserPermissions.Contains("material.delete"))
+
+                                                            {
+                                                                <button type="button" onclick="MoveTheIdToModal_meda(@material.MatId)" class="btn btn-sm btn-danger" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                                                    <i class="fas fa-trash"></i> @Localizer["Delete"]
+                                                                </button>
+                                                            }
+                                                        </div>
+                                                    </td>
+                                                }
+                                            </tr>
+                                        }
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
- 
-      </div>
-      <div class="modal-body text-center">
-       @Localizer["deletemodalbody"]
-      </div>
-      <div class="modal-footer">
-        <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="UserPermission" asp-route-id="">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
-            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
-        </form>
-        </div>
     </div>
-  </div>
 </div>
 
+@section model {
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
+                </div>
+                <div class="modal-body text-center">
+                    @Localizer["deletemodalbody"]
+                </div>
+                <div class="modal-footer">
+                    <form id="DeleteForm" method="post" asp-action="Delete" asp-controller="Material">
+                        <input type="hidden" name="id" id="deleteItemId" />
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+                        <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+}
 
-@section Scripts{
+@section Scripts {
     <script>
-       function MoveTheIdToModal(CustId){
-            var elem = document.getElementById("DeleteForm")
-            var elemValue = elem.getAttribute('action').split('/');
-            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
-            elem.setAttribute("action", newhref); 
+        function MoveTheIdToModal_meda(CustId) {
+            document.getElementById("deleteItemId").value = CustId;
         }
+
+        function ToggleOnAndOff(event, id) {
+            event.preventDefault();
+
+            const controller = event.currentTarget.getAttribute("controll");
+            fetch(`/${controller}/ToggleState/${id}`)
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert("ÕœÀ Œÿ√ √À‰«¡ «· »œÌ·.");
+                    }
+                });
+        }
+
+        //  ÂÌ∆… «·œ« « «»·
+        $(document).ready(function () {
+            $('#Datatable').DataTable({
+                pageLength: 5,
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Arabic.json'
+                }
+            });
+        });
     </script>
 }

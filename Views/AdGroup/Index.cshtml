@@ -4,17 +4,19 @@
 
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = @Localizer["Groups"];
     var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
 }
+<style>
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
  
     <!-- BEGIN MAIN CONTENT -->
         <div id="main-content">
-            <div class="page-title"> <i class="icon-custom-left"></i>
-                <h3 class="text-center"><strong>@Localizer["Groups"]</strong></h3>
-            </div>
-            <br>
-            <br>
+            
             @if(currentUser?.UserPermissions?.Contains("group.create") == true){
                 <a style="float: left;" asp-action="Create" asp-controller="AdGroup" class="btn btn-primary" role="button">
                     @Localizer["addnewhead"]
@@ -35,10 +37,7 @@
                                             <tr>
                                                 <th><strong>@Localizer["name"]</strong>
                                                 </th>
-                                                <th><strong>@Localizer["customer"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["username"]</strong>
-                                                </th>
+
                                                 <th><strong>@Localizer["cdate"]</strong>
                                                 </th>
                                                 <th><strong>@Localizer["udate"]</strong>
@@ -60,12 +59,6 @@
                                                     <tr>
                                                         <td class="text-center">
                                                             @AdGroup.GroupName                                        
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @AdGroup.GroupCustomerName
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @AdGroup.GroupUserName
                                                         </td>
                                                         <td class="text-center">
                                                             @AdGroup.GroupCdate.Value.ToString("dd/MM/yyyy")
@@ -98,9 +91,13 @@
                                                                 <a asp-action="Edit" asp-controller="AdGroup" asp-route-id="@AdGroup.GroupId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
                                                             }
                                                             @if(currentUser.UserPermissions.Contains("group.delete") ){
-                                                                <button type="button" id="DeleteButton" onclick="MoveTheIdToModal(@AdGroup.GroupId)" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                                                    @Localizer["delete"]
-                                                                </button>
+                                                            <button type="button"
+                                                                    class="btn btn-danger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal"
+                                                                    onclick="MoveTheIdToModal_aa(@AdGroup.GroupId)">
+                                                                @Localizer["delete"]
+                                                            </button>
                                                             }
                                                             </td>
                                                         }
@@ -118,6 +115,7 @@
         </div>
 
 
+@section model{
 
 <!-- Modal -->
 <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -131,7 +129,8 @@
        @Localizer["deletemodalbody"]
       </div>
       <div class="modal-footer">
-        <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="AdGroup" asp-route-id="">
+        <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="AdGroup" >
+                    <input type="hidden" name="id" id="deleteItemId" />
             <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
             <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
         </form>
@@ -139,15 +138,37 @@
     </div>
   </div>
 </div>
-
+}
 @section Scripts{
     <script>
-         function MoveTheIdToModal(CustId){
-            var elem = document.getElementById("DeleteForm")
-            var elemValue = elem.getAttribute('action').split('/');
-            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
-            elem.setAttribute("action", newhref); 
+        function MoveTheIdToModal_aa(CustId) {
+            document.getElementById("deleteItemId").value = CustId;
         }
+        function ToggleOnAndOff(event, id) {
+            event.preventDefault();
+
+            const controller = event.currentTarget.getAttribute("controll");
+            fetch(`/${controller}/ToggleState/${id}`)
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert("ÕœÀ Œÿ√ √À‰«¡ «· »œÌ·.");
+                    }
+                });
+        }
+
+        //  ÂÌ∆… «·œ« « «»·
+        $(document).ready(function () {
+            $('#Datatable').DataTable({
+                pageLength: 5,
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Arabic.json'
+                }
+            });
+        });
+
     </script>
 }
 

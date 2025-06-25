@@ -5,3 +5,4 @@ mediaplus_db.sql
 */bin
 Debug
 .dll
+*.dll

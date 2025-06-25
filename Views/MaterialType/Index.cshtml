@@ -76,6 +76,7 @@
         </div>
     </div>
 </div>
+@section model{
 
 <!-- Delete Confirmation Modal -->
 <div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
@@ -90,7 +91,8 @@
                 <p class="text-danger"><small>@Localizer["This action cannot be undone."]</small></p>
             </div>
             <div class="modal-footer">
-                <form id="deleteForm" method="get" asp-action="Delete" asp-controller="MaterialType" asp-route-id="">
+                <form id="deleteForm" method="post" asp-action="Delete" asp-controller="MaterialType" >
+                        <input type="hidden" name="id" id="deleteItemId" />
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">@Localizer["Cancel"]</button>
                     <button type="submit" class="btn btn-danger">@Localizer["Delete"]</button>
                 </form>
@@ -98,7 +100,7 @@
         </div>
     </div>
 </div>
-
+}
 @section Scripts {
     <script>
         $(document).ready(function() {
@@ -112,10 +114,7 @@
         });
 
         function moveIdToModal(id) {
-            const form = document.getElementById("deleteForm");
-            const formAction = form.getAttribute('action').split('/');
-            const newAction = `/${formAction[1]}/${formAction[2]}/${id}`;
-            form.setAttribute("action", newAction);
+            document.getElementById("deleteItemId").value = id;
         }
     </script>
 }

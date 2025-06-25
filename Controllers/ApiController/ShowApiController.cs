@@ -102,6 +102,8 @@ namespace MediaPlus.Controllers.ApiController
         {
             public int ShowTime { get; set; }
             public int TemplateId { get; set; }
+            public int deviceId { get; set; }
+
             public bool IsScheduled { get; set; }
             public DateTime? ScheduledFrom { get; set; }
             public DateTime? ScheduledTo { get; set; }
@@ -121,8 +123,9 @@ namespace MediaPlus.Controllers.ApiController
             {
                 return BadRequest("No shows provided in the request body.");
             }
-            var createdShows = new List<Show>();
 
+            var createdShows = new List<Show>();
+            
             var devices = await _context.AdDevices
                 .Where(d => d.DevicesCustCode == request.Shows[0].ShowCustCode.ToString())
                 .ToListAsync();
@@ -131,118 +134,117 @@ namespace MediaPlus.Controllers.ApiController
                 return BadRequest("لا توجد أجهزة متاحة.");
 
             var showCode = Guid.NewGuid().ToString("n").Substring(0, 8);
-            int showOrder = 1;
 
             using var transaction = await _context.Database.BeginTransactionAsync();
             try
             {
-                foreach (var device in devices)
+                int deviceIndex = 0;
+
+                foreach (var showDto in request.Shows)
                 {
+                    if (deviceIndex >= devices.Count)
+                        break; // لا نكرر الأجهزة أكثر من عددها
+
+                    var device = devices[deviceIndex++];
+
+                    // إنشاء إعداد العرض
                     var showSetting = new ShowSetting
                     {
                         ShowSettingGroupId = 1,
                         ShowSettingTotalView = 1,
-                        ShowSettingDeviceId = device.DevicesId,
+                        ShowSettingDeviceId = showDto.deviceId,
                         ShowSettingPresent = 1,
                         ShowSettingNext = 2,
                         ShowSettingCdate = DateTime.Now,
                         ShowSettingUdate = DateTime.Now,
                         ShowSettingShowcode = showCode,
-                        ShowSettingCustCode = request.Shows[0].ShowCustCode.ToString()
+                        ShowSettingCustCode = showDto.ShowCustCode
                     };
 
                     _context.ShowSettings.Add(showSetting);
                     await _context.SaveChangesAsync();
 
-                    foreach (var showDto in request.Shows)
+                    // إنشاء العرض نفسه
+                    var show = new Show
                     {
-                        var show = new Show
+                        ShowSettingId = showSetting.ShowSettingId,
+                        ShowCode = Guid.NewGuid().ToString("n").Substring(0, 8),
+                        ShowOrder = 1,
+                        ShowTime = showDto.ShowTime,
+                        ShowTemplateId = showDto.TemplateId,
+                        IsScheduled = showDto.IsScheduled,
+                        ScheduledFrom = showDto.ScheduledFrom,
+                        ScheduledTo = showDto.ScheduledTo,
+                        ScheduledRunNo = showDto.ScheduledRunNo,
+                        ShowCdate = DateTime.Now,
+                        ShowUdate = DateTime.Now,
+                        ShowByUserid = 1,
+                        ShowCustCode = showDto.ShowCustCode,
+                        ShowIsactive = 1,
+                    };
+
+                    _context.Shows.Add(show);
+                    await _context.SaveChangesAsync();
+
+                    createdShows.Add(show);
+
+                    // ربط الوسائط
+                    var showTemplateDetails = await _context.TemplateDetails
+                        .Where(x => x.TempTempId == show.ShowTemplateId)
+                        .ToListAsync();
+
+                    if (showDto.ShowDetails != null)
+                    {
+                        foreach (var detailDto in showDto.ShowDetails)
                         {
-                            ShowSettingId = showSetting.ShowSettingId,
-                            ShowCode = Guid.NewGuid().ToString("n").Substring(0, 8),
-                            ShowOrder = showOrder++,
-                            ShowTime = showDto.ShowTime,
-                            ShowTemplateId = showDto.TemplateId,
-                            IsScheduled = showDto.IsScheduled,
-                            ScheduledFrom = showDto.ScheduledFrom,
-                            ScheduledTo = showDto.ScheduledTo,
-                            ScheduledRunNo = showDto.ScheduledRunNo,
-                            ShowCdate = DateTime.Now,
-                            ShowUdate = DateTime.Now,
-                            ShowByUserid = 1,
-                            ShowCustCode = showDto.ShowCustCode,
-                            ShowIsactive = 1,
-                        };
+                            var templateDetail = showTemplateDetails.FirstOrDefault(); // يمكن تحسينها حسب المنطقة
 
-                        _context.Shows.Add(show);
-                        await _context.SaveChangesAsync(); // حفظ ShowId
-
-                        createdShows.Add(show);
-
-                        var showTemplateDetails = await _context.TemplateDetails
-                            .Where(x => x.TempTempId == show.ShowTemplateId)
-                            .ToListAsync();
-
-                        if (showDto.ShowDetails != null)
-                        {
-                            foreach (var detailDto in showDto.ShowDetails)
+                            if (templateDetail != null)
                             {
-                                // Find the corresponding TemplateDetail based on ShowDetailsZoneId
-                                var templateDetail = showTemplateDetails.FirstOrDefault();
-
-                                if (templateDetail != null)
+                                var detail = new ShowDetail
                                 {
-                                    var detail = new ShowDetail
-                                    {
-                                        ShowDetailsShowid = show.ShowId,
-                                        ShowDetailsShowcode = show.ShowCode,
-                                        ShowDetailsCustCode = showDto.ShowCustCode,
-                                        ShowDetailsFileId = detailDto.ShowDetailsFileId,
-                                        ShowDetailsZoneId = templateDetail.TempDetail, // Use TempDetailId from templateDetail
-                                        ShowDetailsIsactive = 1,
-                                        ShowDetailsCdate = DateTime.Now,
-                                        ShowDetailsUdate = DateTime.Now,
-                                    };
+                                    ShowDetailsShowid = show.ShowId,
+                                    ShowDetailsShowcode = show.ShowCode,
+                                    ShowDetailsCustCode = showDto.ShowCustCode,
+                                    ShowDetailsFileId = detailDto.ShowDetailsFileId,
+                                    ShowDetailsZoneId = templateDetail.TempDetail,
+                                    ShowDetailsIsactive = 1,
+                                    ShowDetailsCdate = DateTime.Now,
+                                    ShowDetailsUdate = DateTime.Now,
+                                };
 
-                                    _context.ShowDetails.Add(detail);
-                                }
-                                else
-                                {
-                                    // Handle the case where no matching TemplateDetail is found
-                                    Console.WriteLine($"Warning: No matching TemplateDetail found for ShowDetailsZoneId {detailDto.ShowDetailsZoneId}");
-                                    // You might want to log an error or skip this detail
-                                }
+                                _context.ShowDetails.Add(detail);
                             }
-
-                            await _context.SaveChangesAsync(); // Save details
                         }
 
-                        // Create and save HTML code for the current show
-                        var showHtml = new ShowHtmlcode
-                        {
-                            ShowHtmlCode1 = GetHtmlCode(show),
-                            ShowCdate = DateTime.Now,
-                            ShowUdate = DateTime.Now,
-                            ShowCustCode = _currentCustomer?.CustCode,
-                            ShowByuserId = _currentUser?.UserId,
-                            ShowIsactive = 1,
-                            ShowUserid = show.ShowByUserid,
-                            ShowSettingId = showSetting.ShowSettingId,
-                            ShowCode = showSetting.ShowSettingShowcode,
-                        };
-
-                        _context.ShowHtmlcodes.Add(showHtml);
+                        await _context.SaveChangesAsync();
                     }
+
+                    // حفظ HTML العرض
+                    var showHtml = new ShowHtmlcode
+                    {
+                        ShowHtmlCode1 = GetHtmlCode(show),
+                        ShowCdate = DateTime.Now,
+                        ShowUdate = DateTime.Now,
+                        ShowCustCode = _currentCustomer?.CustCode,
+                        ShowByuserId = _currentUser?.UserId,
+                        ShowIsactive = 1,
+                        ShowUserid = show.ShowByUserid,
+                        ShowSettingId = showSetting.ShowSettingId,
+                        ShowCode = showSetting.ShowSettingShowcode,
+                    };
+
+                    _context.ShowHtmlcodes.Add(showHtml);
                 }
 
                 await _context.SaveChangesAsync();
-                await transaction.CommitAsync(); // Commit the final save
+                await transaction.CommitAsync();
 
                 return CreatedAtAction(nameof(GetShows), new { custcode = _currentCustomer?.CustCode }, createdShows);
             }
             catch (Exception ex)
             {
-                await transaction.RollbackAsync(); // Rollback everything
+                await transaction.RollbackAsync();
                 return StatusCode(500, $"حدث خطأ أثناء إنشاء العروض: {ex.Message}");
             }
         }

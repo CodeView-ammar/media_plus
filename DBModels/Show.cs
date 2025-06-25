@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MediaPlus.DBModels;
 
@@ -13,6 +14,7 @@ public partial class Show
 
     public int? ShowTime { get; set; }
 
+    [Required(ErrorMessage = "يجب اختيار قالب العرض")]
     public int? ShowTemplateId { get; set; }
 
     public int? ShowOrder { get; set; }

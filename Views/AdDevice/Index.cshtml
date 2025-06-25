@@ -3,166 +3,218 @@
 @model IEnumerable<AdDeviceViewModel>
 
 @{
-    ViewBag.Title = "Index";
-    string[] avaiablePhotoExtension =  { "jpg", "png" , "jpeg"};
+    ViewBag.Title = @Localizer["devices"];
+
+
+
+    string[] avaiablePhotoExtension = { "jpg", "png", "jpeg" };
+
     var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
 
 }
 
-    <!-- BEGIN MAIN CONTENT -->
-        <div id="main-content">
-            <div class="page-title"> <i class="icon-custom-left"></i>
-                <h3 class="text-center"><strong>@Localizer["devices"]</strong></h3>
-            </div>
-            <br>
-            <br>
-            @if(currentUser.UserPermissions.Contains("device.create") ){
-                <a style="float: left;" asp-action="Create" asp-controller="AdDevice" class="btn btn-primary" role="button">
-                    @Localizer["addnewdevice"]
-                    <i class="fa fa-plus"></i>
-                </a>
-            }
-            <br>
-            <br>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                            <div class="row">
-                                <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
-                                    <div id="Print">
-                                        <table id="Datatable" class="table table-striped table-hover table-condensed">
-                                        <thead class="no-bd">
+<!-- BEGIN MAIN CONTENT -->
+<div id="main-content">
+    @if (currentUser.UserPermissions.Contains("device.create"))
+
+    {
+        <a style="float: left;" asp-action="Create" asp-controller="AdDevice" class="btn btn-primary" role="button">
+            @Localizer["addnewdevice"]
+            <i class="fa fa-plus"></i>
+        </a>
+    }
+    <br>
+    <br>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-md-12 col-sm-12 col-xs-12 table-responsive">
+                            <div id="Print">
+                                <table id="Datatable" class="table table-striped table-hover table-condensed">
+                                    <thead class="no-bd">
+                                        <tr>
+                                            <th>
+                                                <strong>@Localizer["name"]</strong>
+                                            </th>
+                                            <th>
+                                                <strong>@Localizer["group"]</strong>
+                                            </th>
+                                            <th>
+                                                <strong>@Localizer["cdate"]</strong>
+                                            </th>
+                                            <th>
+                                                <strong>@Localizer["udate"]</strong>
+                                            </th>
+                                            @if (currentUser.UserPermissions.Contains("device.update"))
+
+                                            {
+                                                <th>
+                                                    <strong>@Localizer["state"]</strong>
+                                                </th>
+                                            }
+                                            <th>
+                                                <strong>@Localizer["attachedfile"]</strong>
+                                            </th>
+                                            @if (currentUser.UserPermissions.Contains("device.update")
+                                            || currentUser.UserPermissions.Contains("device.delete")
+                                            )
+                                            {
+                                                <th>
+                                                    <strong>@Localizer["actions"]</strong>
+                                                </th>
+                                            }
+                                        </tr>
+                                    </thead>
+                                    <tbody class="no-bd-y">
+                                        @foreach (var Device in Model)
+
+                                        {
                                             <tr>
-                                                <th><strong>@Localizer["name"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["group"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["customer"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["user"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["cdate"]</strong>
-                                                </th>
-                                                <th><strong>@Localizer["udate"]</strong>
-                                                </th>
-                                                @if(currentUser.UserPermissions.Contains("device.update") ){
-                                                    <th><strong>@Localizer["state"]</strong>
-                                                    </th>
+                                                <td class="text-center">
+                                                    @Device.DevicesName
+                                                </td>
+                                                <td class="text-center">
+                                                    @Device.DevicesGroupname
+                                                </td>
+                                                <td class="text-center">
+                                                    @Device.DevicesCdate?.ToString("dd/MM/yyyy")
+                                                </td>
+                                                <td class="text-center">
+                                                    @Device.DevicesUdate?.ToString("dd/MM/yyyy")
+                                                </td>
+                                                @if (currentUser.UserPermissions.Contains("device.update"))
+
+                                                {
+                                                    <td class="text-center">
+                                                        @if (@Device.DevicesOnoff)
+
+                                                        {
+                                                            <button onclick='ToggleOnAndOff(event,"@Device.DevicesId")' class="btn btn-sm btn-success" controll="AdDevice">
+                                                                @Localizer["on"]
+                                                                <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                            </button>
+                                                        }
+                                                        else
+
+                                                        {
+                                                            <button onclick='ToggleOnAndOff(event,"@Device.DevicesId")' class="btn btn-sm btn-danger" controll="AdDevice">
+                                                                @Localizer["off"]
+                                                                <i class="bi bi-power" style="pointer-events: none;"></i>
+                                                            </button>
+                                                        }
+                                                    </td>
                                                 }
-                                                <th><strong>@Localizer["attachedfile"]</strong>
-                                                </th>
-                                                @if(currentUser.UserPermissions.Contains("device.update")
-                                                    || currentUser.UserPermissions.Contains("device.delete")
-                                                     ){
-                                                         <th><strong>@Localizer["actions"]</strong>
-                                                </th>   
+
+                                                <td class="text-center justify-content-center">
+                                                    @if (avaiablePhotoExtension.Contains(Device.DevicesOfflinePhoto?.Split("/")[1]))
+
+                                                    {
+                                                        <a href="/AdDevice/Download/?Id=@(Device.DevicesId)">
+                                                            <img src="~/upload/device/photo/@(Device.DevicesOfflinePhoto.Split(",")[0])" width="75" height="75" alt="preview" />
+                                                        </a>
+                                                    }
+                                                </td>
+
+                                                @if (currentUser.UserPermissions.Contains("device.update") || currentUser.UserPermissions.Contains("device.delete"))
+
+                                                {
+                                                    <td style="float:left;">
+                                                        <div class="row">
+                                                            <div class="col-md-6">
+
+                                                        @if (currentUser.UserPermissions.Contains("device.update"))
+
+                                                        {
+                                                            <a asp-action="Edit" asp-controller="AdDevice" asp-route-id="@Device.DevicesId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
+                                                        }
+                                                            </div>
+                                                            <div class="col-md-6">
+
+                                                        @if (currentUser.UserPermissions.Contains("device.delete"))
+
+                                                        {
+                                                            <button type="button"
+                                                                    class="btn btn-danger"
+                                                                    data-bs-toggle="modal"
+                                                                    data-bs-target="#exampleModal"
+                                                                    onclick="MoveTheIdToModal(@Device.DevicesId)">
+                                                                @Localizer["delete"]
+                                                            </button>
+                                                        }
+                                                            </div>
+                                                        </div>
+                                                    </td>
                                                 }
                                             </tr>
-                                        </thead>
-                                        <tbody class="no-bd-y">
-                                                @foreach(var Device in Model){
-                                                    <tr>
-                                                        <td class="text-center">
-                                                            @Device.DevicesName                     
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @Device.DevicesGroupname                     
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @Device.DevicesCustomerName
-                                                        </td>
-                                                       <td class="text-center">
-                                                            @Device.DevicesByUserName
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @Device.DevicesCdate?.ToString("dd/MM/yyyy")
-                                                        </td>
-                                                        <td class="text-center">
-                                                            @Device.DevicesUdate?.ToString("dd/MM/yyyy")
-                                                        </td>
-                                                        @if(currentUser.UserPermissions.Contains("device.update") ){
-                                                        <td class="text-center">
-                                                            @if(@Device.DevicesOnoff){
-                                                                <button onclick='ToggleOnAndOff(event,"@Device.DevicesId")' class="btn btn-sm btn-success" controll="AdDevice" >
-                                                                    @Localizer["on"]
-                                                                    <i class="bi bi-power" style="pointer-events: none;"></i>
-                                                                </button>
-                                                                }else{
-                                                                <button onclick='ToggleOnAndOff(event,"@Device.DevicesId")'  class="btn btn-sm btn-danger" controll="AdDevice" >
-                                                                    @Localizer["off"]
-                                                                    <i class="bi bi-power" style="pointer-events: none;"></i>
-                                                                </button>
-                                                            }
-                                                        </td>
-                                                        }
-
-                                                        <td class="text-center justify-content-center">
-                                                            @if (avaiablePhotoExtension.Contains(Device.DevicesOfflinePhoto?.Split("/")[1]))
-                                                            {
-                                                                <a href="/AdDevice/Download/?Id=@(Device.DevicesId)">
-                                                                    <img src="~/upload/device/photo/@(Device.DevicesOfflinePhoto.Split(",")[0])" width="75" height="75" alt="preview" />
-                                                                </a>
-                                                            }
-                                                        </td>
-                                                        
-                                                        @if( currentUser.UserPermissions.Contains("device.update") || currentUser.UserPermissions.Contains("device.delete")){
-                                                        <td style="float:left;">
-                                                            @if(currentUser.UserPermissions.Contains("device.update") ){
-                                                                <a asp-action="Edit" asp-controller="AdDevice" asp-route-id="@Device.DevicesId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
-                                                            }    
-                                                            @if(currentUser.UserPermissions.Contains("device.delete") ){
-                                                                <button type="button" id="DeleteButton" onclick="MoveTheIdToModal(@Device.DevicesId)" class="btn btn-danger" data-toggle="modal" data-target="#exampleModal">
-                                                                    @Localizer["delete"]
-                                                                </button>
-                                                            }
-                                                        </td>
-                                                        }
-                                                    </tr>
-                                                }
-                                        </tbody>
-                                    </table>
-                                    </div>
-                                </div>
+                                        }
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
-      </div>
-      <div class="modal-body text-center">
-        @Localizer["deletedevice"]
-      </div>
-      <div class="modal-footer">
-        <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="AdDevice" asp-route-id="">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
-            <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
-        </form>
-        </div>
     </div>
-  </div>
 </div>
 
 
-@section Scripts{
+@section model{
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title text-center" id="exampleModalLabel">@Localizer["confirmdelete"]</h5>
+            </div>
+            <div class="modal-body text-center">
+                @Localizer["deletedevice"]
+            </div>
+            <div class="modal-footer">
+                <form id="DeleteForm" method="get" asp-action="Delete" asp-controller="AdDevice" >
+                        <input type="hidden" name="id" id="deleteItemId" />
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
+                    <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+}
+@section Scripts {
     <script>
-         function MoveTheIdToModal(CustId){
-            var elem = document.getElementById("DeleteForm")
-            var elemValue = elem.getAttribute('action').split('/');
-            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + CustId;
-            elem.setAttribute("action", newhref); 
+        function MoveTheIdToModal(CustId) {
+            document.getElementById("deleteItemId").value = CustId;
         }
+        function ToggleOnAndOff(event, id) {
+            event.preventDefault();
+
+            const controller = event.currentTarget.getAttribute("controll");
+            fetch(`/${controller}/ToggleState/${id}`)
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert("حدث خطأ أثناء التبديل.");
+                    }
+                });
+        }
+
+        // تهيئة الداتاتابل
+        $(document).ready(function () {
+            $('#Datatable').DataTable({
+                pageLength: 10,
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Arabic.json'
+                }
+            });
+        });
+
     </script>
 }
-
 

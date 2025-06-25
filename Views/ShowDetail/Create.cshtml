@@ -2,56 +2,71 @@
 
 
 @{
+    ViewData["Title"] =@Localizer["template"];
+
+
+
     var tempDataZone = ViewData["Zones"] as Zone[,];
+
     var Index = 0;
+
     var Index2 = 0;
 }
+<style>
 
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
 <div class="container">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
-            <br>
-            <h3 class="text-center">@Localizer["customshowdetails"]  <strong>@Localizer["template"] @(ViewBag.CurrentShowIndex + 1)</strong></h3>
-		    <form role="form" asp-action="Create" method="get" asp-controller="ShowDetail" >
-                               
-                <hr class="colorgraph">
+    <div class="col-xs-12 col-sm-12  col-md-12  col-sm-offset-2 col-md-offset-3">
+        <br>
+        <h3 class="text-center">@Localizer["customshowdetails"]  <strong>@Localizer["template"] @(ViewBag.CurrentShowIndex + 1)</strong></h3>
+        <form role="form" asp-action="Create" method="get" asp-controller="ShowDetail">
+
+            <hr class="colorgraph">
 
 
-                @for(var i = 0; i < @ViewBag.NumberRow; i++){
-                    <div class="row">
-                        @for(var j = 0; j < @ViewBag.NumberColumn; j++){
-                                <div class="bordered" style="height: @tempDataZone[@i,@j].ZoneHeight%; width: @tempDataZone[@i,@j].ZoneWidth%; float:left;">
-                                    <br>
-                                    <div class="form-group text-center">
+            @for (var i = 0; i < @ViewBag.NumberRow; i++)
 
-                                        <Label><h3>@tempDataZone[@i,@j].ZoneName</h3></Label>
-                                        <div style="display: none;" class="invisible">
-                                            <input asp-for="@Model.showDetail[@Index].ShowDetailsZoneId" value="@tempDataZone[@i,@j].ZoneId"  class="d-none" type="text" />
-                                        </div>
+            {
+                <div class="row">
+                    @for (var j = 0; j < @ViewBag.NumberColumn; j++)
 
-                                        <br>
+                    {
+                        <div class="bordered" style="height: @tempDataZone[@i,@j].ZoneHeight%; width: @tempDataZone[@i,@j].ZoneWidth%; float:left;">
+                            <br>
+                            <div class="form-group text-center">
 
-                                         
-                                    <select id="materialSelect_@Index"
-                                            class="form-control border-radius mt-2"
-                                            tabindex="1"
-                                            asp-for="@Model.showDetail[Index].ShowDetailsFileId"
-                                            asp-items="@(new SelectList(ViewBag.MaterialSelectedList, "Value", "Text"))"
-                                            onchange="handleFileSelect(this, @Index)">
-                                        <option value="0" selected="selected">@Localizer["selectfile"]</option>
-                                    </select>
-                                        <span asp-validation-for="@Model.showDetail[@Index].ShowDetailsFileId" class="text-danger"></span>
-                                        
-                                        <input style="display: none;" class="invisible d-none" asp-for="@Model.showDetail[@Index].ShowDetailsShowid" value="@ViewBag.CurrentShowId" type="text" />
-
-                                    </div>
+                                <Label><h3>@tempDataZone[@i, @j].ZoneName</h3></Label>
+                                <div style="display: none;" class="invisible">
+                                    <input asp-for="@Model.showDetail[@Index].ShowDetailsZoneId" value="@tempDataZone[@i,@j].ZoneId" class="d-none" type="text" />
                                 </div>
-                            
-                            Index++;
-                        }
-                    </div>
-                }
 
-                <style>
+                                <br>
+
+
+                                <select id="materialSelect_@Index"
+                                        class="form-control border-radius mt-2"
+                                        tabindex="1"
+                                        asp-for="@Model.showDetail[Index].ShowDetailsFileId"
+                                        asp-items="@(new SelectList(ViewBag.MaterialSelectedList, "Value", "Text"))"
+                                        onchange="handleFileSelect(this, @Index)">
+                                    <option value="0" selected="selected">@Localizer["selectfile"]</option>
+                                </select>
+                                <span asp-validation-for="@Model.showDetail[@Index].ShowDetailsFileId" class="text-danger"></span>
+
+                                <input style="display: none;" class="invisible d-none" asp-for="@Model.showDetail[@Index].ShowDetailsShowid" value="@ViewBag.CurrentShowId" type="text" />
+
+                            </div>
+                        </div>
+
+                        Index++;
+                    }
+                </div>
+            }
+
+            <style>
                 .simulation-wrapper {
                     position: relative;
                     width: 100%;
@@ -103,14 +118,17 @@
                 }
             </style>
 
-            <!-- ÇáÍÇæíÉ -->
+            <!-- Ã‡Ã¡ÃÃ‡Ã¦Ã­Ã‰ -->
             <div class="simulation-wrapper">
-    
-                <!-- ÔÇÔÉ ÇáÚÑÖ ÇáÏÇÎáíÉ -->
+
+                <!-- Ã”Ã‡Ã”Ã‰ Ã‡Ã¡ÃšÃ‘Ã– Ã‡Ã¡ÃÃ‡ÃŽÃ¡Ã­Ã‰ -->
                 <div class="simulation-screen">
                     @for (var i = 0; i < ViewBag.NumberRow; i++)
+
                     {
+
                         for (var j = 0; j < ViewBag.NumberColumn; j++)
+
                         {
                             var zone = tempDataZone[i, j];
                             var top = 0;
@@ -125,24 +143,26 @@
                             </div>
 
                             Index2++;
+
                         }
+
                     }
                 </div>
 
-                <!-- ÕæÑÉ ÇáÅØÇÑ -->
+                <!-- Ã•Ã¦Ã‘Ã‰ Ã‡Ã¡Ã…Ã˜Ã‡Ã‘ -->
                 <div class="overlay-frame"></div>
             </div>
 
-			<hr class="colorgraph">
-			<div class="row">
-                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
-			</div>
-		</form>
-	</div>
+            <hr class="colorgraph">
+            <div class="row">
+                <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+            </div>
+        </form>
+    </div>
 </div>
 
 
- 
+
 <script>
     function handleFileSelect(selectElement, index) {
         const selectedValue = selectElement.value;
@@ -188,6 +208,8 @@
 </script>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 
 }

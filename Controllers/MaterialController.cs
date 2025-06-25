@@ -314,7 +314,8 @@ namespace MediaPlus.Controllers
 
         // =====================================================================
        // Toggle active Part
-       [HttpGet]
+       
+        [HttpGet]
        public IActionResult ToggleState(int Id)
        {    
             var targetElement = _MaterialTb.GetEntity(Id);

@@ -1,0 +1,55 @@
+@model PaymentTypeViewModel
+
+@{
+    ViewData["Title"] = Localizer["Edit Payment Type"];
+}
+
+<div class="card">
+    <div class="card-header">
+        <h5 class="card-title mb-0">@Localizer["Edit Payment Type"]</h5>
+    </div>
+    <div class="card-body">
+        <form asp-action="Edit" asp-controller="PaymentType" method="post">
+            <input type="hidden" asp-for="TypeId" />
+            <input type="hidden" asp-for="TypeIsActive" />
+            <input type="hidden" asp-for="TypeCreateAt" />
+            <input type="hidden" asp-for="TypeUpdateAt" />
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="TypeName" class="form-label">@Localizer["Arabic Name"]</label>
+                        <input asp-for="TypeName" class="form-control" placeholder="@Localizer["Enter Payment type name in Arabic"]" />
+                        <span asp-validation-for="TypeName" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group mb-3">
+                        <label asp-for="TypeShortName" class="form-label">@Localizer["English Name"]</label>
+                        <input asp-for="TypeShortName" class="form-control" placeholder="@Localizer["Enter Payment type name in English"]" />
+                        <span asp-validation-for="TypeShortName" class="text-danger"></span>
+                    </div>
+                </div>
+            </div>
+
+            <hr />
+            
+            <div class="row">
+                <div class="col-md-6">
+                    <a asp-action="Index" class="btn btn-secondary w-100">
+                        <i class="fas fa-arrow-left me-1"></i> @Localizer["Back to List"]
+                    </a>
+                </div>
+                <div class="col-md-6">
+                    <button type="submit" class="btn btn-success w-100">
+                        <i class="fas fa-save me-1"></i> @Localizer["Save Changes"]
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}

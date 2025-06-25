@@ -1,9 +1,10 @@
+
 @using System.Text.Json
 @using MediaPlus.Services
 
 @{
     var _isEnglishCulture = Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US";
-    UserSessionModel? currentUser = null; // Initialize to null
+    UserSessionModel? currentUser = null;
     try
     {
         var userObject = Context.Session.GetString("UserObject");
@@ -12,12 +13,9 @@
             currentUser = JsonSerializer.Deserialize<UserSessionModel>(userObject);
         }
     }
-    catch (JsonException ex)
+    catch (JsonException)
     {
-        // Log the exception details, handle the error appropriately
-        // For example:
-        // _logger.LogError(ex, "Error deserializing UserObject from session.");
-        currentUser = null; // Ensure currentUser is null in case of error
+        currentUser = null;
     }
 
     var returnUrl = string.IsNullOrEmpty(Context.Request.Path) ? "~/" : $"~{Context.Request.Path.Value}";
@@ -27,97 +25,494 @@
 <html lang="@(_isEnglishCulture ? "en" : "ar")" dir="@(_isEnglishCulture ? "ltr" : "rtl")">
 
 <head>
-    <!-- META SECTION -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="MediaPlus - Digital Media Management System">
     <meta name="author" content="Mohamed Saied">
-
     <title>@ViewData["Title"] - MediaPlus</title>
 
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
-    <!-- DataTables CSS -->
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css">
-    
-    <!-- Custom Styles -->
-    <link rel="stylesheet" href="~/css/site.css">
-    
+
+    <!-- Bootstrap CSS -->
     @if (!_isEnglishCulture)
     {
-        <!-- RTL Support for Bootstrap -->
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.rtl.min.css">
     }
+    else
+    {
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    }
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <!-- DataTables -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.7/css/dataTables.bootstrap5.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.5.0/css/responsive.bootstrap5.min.css">
+
+    <!-- Main CSS -->
+    <style>
+    :root {
+        --primary-color: #00635D;
+        --primary-dark: #004D47;
+        --secondary-color: #D6BA95;
+        --success-color: #10b981;
+        --warning-color: #f59e0b;
+        --danger-color: #ef4444;
+        --info-color: #06b6d4;
+        --light-color: #ffffff;
+        --dark-color: #1e293b;
+        --sidebar-width: 280px;
+        --header-height: 70px;
+    }
+
+    .btn-primary {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+    }
+
+    .btn-primary:hover {
+        background: linear-gradient(135deg, var(--primary-dark), #c7a577);
+        box-shadow: 0 5px 15px rgba(0, 99, 93, 0.4);
+    }
+
+    .navbar-brand,
+    .card-title,
+    .form-label {
+        color: var(--primary-color) !important;
+    }
+
+    .table thead th {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+    }
+
+    .form-control:focus, .form-select:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.2rem rgba(0, 99, 93, 0.25);
+    }
+
+    .content-header {
+        background: linear-gradient(135deg, var(--primary-color), var((--primary-color));
+    }
+
+    body {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    }
+</style>
+    <style>
+      
+        body {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding-top: var(--header-height);
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1030;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            box-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            padding: 1rem 0;
+            height: var(--header-height);
+        }
+
+        .navbar-brand {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary-color) !important;
+            text-decoration: none;
+        }
+
+        .logo-text {
+            background: linear-gradient(45deg, var(--primary-color), #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .navbar-nav .nav-link {
+            color: var(--primary-color) !important;
+            font-weight: 500;
+            padding: 0.5rem 1rem !important;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            background-color: var(--primary-color);
+            transform: translateY(-2px);
+        }
+        .navbar-nav  .nav-link.active {
+        background: linear-gradient(135deg, var(--primary-color), var(--primary-color)) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    }
+        .sidebar {
+            position: fixed;
+            top: var(--header-height);
+            left: 0;
+            height: calc(100vh - var(--header-height));
+            width: var(--sidebar-width);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-right: 1px solid rgba(0, 0, 0, 0.1);
+            overflow-y: auto;
+            transition: all 0.3s ease;
+        }
+
+        .main-content {
+            margin-left: var(--sidebar-width);
+            min-height: calc(100vh - var(--header-height));
+            padding: 2rem;
+            transition: all 0.3s ease;
+            width: fit-content;
+        }
+
+        .content-wrapper {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            overflow: hidden;
+        }
+
+        .content-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+            color: white;
+            padding: 2rem;
+            margin: -1px -1px 0 -1px;
+        }
+
+        .content-header h1 {
+            margin: 0;
+            font-size: 2rem;
+            font-weight: 600;
+        }
+
+        .breadcrumb {
+            background: transparent;
+            margin: 0;
+        }
+
+        .breadcrumb-item a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+        }
+
+        .breadcrumb-item.active {
+            color: white;
+        }
+
+        .content {
+            padding: 2rem;
+        }
+
+        .card {
+            border: none;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            overflow: hidden;
+        }
+
+        .card:hover {
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: linear-gradient(135deg, var(--light-color), var(--primary-color));
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: var(--dark-color);
+        }
+
+        .btn {
+            border-radius: 10px;
+            font-weight: 500;
+            padding: 0.75rem 1.5rem;
+            transition: all 0.3s ease;
+            border: none;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: linear-gradient(135deg, var(--primary-dark), #7c3aed);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(37, 99, 235, 0.4);
+        }
+
+        .btn-success {
+            background: linear-gradient(135deg, var(--success-color), #059669);
+        }
+
+        .btn-danger {
+            background: linear-gradient(135deg, var(--danger-color), #dc2626);
+        }
+
+        .btn-warning {
+            background: linear-gradient(135deg, var(--warning-color), #d97706);
+        }
+
+        .btn-info {
+            background: linear-gradient(135deg, var(--info-color), #0891b2);
+        }
+
+        .form-control, .form-select {
+            border-radius: 10px;
+            border: 2px solid #e2e8f0;
+            padding: 0.75rem 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+        }
+
+        .form-label {
+            font-weight: 600;
+            color: var(--dark-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .table {
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .table thead th {
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-color));
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 1rem;
+        }
+
+        .table tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        .table tbody tr:hover {
+            background-color: var(--light-color);
+            transform: scale(1.01);
+        }
+
+        .notification-dropdown {
+            border-radius: 15px;
+            border: none;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            padding: 0;
+            min-width: 300px;
+        }
+
+        .notification-item {
+            display: flex;
+            align-items: center;
+            padding: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .notification-item:hover {
+            background-color: var(--light-color);
+        }
+
+        .notification-item .icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+        }
+
+        .footer {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-top: 1px solid rgba(0, 0, 0, 0.1);
+            margin-left: var(--sidebar-width);
+        }
+
+        .fade-in {
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        @@keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .slide-in {
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @@keyframes slideIn {
+            from { transform: translateX(-100%); }
+            to { transform: translateX(0); }
+        }
+    </style>
+
+    @if (!_isEnglishCulture)
+    {
+        <style>
+            .sidebar {
+                right: 0;
+                left: auto;
+            }
+
+             .main-content {
+                 margin-left: 0;
+                 margin-right: var(--sidebar-width);
+                width: fit-content;
+             }
+
+            .footer {
+                margin-left: 0;
+                margin-right: var(--sidebar-width);
+            }
+
+            .notification-item .icon {
+                margin-left: 0;
+                margin-right: 1rem;
+            }
+
+            @@media (max-width: 991.98px) {
+                .sidebar {
+                    transform: translateX(100%);
+                }
+
+                .sidebar.show {
+                    transform: translateX(0);
+                }
+            }
+
+            .notification-dropdown {
+                width: 300px;
+                max-height: 400px;
+                overflow-y: auto;
+            }
+
+            .notification-item {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+            }
+
+                .notification-item .icon {
+                    width: 40px;
+                    height: 40px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 10px;
+                    font-size: 16px;
+                }
+
+                .notification-item .content {
+                    flex: 1;
+                }
+        </style>
+    }
+
 </head>
 
+
 <body class="d-flex flex-column min-vh-100">
-    <!-- HEADER -->
     <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
-                <!-- LOGO -->
                 <a class="navbar-brand" asp-action="Index" asp-controller="Dashboard">
                     <span class="logo-text">MediaPlus</span>
                 </a>
                 
-                <!-- MOBILE TOGGLE -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
                         aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fas fa-bars"></i>
                 </button>
                 
-                <!-- TOP NAVBAR -->
                 <div class="collapse navbar-collapse" id="mainNavbar">
                     <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
-                        <!-- LANGUAGE SWITCHER -->
-                        <li class="nav-item">
-                            <a class="nav-link" asp-controller="Dashboard" asp-action="SetLanguage"
-                               asp-route-returnUrl="@returnUrl">
-                                <i class="fas fa-language"></i>
-                                <span class="d-none d-sm-inline ms-2">@Localizer["Change Language"]</span>
-                            </a>
-                        </li>
-                        
-                        <!-- NOTIFICATIONS -->
+                    @{
+                        var currentCulture = Context.Request.Cookies[".AspNetCore.Culture"];
+                        bool isEnglish = currentCulture != null && currentCulture.Contains("en");
+                        var flagImage = isEnglish ?  "/upload/flags/us.png":"/upload/flags/sa.png" ;
+                        var langCode = isEnglish ?   "en":"ar";
+                        var returnU = Context.Request.Path + Context.Request.QueryString;
+                    }
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="langDropdown" role="button"
+                           data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="@flagImage" alt="flag" width="24" height="16" class="me-1" />
+                            @langCode
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="langDropdown">
+                            <li>
+                                <a class="dropdown-item" asp-controller="Dashboard" asp-action="SetLanguage"
+                                   asp-route-culture="en" asp-route-returnUrl="@returnU">
+                                    <img src="/upload/flags/us.png" width="24" height="16" class="me-2" />
+                                    English
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" asp-controller="Dashboard" asp-action="SetLanguage"
+                                   asp-route-culture="ar" asp-route-returnUrl="@returnU">
+                                    <img src="/upload/flags/sa.png" width="24" height="16" class="me-2" />
+                                    «·⁄—»Ì…
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="notificationsDropdown" role="button" 
+                            <a class="nav-link dropdown-toggle position-relative" href="#" id="notificationsDropdown" role="button"
                                data-bs-toggle="dropdown" aria-expanded="false">
                                 <i class="fas fa-bell"></i>
                                 <span class="badge bg-danger rounded-pill position-absolute top-0 start-100 translate-middle">3</span>
                             </a>
                             <ul class="dropdown-menu dropdown-menu-end notification-dropdown" aria-labelledby="notificationsDropdown">
-                                <li class="dropdown-header">
-                                    @Localizer["Notifications"]
-                                </li>
+                                <li class="dropdown-header fw-bold">@Localizer["Notifications"]</li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
-                                    <a class="dropdown-item" href="#">
+                                    <a class="dropdown-item p-0" href="#">
                                         <div class="notification-item">
                                             <div class="icon bg-primary text-white rounded-circle">
                                                 <i class="fas fa-user-plus"></i>
                                             </div>
                                             <div class="content">
-                                                <p class="message">@Localizer["New user registered"]</p>
-                                                <p class="time">5 @Localizer["minutes ago"]</p>
+                                                <p class="message mb-1 fw-medium">@Localizer["New user registered"]</p>
+                                                <p class="time mb-0 text-muted small">5 @Localizer["minutes ago"]</p>
                                             </div>
                                         </div>
                                     </a>
                                 </li>
                                 <li><hr class="dropdown-divider"></li>
                                 <li>
-                                    <a class="dropdown-item text-center" href="#">
+                                    <a class="dropdown-item text-center fw-medium" href="#">
                                         @Localizer["View all notifications"]
                                     </a>
                                 </li>
                             </ul>
                         </li>
                         
-                        <!-- USER PROFILE -->
                         <partial name="_UserProfilePartial" model="@currentUser" />
                     </ul>
                 </div>
@@ -125,31 +520,28 @@
         </nav>
     </header>
 
-    <!-- MAIN CONTAINER -->
-    <div class="container-fluid flex-grow-1">
-        <div class="row">
-            <!-- SIDEBAR -->
-            <aside class="sidebar collapse d-lg-block" id="mainSidebar">
+    <div class="container-fluid flex-grow-1 p-0">
+        <div class="row g-0">
+            <aside class="sidebar collapse d-lg-block slide-in" id="mainSidebar">
                 <div class="sidebar-sticky">
                     <partial name="_NavigationPartial" model="@currentUser" />
                 </div>
             </aside>
 
-            <!-- MAIN CONTENT -->
-            <main class="main-content ms-sm-auto">
-                <div class="content-wrapper">
+            <main class="main-content">
+                <div class="content-wrapper fade-in">
                     <div class="content-header">
                         <div class="container-fluid">
-                            <div class="row mb-2">
+                            <div class="row align-items-center">
                                 <div class="col-sm-6">
                                     <h1 class="m-0">@ViewData["Title"]</h1>
                                 </div>
-                                <div class="col-sm-6">
-                                    <ol class="breadcrumb float-sm-end">
-                                        <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="Index">@Localizer["Home"]</a></li>
-                                        <li class="breadcrumb-item active">@ViewData["Title"]</li>
-                                    </ol>
-                                </div>
+                                 <div class="col-sm-6">
+                                     <ol class="breadcrumb float-sm-end mb-0">
+                                         <li class="breadcrumb-item"><a asp-controller="Dashboard" asp-action="Index">@Localizer["Home"]</a></li>
+                                         <li class="breadcrumb-item active">@ViewData["Title"]</li>
+                                     </ol>
+                                 </div>
                             </div>
                         </div>
                     </div>
@@ -164,12 +556,11 @@
         </div>
     </div>
 
-    <!-- FOOTER -->
     <footer class="footer mt-auto py-3">
         <div class="container-fluid">
             <div class="row">
                 <div class="col-md-6">
-                    <span class="text-muted">&copy; @DateTime.Now.Year - MediaPlus</span>
+                    <span class="text-muted">&copy; @DateTime.Now.Year - MediaPlus. @Localizer["All rights reserved"]</span>
                 </div>
                 <div class="col-md-6 text-end">
                     <span class="text-muted">@Localizer["Version"]: 2.0</span>
@@ -178,20 +569,114 @@
         </div>
     </footer>
 
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    
-    <!-- Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Scripts -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.7/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.5.0/js/responsive.bootstrap5.min.js"></script>
+        <!--  √ﬂœ „‰  ÷„Ì‰ bootstrap.bundle.min.js ·œ⁄„ «·„Êœ«· -->
 
-    <!-- DataTables JS -->
-    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
-    <script src="https://cdn.datatables.net/1.13.4/js/dataTables.bootstrap5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 
-    <!-- Custom Scripts -->
-    <script src="~/js/site.js"></script>
-    <script src="~/js/dashboard.js"></script>
+<!-- Bootstrap JS („Â„ Ãœ« ·⁄„· «·ﬁ«∆„… «·„‰”œ·…) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Global JavaScript functionality
+        $(document).ready(function() {
+            // Initialize DataTables with responsive design
+            $('.data-table').DataTable({
+                responsive: true,
+                pageLength: 10,
+                language: {
+                //     @if (!_isEnglishCulture)
+                //     {
+                //         "url": "cdn.datatables.net/plug-ins/1.13.7/i18n/ar.json";
+                //     }
+                },
+                columnDefs: [
+                    { responsivePriority: 1, targets: 0 },
+                    { responsivePriority: 2, targets: -1 }
+                ]
+            });
 
-    @await RenderSectionAsync("Scripts", required: false)
+            // Sidebar toggle for mobile
+            $('.navbar-toggler').on('click', function() {
+                $('#mainSidebar').toggleClass('show');
+            });
+
+            // Auto-hide alerts
+            $('.alert').delay(5000).fadeOut();
+
+            // Smooth scrolling
+            $('a[href^="#"]').on('click', function(event) {
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    event.preventDefault();
+                    $('html, body').stop().animate({
+                        scrollTop: target.offset().top - 100
+                    }, 1000);
+                }
+            });
+
+            // Form validation enhancement
+            $('form').on('submit', function() {
+                $(this).find('button[type="submit"]').prop('disabled', true).html(
+                    '<i class="fas fa-spinner fa-spin me-2"></i>@Localizer["Processing..."]'
+                );
+            });
+        });
+
+        // Global notification function
+        function showNotification(message, type = 'success') {
+            const alertClass = `alert-${type}`;
+            const icon = type === 'success' ? 'check-circle' : 
+                        type === 'error' ? 'exclamation-circle' : 
+                        type === 'warning' ? 'exclamation-triangle' : 'info-circle';
+            
+            const notification = $(`
+                <div class="alert ${alertClass} alert-dismissible fade show position-fixed" 
+                     style="top: 90px; right: 20px; z-index: 1060; min-width: 300px;">
+                    <i class="fas fa-${icon} me-2"></i>
+                    ${message}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                </div>
+            `);
+            
+            $('body').append(notification);
+            setTimeout(() => notification.fadeOut(), 5000);
+        }
+
+
+    </script>
+
+        @RenderSection("Scripts", required: false)
+        @RenderSection("model", required: false)
+<script>
+      function customtoggleRoleStatus(cntrole,roleId) {
+            fetch(`/${cntrole}/ToggleState?Id=${roleId}`)
+                .then(response => {
+                    if (!response.ok) throw new Error("Network error");
+                    return response.text();
+                })
+                .then(data => {
+                    if (data === "success") {
+                        const btn = document.getElementById(`statusBtn-${roleId}`);
+                        const isActive = btn.classList.contains("btn-danger");
+
+                        btn.classList.toggle("btn-success", isActive);
+                        btn.classList.toggle("btn-danger", !isActive);
+                        btn.innerHTML = (isActive ? "@Localizer["‰‘ÿ"]" : "@Localizer["€Ì— ‰‘ÿ"]") + ` <i class="bi bi-power"></i>`;
+                    }
+                })
+                .catch(err => {
+                    alert("›‘· ›Ì  €ÌÌ— Õ«·… «· ›⁄Ì·.");
+                    console.error(err);
+                });
+        }
+
+
+</script>
 </body>
 </html>

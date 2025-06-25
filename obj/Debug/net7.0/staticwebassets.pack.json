@@ -1469,6 +1469,10 @@
       "PackagePath": "staticwebassets\\upload\\customer\\photo\\1f75137c-1225-4bad.jpeg"
     },
     {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\customer\\photo\\8cf3dcf0-d482-450c.jpeg",
+      "PackagePath": "staticwebassets\\upload\\customer\\photo\\8cf3dcf0-d482-450c.jpeg"
+    },
+    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\customer\\photo\\de9fbabd-258a-4199.PNG",
       "PackagePath": "staticwebassets\\upload\\customer\\photo\\de9fbabd-258a-4199.PNG"
     },
@@ -1481,8 +1485,16 @@
       "PackagePath": "staticwebassets\\upload\\device\\photo\\1000107564.jpg"
     },
     {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\135b9778-2236-4272-bed3-6eabeb634d28.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\135b9778-2236-4272-bed3-6eabeb634d28.jpg"
+    },
+    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\1683abfe-bd22-4ed3-a2ec-b8ed75e09b06.jpg",
       "PackagePath": "staticwebassets\\upload\\device\\photo\\1683abfe-bd22-4ed3-a2ec-b8ed75e09b06.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\1e23b0dc-0cd3-4c87-a645-bcc02eed046b.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\1e23b0dc-0cd3-4c87-a645-bcc02eed046b.jpg"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\2ca48ad4-d2cf-4e49-ab68-3433d6a56e05.jpg",
@@ -1501,6 +1513,10 @@
       "PackagePath": "staticwebassets\\upload\\device\\photo\\31e562bf-87d0-4968-b25a-76ae2ee70cb7.jpg"
     },
     {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\330d2728-8d10-48ca.png",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\330d2728-8d10-48ca.png"
+    },
+    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\378a4672-0898-493d-9433-67654b0e69dd.jpg",
       "PackagePath": "staticwebassets\\upload\\device\\photo\\378a4672-0898-493d-9433-67654b0e69dd.jpg"
     },
@@ -1511,6 +1527,10 @@
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\43000c88-c19c-48db-98e4-9a6eb9b7a6e8.jpg",
       "PackagePath": "staticwebassets\\upload\\device\\photo\\43000c88-c19c-48db-98e4-9a6eb9b7a6e8.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\433ce606-8c29-4be7-a9f0-b966ca5653b4.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\433ce606-8c29-4be7-a9f0-b966ca5653b4.jpg"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\498a4275-90e6-4b8d-8ce1-6a3f46a2fb4f.jpg",
@@ -1593,6 +1613,10 @@
       "PackagePath": "staticwebassets\\upload\\device\\photo\\bce8c09d-56a9-4834-9b2e-48488ee7abab.jpg"
     },
     {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\ca246279-72a4-42d5-bdfe-7d3f8d7442c9.jpg",
+      "PackagePath": "staticwebassets\\upload\\device\\photo\\ca246279-72a4-42d5-bdfe-7d3f8d7442c9.jpg"
+    },
+    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\d4af6db0-e631-4bc7-9f17-db1cae762531.jpg",
       "PackagePath": "staticwebassets\\upload\\device\\photo\\d4af6db0-e631-4bc7-9f17-db1cae762531.jpg"
     },
@@ -1611,6 +1635,14 @@
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\device\\photo\\fcfbb47f-ff04-4046-935d-0fd77c8713f2.jpg",
       "PackagePath": "staticwebassets\\upload\\device\\photo\\fcfbb47f-ff04-4046-935d-0fd77c8713f2.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\flags\\sa.png",
+      "PackagePath": "staticwebassets\\upload\\flags\\sa.png"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\flags\\us.png",
+      "PackagePath": "staticwebassets\\upload\\flags\\us.png"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\01b9aa3a-4b90-49b8.jpg",
@@ -1633,24 +1665,12 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\1b87c102-dfd6-4e0c.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\21920804-7e2b-4e14-be6c-de53307f6d97.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\21920804-7e2b-4e14-be6c-de53307f6d97.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\23bc373e-21a3-4d61.png",
       "PackagePath": "staticwebassets\\upload\\show_material\\23bc373e-21a3-4d61.png"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\2695414c-d0f0-409f-abb0-96a460f9c8bc.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\2695414c-d0f0-409f-abb0-96a460f9c8bc.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\32ea7c52-b1de-4fa9-b76a-6db1de94033c.jpg",
       "PackagePath": "staticwebassets\\upload\\show_material\\32ea7c52-b1de-4fa9-b76a-6db1de94033c.jpg"
-    },
-    {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\38424385-9c54-414d-a0d2-b0bcebb6581b.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\38424385-9c54-414d-a0d2-b0bcebb6581b.jpg"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4a4bf8df-3595-452f-8347-e2ecd4354f82_1000107155.jpg",
@@ -1661,16 +1681,8 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\4bf73194-d422-495b-a3ba-3f8c2ba0f83e.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4e542590-2fbe-45c0-88d9-979b09a5c869.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\4e542590-2fbe-45c0-88d9-979b09a5c869.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\4ea33c90-5e28-40b4.mp4",
       "PackagePath": "staticwebassets\\upload\\show_material\\4ea33c90-5e28-40b4.mp4"
-    },
-    {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\53d772d8-4987-4be2-8150-7168bc69dc68.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\53d772d8-4987-4be2-8150-7168bc69dc68.jpg"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\545fd0bc-9d24-4233-ad83-871b0d0b9df4_1000107155.jpg",
@@ -1689,10 +1701,6 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\6184fd3d-1187-4e5a.JPG"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\62e82891-a557-48e9-ba0c-04f9049ffccf.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\62e82891-a557-48e9-ba0c-04f9049ffccf.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\6a90f1ec-3780-4ede.JPG",
       "PackagePath": "staticwebassets\\upload\\show_material\\6a90f1ec-3780-4ede.JPG"
     },
@@ -1705,12 +1713,12 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\7eb36561-2976-4b06-8d0e-8203be34d4ec.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\82e6135e-b4d3-4de1.png",
-      "PackagePath": "staticwebassets\\upload\\show_material\\82e6135e-b4d3-4de1.png"
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\8197bd62-45f3-4cd6-988f-794b24eab29b.mp4",
+      "PackagePath": "staticwebassets\\upload\\show_material\\8197bd62-45f3-4cd6-988f-794b24eab29b.mp4"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\8e49c2b8-0884-4e59-a050-3b8361bf003e.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\8e49c2b8-0884-4e59-a050-3b8361bf003e.jpg"
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\82e6135e-b4d3-4de1.png",
+      "PackagePath": "staticwebassets\\upload\\show_material\\82e6135e-b4d3-4de1.png"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\9177ca38-5328-491d.jpeg",
@@ -1725,20 +1733,8 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\9f3a3003-6bca-45a1.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\a1d4a81e-485b-41be-bff0-a06e5fc3aaca.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\a1d4a81e-485b-41be-bff0-a06e5fc3aaca.jpg"
-    },
-    {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\a29b76c1-5c66-41f4-a718-f6e69c6af151.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\a29b76c1-5c66-41f4-a718-f6e69c6af151.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\a29e405f-a10d-498a.jpg",
       "PackagePath": "staticwebassets\\upload\\show_material\\a29e405f-a10d-498a.jpg"
-    },
-    {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\af49470f-5413-4dbf-8a7f-8a8df587ac18.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\af49470f-5413-4dbf-8a7f-8a8df587ac18.jpg"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\b7ca10aa-0194-45fe.png",
@@ -1753,20 +1749,16 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\bf51d29d-a5aa-442e-a8f8-a9dcba2fc368.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\bf9c3e50-43a5-4175.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\bf9c3e50-43a5-4175.jpg"
-    },
-    {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\c1e72985-8adf-4635-b575-133671cfa2ea.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\c1e72985-8adf-4635-b575-133671cfa2ea.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\c8d99463-016f-46b6.png",
       "PackagePath": "staticwebassets\\upload\\show_material\\c8d99463-016f-46b6.png"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\c8e2943e-ade2-46fc.jpeg",
       "PackagePath": "staticwebassets\\upload\\show_material\\c8e2943e-ade2-46fc.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\cb7a0de2-8f02-48a0-af8a-0a74ce3b5e09.jpg",
+      "PackagePath": "staticwebassets\\upload\\show_material\\cb7a0de2-8f02-48a0-af8a-0a74ce3b5e09.jpg"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\cef75e9b-c192-4417.png",
@@ -1789,12 +1781,12 @@
       "PackagePath": "staticwebassets\\upload\\show_material\\e1d1a099-3b85-47e0-9b60-f06cef73a644_1000107155.jpg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e583962a-d56d-4855-8b34-12cfd456b340.jpg",
-      "PackagePath": "staticwebassets\\upload\\show_material\\e583962a-d56d-4855-8b34-12cfd456b340.jpg"
-    },
-    {
       "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\e8d1060f-8aff-4826.jpg",
       "PackagePath": "staticwebassets\\upload\\show_material\\e8d1060f-8aff-4826.jpg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\show_material\\ef3dd9a2-c6e1-4153-8aa6-cacb4d3e06ce.mp4",
+      "PackagePath": "staticwebassets\\upload\\show_material\\ef3dd9a2-c6e1-4153-8aa6-cacb4d3e06ce.mp4"
     },
     {
       "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\44f77814-f791-4c0f.JPG",
@@ -1805,12 +1797,16 @@
       "PackagePath": "staticwebassets\\upload\\user\\photo\\69463a5a-1efa-4a5a.jpeg"
     },
     {
-      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\default_photo_user.jpg",
-      "PackagePath": "staticwebassets\\upload\\user\\photo\\default_photo_user.jpg"
+      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\8f693e24-605f-44ee.PNG",
+      "PackagePath": "staticwebassets\\upload\\user\\photo\\8f693e24-605f-44ee.PNG"
     },
     {
-      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
-      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\a9b89200-b107-4cbf.jpeg",
+      "PackagePath": "staticwebassets\\upload\\user\\photo\\a9b89200-b107-4cbf.jpeg"
+    },
+    {
+      "Id": "D:\\media_plus\\wwwroot\\upload\\user\\photo\\default_photo_user.jpg",
+      "PackagePath": "staticwebassets\\upload\\user\\photo\\default_photo_user.jpg"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.MediaPlus.Microsoft.AspNetCore.StaticWebAssets.props",

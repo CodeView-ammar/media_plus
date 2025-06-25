@@ -3,44 +3,47 @@
 @{
     ViewData["Title"] = "Add New Permission";
 }
+<style>
+    .main-content {
+        width: -webkit-fill-available;
+    }
+</style>
 
-<div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
-		    <form role="form"asp-action="Create" asp-controller="UserPermission">
-                <br>
-                <h2 class="text-center">@Localizer["addhead"]</h2>
-                <hr class="colorgraph">
-                    <div class="row">
-                        <div class="col-xs-12 col-md-6">
-                            <input asp-for="PermNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="4">
-                            <span asp-validation-for="PermNameAr" class="text-danger"></span>                        
+<div class="container py-4">
+    <div class="row justify-content-center">
+        <div class="col-md-12 col-lg-12">
+            <div class="card ">
+                <div class="card-body">
+                    <form asp-action="Create" asp-controller="UserPermission" method="post">
+                        <div class="form-group mb-3">
+                            <label asp-for="PermNameAr" class="form-label">@Localizer["namear"]</label>
+                            <input asp-for="PermNameAr" class="form-control" placeholder="@Localizer["namear"]" />
+                            <span asp-validation-for="PermNameAr" class="text-danger small"></span>
                         </div>
-                        <div class="col-xs-12 col-md-6">
-                            <input asp-for="PermNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="4">
-                            <span asp-validation-for="PermNameEn" class="text-danger"></span>     
+
+                        <div class="form-group mb-4">
+                            <label asp-for="PermNameEn" class="form-label">@Localizer["nameer"]</label>
+                            <input asp-for="PermNameEn" class="form-control" placeholder="@Localizer["nameer"]" />
+                            <span asp-validation-for="PermNameEn" class="text-danger small"></span>
                         </div>
-                    </div>
 
-
-                <hr class="colorgraph">
-
-                <div class="row">
-                    <div class="col-xs-12 col-md-6">
-                        <a asp-action="Index" asp-controller="UserPermission" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
-                    </div>
-                    <div class="col-xs-12 col-md-6">
-                        <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
-                    </div>
+                        <div class="d-flex justify-content-between">
+                            <button type="submit" class="btn btn-success">
+                                @Localizer["submit"]
+                            </button>
+                            <a asp-action="Index" asp-controller="UserPermission" class="btn btn-secondary">
+                                @Localizer["return"]
+                            </a>
+                        </div>
+                    </form>
                 </div>
-		</form>
-	</div>
+            </div>
+        </div>
     </div>
 </div>
 
-
-               
-
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

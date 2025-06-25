@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("MediaPlus")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4905b19798ee518337e9dd6a9543af80b14650ea")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+6227b75fec00a625239e9b5c00eded5d96bb6e6d")]
 [assembly: System.Reflection.AssemblyProductAttribute("MediaPlus")]
 [assembly: System.Reflection.AssemblyTitleAttribute("MediaPlus")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,6 +2,7 @@
 using MediaPlus.DBModels.Repository;
 using MediaPlus.Models.SecurityHelper;
 using MediaPlus.Models.ViewModels;
+using MediaPlus.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -18,52 +19,124 @@ namespace MediaPlus.Controllers.ApiController
     {
         private readonly MediaPlusDbContext _context;
         private readonly IConfiguration _configuration;
+        private readonly UnitOfWork _unitOfWork;
+        private readonly IHttpContextAccessor _accessor;
+        private readonly IRepository<User> _userTb;
+        private readonly IRepository<Customer> _customerTb;
+        private readonly IRepository<License> _licenseTb;
+        private readonly IRepository<UserRole> _userRoleTb;
+        private readonly IRepository<RoleWithPermission> _roleWithPermission;
+        private readonly IRepository<UserPermission> _userPermission;
 
-        public ApiLoginController(MediaPlusDbContext context, IConfiguration configuration)
+        public ApiLoginController(
+            MediaPlusDbContext context,
+            IConfiguration configuration,
+            IHttpContextAccessor accessor)
         {
             _context = context;
             _configuration = configuration;
-        }
-        public static string EncryptToMD5(string input)
-        {
-            using (var md5 = System.Security.Cryptography.MD5.Create())
-            {
-                var inputBytes = System.Text.Encoding.ASCII.GetBytes(input);
-                var hashBytes = md5.ComputeHash(inputBytes);
-                return Convert.ToHexString(hashBytes); // .NET 5+ 
-            }
+            _accessor = accessor;
+            _unitOfWork = new UnitOfWork();
+            _userTb = _unitOfWork.GetRepositoryInstance<User>();
+            _userPermission = _unitOfWork.GetRepositoryInstance<UserPermission>();
+            _userRoleTb = _unitOfWork.GetRepositoryInstance<UserRole>();
+            _roleWithPermission = _unitOfWork.GetRepositoryInstance<RoleWithPermission>();
+            _customerTb = _unitOfWork.GetRepositoryInstance<Customer>();
+            _licenseTb = _unitOfWork.GetRepositoryInstance<License>();
         }
 
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] aLoginViewModel model)
+        public async Task<IActionResult> Login([FromBody] LoginViewModel loginVM)
         {
-            if (string.IsNullOrEmpty(model.Username) || string.IsNullOrEmpty(model.Password) || string.IsNullOrEmpty(model.CustomerCode))
-                return BadRequest("البيانات غير مكتملة");
+            if (loginVM == null || !ModelState.IsValid)
+                return BadRequest("بيانات غير صالحة");
 
-            // تشفير الباسورد
-            string encryptedPassword = SecurityHelper.GetMD5(model.Password);
+            // التحقق من حساب الادمن الثابت
+            if (SecurityHelper.GetMD5(loginVM.Username) == "21232f297a57a5a743894a0e4a801fc3"
+                && SecurityHelper.GetMD5(loginVM.Password) == "21232f297a57a5a743894a0e4a801fc3")
+            {
+                var adminUser = new UserSessionModel
+                {
+                    UserId = 1,
+                    UserNameAr = "مدير النظام",
+                    UserNameEn = "Admin",
+                    UserLoginName = "Administrator",
+                    UserCustCode = "SuperAdmin",
+                    UserPermissions = new List<string>()
+                };
 
-            var user = await _context.Users
-                .FirstOrDefaultAsync(u => u.UserLoginName == model.Username && u.UserPassword == encryptedPassword);
+                var adminCustomer = new CustomerSessionModel
+                {
+                    CustCode = "SuperAdmin",
+                    CustNameAr = "المدير",
+                    CustNameEn = "Admin"
+                };
+
+                return Ok(new
+                {
+                    token = "", // يمكنك إضافة التوكن هنا
+                    User = adminUser,
+                    Customer = adminCustomer,
+                    
+                    userid = adminUser.UserId,
+                    username = adminUser.UserLoginName,
+                    device = loginVM.CompanyCode
+                });
+            }
+
+            var user = await _userTb.EntitiesIQueryable().FirstOrDefaultAsync(u =>
+                u.UserLoginName == loginVM.Username &&
+                u.UserPassword == SecurityHelper.GetMD5(loginVM.Password) &&
+                u.UserCustCode == loginVM.CompanyCode);
 
             if (user == null)
                 return Unauthorized("اسم المستخدم أو كلمة المرور غير صحيحة");
 
-            // التحقق من اسم الجهاز (كود العميل)
-            if (!string.IsNullOrEmpty(user.UserCustCode) && user.UserCustCode != model.CustomerCode)
-                return Unauthorized("كود العميل غير معتمد");
+            // التحقق من الترخيص
+            var validLicense = await _licenseTb.EntitiesIQueryable()
+                .FirstOrDefaultAsync(l => l.LicCustCode == loginVM.CompanyCode && l.LicIsactive == 1);
 
-            // إنشاء التوكن
-            var token = GenerateJwtToken(user);
+            if (validLicense == null || validLicense.LicStartAt > DateTime.Now || validLicense.LicEndAt < DateTime.Now)
+                return BadRequest("الترخيص منتهي أو غير صالح، يرجى التواصل مع الدعم");
+
+            // بناء بيانات الجلسة
+            var userSession = new UserSessionModel
+            {
+                UserId = user.UserId,
+                UserNameAr = user.UserNameAr,
+                UserNameEn = user.UserNameEn,
+                UserLoginName = user.UserLoginName,
+                UserCustCode = user.UserCustCode,
+                UserPhoto = user.UserPhoto,
+                UserRoleId = user.UserRoleId,
+                RoleName = (await _userRoleTb.EntitiesIQueryable().FirstOrDefaultAsync(r => r.RoleId == user.UserRoleId))?.RoleNameEn,
+                UserPermissions = await _userPermission.EntitiesIQueryable()
+                    .Where(p => p.PermCustCode == loginVM.CompanyCode &&
+                                _roleWithPermission.EntitiesIQueryable()
+                                    .Any(r => r.RwpRoleId == user.UserRoleId &&
+                                              r.RwpPermissionId == p.PermId &&
+                                              r.RwpCustCode == loginVM.CompanyCode))
+                    .Select(p => p.PermName)
+                    .ToListAsync()
+            };
+
+            var customer = await _customerTb.EntitiesIQueryable()
+                .Where(c => c.CustCode == loginVM.CompanyCode)
+                .Select(c => new CustomerSessionModel
+                {
+                    CustId = c.CustId,
+                    CustCode = c.CustCode,
+                    CustNameAr = c.CustNameAr,
+                    CustNameEn = c.CustNameEn
+                })
+                .FirstOrDefaultAsync();
 
             return Ok(new
             {
-                token,
-                username = user.UserLoginName,
-                device = model.CustomerCode
+                User = userSession,
+                Customer = customer
             });
         }
-
 
         private string GenerateJwtToken(User user)
         {

@@ -181,7 +181,12 @@
     <value>مستخدمون</value>
     <comment/>
   </data>
-  <data name="adduser" xml:space="preserve">
+	<data name="UserManagement" xml:space="preserve">
+    <value>إدارة المستخدمين</value>
+    <comment/>
+  </data>
+	
+	<data name="adduser" xml:space="preserve">
     <value>اضافة مستخدم</value>
     <comment/>
   </data>

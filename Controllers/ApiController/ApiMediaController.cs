@@ -99,11 +99,17 @@ namespace MediaPlus.Controllers
             return Ok(new { message = "تم الحفظ", id = showMaterial.MatId });
         }
 
-        [HttpGet("show")]
-        public async Task<IActionResult> GetMaterials()
+        [HttpGet("show/{custCode}")]
+        public async Task<IActionResult> GetMaterials(string custCode)
         {
+
+            if (string.IsNullOrEmpty(custCode))
+            {
+                return BadRequest("custCode is required");
+            }
+
             // استرجاع البيانات من قاعدة البيانات
-            var materials = await _context.ShowMaterials.ToListAsync();
+            var materials = await _context.ShowMaterials.Where(u=>u.MatCustCode==custCode).ToListAsync();
 
             if (materials == null || !materials.Any())
             {
@@ -112,5 +118,30 @@ namespace MediaPlus.Controllers
 
             return Ok(materials);
         }
+        [HttpDelete("delete/{id}")]
+        public async Task<IActionResult> DeleteMaterial(int id)
+        {
+            // البحث عن الوسائط في قاعدة البيانات
+            var showMaterial = await _context.ShowMaterials.FindAsync(id);
+
+            if (showMaterial == null)
+            {
+                return NotFound("لا توجد وسائط بهذا المعرف");
+            }
+
+            // حذف الملف من النظام
+            var filePath = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "upload/show_material", Path.GetFileName(showMaterial.MatPath));
+            if (System.IO.File.Exists(filePath))
+            {
+                System.IO.File.Delete(filePath);
+            }
+
+            // حذف السجل من قاعدة البيانات
+            _context.ShowMaterials.Remove(showMaterial);
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "تم حذف الوسائط بنجاح" });
+        }
     }
+
 }

@@ -1,30 +1,36 @@
 @model MediaPlus.Models.ViewModels.CustomerViewModel
-
+@using MediaPlus.Services
+@using Newtonsoft.Json
 @{
-    ViewData["Title"] = "Add Customer";
+    ViewBag.Title = @Localizer["addnew"];
+
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
 }
- 
+<style>
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
+
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-2 col-md-offset-3">
             <form method="post" asp-action="Create" asp-controller="Customer" enctype="multipart/form-data">
-                <br>
-                <h2 class="text-center">@Localizer["addnew"]</h2>
-                <hr class="colorgraph">
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <div class="form-group">
-                            <label asp-for="CustNameEn">@Localizer["nameer"]</label>
-                            <input asp-for="CustNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
-                            <span asp-validation-for="CustNameEn" class="text-danger"></span>
-                        </div>
-                    </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="form-group">
                             <label asp-for="CustNameAr">@Localizer["namear"]</label>
                             <input asp-for="CustNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="1">
                             <span asp-validation-for="CustNameAr" class="text-danger"></span>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <div class="form-group">
+                            <label asp-for="CustNameEn">@Localizer["nameer"]</label>
+                            <input asp-for="CustNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
+                            <span asp-validation-for="CustNameEn" class="text-danger"></span>
                         </div>
                     </div>
                 </div>
@@ -43,13 +49,13 @@
                             <span asp-validation-for="CustTrNo" class="text-danger"></span>
                         </div>
                     </div>
-                </div>
-                <div class="form-group">
-                    <label asp-for="CustEmail">@Localizer["email"]</label>
-                    <input asp-for="CustEmail" type="email" class="form-control input-lg" placeholder="@Localizer["email"]" tabindex="5">
-                    <span asp-validation-for="CustEmail" class="text-danger"></span>
-                </div>
-                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="form-group">
+                        <label asp-for="CustEmail">@Localizer["email"]</label>
+                        <input asp-for="CustEmail" type="email" class="form-control input-lg" placeholder="@Localizer["email"]" tabindex="5">
+                        <span asp-validation-for="CustEmail" class="text-danger"></span>
+                        </div>
+                    </div>
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="form-group">
                             <label asp-for="CustMobileNo">@Localizer["mobile"]</label>
@@ -64,8 +70,6 @@
                             <span asp-validation-for="CustTel" class="text-danger"></span>
                         </div>
                     </div>
-                </div>
-                <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
                         <div class="form-group">
                             <label asp-for="CustLogo">@Localizer["logo"]</label>
@@ -78,10 +82,10 @@
                 <hr class="colorgraph">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <a asp-action="Index" asp-controller="Customer" class="btn btn-primary btn-block btn-lg" tabindex="9">@Localizer["return"]</a>
+                        <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg" tabindex="10">
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg" tabindex="10">
+                        <a asp-action="Index" asp-controller="Customer" class="btn btn-primary btn-block btn-lg" tabindex="9">@Localizer["return"]</a>
                     </div>
                 </div>
             </form>

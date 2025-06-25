@@ -1,88 +1,121 @@
 @model MediaPlus.Models.ViewModels.ShowCreationViewModel
+@using MediaPlus.DBModels
+@using MediaPlus.Services
+@using Newtonsoft.Json
+
+@{
+    ViewBag.Title = @Localizer["customeshow"];
+
+
+
+
+
+
+
+    var userObject = Context.Session.GetString("UserObject");
+
+
+
+    UserSessionModel currentUser = userObject != null ? JsonConvert.DeserializeObject<UserSessionModel>(userObject) : new UserSessionModel();
+}
 
 <style>
-    .icheckbox_flat-blue, .iradio_flat-blue {
-        display: inline-block;
-        vertical-align: middle;
-        margin: 0;
-        padding: 0;
+    .button-checkbox {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 5px;
+    }
+
+    .btntime {
         width: 120px;
-        height: 20px;
-        border: 0;
+        height: 34px;
+        border: 1px solid #0d6efd;
+        background-color: #e7f1ff;
+        color: #0d6efd;
         cursor: pointer;
+        border-radius: 5px;
+        font-weight: 600;
+    }
+
+        .btntime.active {
+            background-color: #0d6efd;
+            color: white;
+        }
+
+    hr.colorgraph {
+        border-top: 2px solid #0d6efd;
+        margin: 20px 0;
+    }
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
     }
 </style>
 
 <div class="container">
-    <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+    <div class="row ">
+        <div class="col-xs-12 col-sm-12 col-md-12">
             <form role="form" asp-action="CreateConfirmation" asp-controller="Show">
-                <br>
-                <h2 class="text-center">@Localizer["customeshow"]</h2>
-                <hr class="colorgraph" />
-
+                
                 @for (var i = 0; i < ViewBag.NumberOfShows; i++)
+
                 {
-                    <div class="row">
-                        <div class="col-xs-12 col-sm-4 col-md-4">
-                            <div class="form-group">
-                                <label asp-for="@Model.show[i].ShowTemplateId">@Localizer["selecttemplate"]</label>
-                                <select class="form-control border-radius"
-                                        asp-for="@Model.show[i].ShowTemplateId"
-                                        asp-items="@(new SelectList(ViewBag.TemplateSelectedList, "Value", "Text"))">
-                                    <option value="">@Localizer["selecttemplate"]</option>
-                                </select>
-                                <span asp-validation-for="@Model.show[i].ShowTemplateId" class="text-danger"></span>
+                    <div class="card mb-4 shadow-sm">
+                        <div class="card-header bg-primary text-white">
+                            <h5 class="mb-0">@Localizer["show"] @(i + 1)</h5>
+                        </div>
+                        <div class="card-body">
+                            <div class="row g-3 align-items-center">
+                                <div class="col-md-5">
+                                    <label asp-for="@Model.show[i].ShowTemplateId" class="form-label">@Localizer["selecttemplate"]</label>
+                                    <select class="form-select"
+                                            asp-for="@Model.show[i].ShowTemplateId"
+                                            asp-items="@(new SelectList(ViewBag.TemplateSelectedList, "Value", "Text"))">
+                                        <option value="">@Localizer["selecttemplate"]</option>
+                                    </select>
+                                    <span asp-validation-for="@Model.show[i].ShowTemplateId" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-5">
+                                    <label asp-for="@Model.show[i].ShowTime" class="form-label">@Localizer["showtimesecond"]</label>
+                                    <input asp-for="@Model.show[i].ShowTime" type="number" min="0" class="form-control" placeholder="@Localizer["showtimesecond"]"  value="30" />
+                                    <span asp-validation-for="@Model.show[i].ShowTime" class="text-danger"></span>
+                                </div>
+
+                                <div class="col-md-2 text-center">
+                                    <label>@Localizer["جدولة العرض"]</label>
+                                    <div class="button-checkbox">
+                                        <button type="button" class="btntime" data-num="@(i + 1)" tabindex="7">
+                                            @Localizer["toggleSchedule"]
+                                        </button>
+                                        <input type="checkbox" class="form-check-input" id="isScheduledCheckbox@(i + 1)" style="display:none;" />
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div id="scheduleFields@(i + 1)" class="mt-3" style="display:none;">
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <label asp-for="@Model.show[i].ScheduledFrom" class="form-label">@Localizer["ScheduledFrom"]</label>
+                                        <input asp-for="@Model.show[i].ScheduledFrom" type="datetime-local" class="form-control" />
+                                        <span asp-validation-for="@Model.show[i].ScheduledFrom" class="text-danger"></span>
+                                    </div>
+
+                                    <div class="col-md-6">
+                                        <label asp-for="@Model.show[i].ScheduledTo" class="form-label">@Localizer["ScheduledTo"]</label>
+                                        <input asp-for="@Model.show[i].ScheduledTo" type="datetime-local" class="form-control" />
+                                        <span asp-validation-for="@Model.show[i].ScheduledTo" class="text-danger"></span>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-
-                        <div class="col-xs-12 col-sm-5 col-md-5">
-                            <div class="form-group">
-                                <label asp-for="@Model.show[i].ShowTime">@Localizer["showtimesecond"]</label>
-                                <input asp-for="@Model.show[i].ShowTime" type="number" class="form-control input-lg" placeholder="@Localizer["showtimesecond"]" />
-                                <span asp-validation-for="@Model.show[i].ShowTime" class="text-danger"></span>
-                            </div>
-                        </div>
-
-                        <div class="col-xs-12 col-sm-3 col-md-3 text-center">
-                            <h3>@Localizer["show"] @(i + 1)</h3>
-                        </div>
-                    </div>
-                    
-                    <div class="row">
-                        <div class="col-xs-12">
-                            <label for="isScheduledCheckbox@(i + 1)">@Localizer["جدولة العرض"]</label>
-                            <div class="button-checkbox">
-                                <button type="button" class="btn btntime" data-color="info" data-num="@(i + 1)" tabindex="7"></button>
-                                <input type="checkbox" class="form-check-input" id="isScheduledCheckbox@(i + 1)" />
-                            </div>
-                        </div>
-                    </div>
-
-                    <div id="scheduleFields@(i + 1)" style="display:none;">
-                        <div class="form-group">
-                            <label asp-for="@Model.show[i].ScheduledFrom">@Localizer["ScheduledFrom"]</label>
-                            <input asp-for="@Model.show[i].ScheduledFrom" type="datetime-local" class="form-control" />
-                            <span asp-validation-for="@Model.show[i].ScheduledFrom" class="text-danger"></span>
-                        </div>
-
-                        <div class="form-group">
-                            <label asp-for="@Model.show[i].ScheduledTo">@Localizer["ScheduledTo"]</label>
-                            <input asp-for="@Model.show[i].ScheduledTo" type="datetime-local" class="form-control" />
-                            <span asp-validation-for="@Model.show[i].ScheduledTo" class="text-danger"></span>
-                        </div>
-
-@*                         <div class="form-group">
-                            <label asp-for="@Model.show[i].ScheduledRunNo">@Localizer["ScheduledRunNo"]</label>
-                            <input asp-for="@Model.show[i].ScheduledRunNo" class="form-control" />
-                            <span asp-validation-for="@Model.show[i].ScheduledRunNo" class="text-danger"></span>
-                        </div> *@
                     </div>
                 }
 
                 <hr class="colorgraph" />
-                <div class="row">
-                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg" />
+                <div class="d-grid gap-2">
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-lg" />
                 </div>
             </form>
         </div>
@@ -90,26 +123,38 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
     <script>
-    function toggleScheduleFields(num) {
-                const checkbox = $("#isScheduledCheckbox" + num);
-                const scheduleFields = $("#scheduleFields" + num);
-
-                // Check if scheduleFields exists before trying to set its display
-                if (scheduleFields.length) {
-                    scheduleFields.css("display", checkbox.is(":checked") ? "block" : "none");
+        function toggleScheduleFields(num) {
+            const checkbox = $("#isScheduledCheckbox" + num);
+            const scheduleFields = $("#scheduleFields" + num);
+            if (scheduleFields.length) {
+                scheduleFields.toggle(checkbox.is(":checked"));
+                // Toggle active class on button
+                const btn = $(".btntime[data-num='" + num + "']");
+                if (checkbox.is(":checked")) {
+                    btn.addClass("active");
+                } else {
+                    btn.removeClass("active");
                 }
             }
+        }
 
-        document.addEventListener("DOMContentLoaded", function () {
+        $(document).ready(function () {
             $(".btntime").on("click", function () {
                 var num = $(this).data("num");
-                const checkbox = $("#isScheduledCheckbox"+num);
-                checkbox.checked = !checkbox.checked; // Toggle checkbox state
+                var checkbox = $("#isScheduledCheckbox" + num);
+                checkbox.prop("checked", !checkbox.prop("checked"));
                 toggleScheduleFields(num);
             });
-            toggleScheduleFields(); // Show fields based on previous saved value, if applicable
-        });
+
+            // Initialize schedule fields visibility based on checkbox state (for postback edit)
+        @for (var i = 1; i <= ViewBag.NumberOfShows; i++)
+        {
+            <text>toggleScheduleFields(@i);</text>
+        }
+                });
     </script>
 }

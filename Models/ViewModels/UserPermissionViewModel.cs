@@ -11,12 +11,10 @@ namespace MediaPlus.Models.ViewModels
     {
         public int PermId { get; set; }
 
-        [RegularExpression(@"^[ء-ي\s]+$", ErrorMessage = "Only Arabic characters are allowed.")]
         [Required(ErrorMessage = "Arabic Permission Name is required")]
         [DuplicationCheckPermNameAr]
         public string? PermNameAr { get; set; }
 
-        [RegularExpression(@"^[A-Za-z\s]+$", ErrorMessage = "Only English characters are allowed.")]
         [Required(ErrorMessage = "English Permission Name is required")]
         [DuplicationCheckPermNameEn]
         public string? PermNameEn { get; set; }

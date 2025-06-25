@@ -14,10 +14,12 @@ namespace MediaPlus.Models.ViewModels
 
         [RegularExpression(@"^[ء-ي\s]+$", ErrorMessage = "Only Arabic characters are allowed.")]
         [DuplicationCheckRoleNameAr]
+        [Required(ErrorMessage = "الاسم العربي مطلوب")]
         public string? RoleNameAr { get; set; }
 
         [RegularExpression(@"^[A-Za-z\s]+$", ErrorMessage = "Only English characters are allowed.")]
         [DuplicationCheckRoleNameEn]
+        [Required(ErrorMessage = "الاسم الانجليزي مطلوب")]
         public string? RoleNameEn { get; set; }
 
         public DateTime? RoleCdate { get; set; }

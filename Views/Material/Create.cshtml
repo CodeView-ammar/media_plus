@@ -1,32 +1,40 @@
 @model MediaPlus.Models.ViewModels.MaterialViewModel
 
+@{
+    ViewData["Title"] = @Localizer["newhead"];
+}
+<style>
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
 
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-2 col-md-offset-3">
 		    <form role="form"asp-action="Create" asp-controller="Material" enctype="multipart/form-data">
                 <br>
-                <h2 class="text-center">@Localizer["newhead"]</h2>
-                <hr class="colorgraph">
+
                 <div class="row">
-				<div class="col-xs-12 col-sm-6 col-md-6">
-					<div class="form-group">
-                            <label asp-for="MatShowNameEn">@Localizer["nameer"]</label>
-						<input asp-for="MatShowNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
-                        <span asp-validation-for="MatShowNameEn" class="text-danger"></span>
-					</div>
-				</div>
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="col-xs-12 col-sm-4 col-md-4">
 					<div class="form-group">
                             <label asp-for="MatShowNameAr">@Localizer["namear"]</label>
                         <input asp-for="MatShowNameAr" type="text" class="form-control input-lg" placeholder="@Localizer["namear"]" tabindex="1">
                         <span asp-validation-for="MatShowNameAr" class="text-danger"></span>
 					</div>
 				</div>
+				<div class="col-xs-12 col-sm-4 col-md-4">
+					<div class="form-group">
+                            <label asp-for="MatShowNameEn">@Localizer["nameer"]</label>
+						<input asp-for="MatShowNameEn" type="text" class="form-control input-lg" placeholder="@Localizer["nameer"]" tabindex="2">
+                        <span asp-validation-for="MatShowNameEn" class="text-danger"></span>
+					</div>
+				</div>
 			</div>
             <div class="row">
 				
-				<div class="col-xs-12 col-sm-6 col-md-6">
+				<div class="col-xs-12 col-sm-4 col-md-4">
 					<div  class="form-group">
                          <select onchange="ToggleDivs(event)" id="selectType" class="form-control border-radius" tabindex="1" asp-for="MatTypeId" asp-items="@(new SelectList(ViewBag.TypeSelectedList, "Value", "Text"))">  
                             <option value="">@Localizer["selecttype"]</option>  
@@ -51,10 +59,10 @@
 			<hr class="colorgraph">
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
-                    <a asp-action="Index" asp-controller="Material" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
                 </div>
 				<div class="col-xs-12 col-md-6">
-                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                    <a asp-action="Index" asp-controller="Material" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
                 </div>
 			</div>
 		</form>

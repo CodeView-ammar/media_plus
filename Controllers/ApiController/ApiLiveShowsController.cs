@@ -1,12 +1,6 @@
 ﻿using MediaPlus.DBModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using static System.Runtime.InteropServices.JavaScript.JSType;
-
 namespace MediaPlus.Controllers.ApiController
 {
     [Route("api/[controller]")]

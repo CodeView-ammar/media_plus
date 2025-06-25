@@ -47,11 +47,11 @@ namespace MediaPlus.Controllers
                 TempData.ClearObject("ShowDetail");
             }
             
+
             var shows = TempData.GetObject<List<Show>>("Show");
             var currentShowIndex = TempData.GetObject<int>("currentShow");
-            
 
-            if(showVm.showDetail != null){
+            if (showVm.showDetail != null){
                 //fetch data
                 var oldShowDetails = TempData.GetObject<List<ShowDetail>>("ShowDetail") ?? new List<ShowDetail>{};
                 oldShowDetails.AddRange(showVm.showDetail);

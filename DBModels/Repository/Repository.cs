@@ -120,7 +120,10 @@ namespace MediaPlus.DBModels.Repository
             _dbset.Update(entity);
             _context.SaveChanges();
         }
-
+        public IQueryable<T> GetAll()
+        {
+            return _dbset.AsQueryable();
+        }
         public void UpdateByWhereClause(Expression<Func<T, bool>> wherePredict, Action<T> forEachPredict)
         {
             var entities = _dbset.Where(wherePredict).ToList();

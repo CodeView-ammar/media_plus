@@ -92,14 +92,17 @@ namespace MediaPlus.Controllers
         [HttpPost]
         public IActionResult Create(RoleViewModel RoleVM)
         {
-            if (!ModelState.IsValid){
-                return View("Create"); 
+        
+
+            if (!ModelState.IsValid)
+            {
+                return View(RoleVM); // Ì⁄Ìœ «·‰„Ê–Ã „⁄ —”«∆· «·Œÿ√
             }
 
             var InsertedUserRole  = new UserRole()
             {
                 RoleNameAr = RoleVM.RoleNameAr,
-                RoleNameEn = RoleVM.RoleNameEn.ToLower(),
+                RoleNameEn = RoleVM.RoleNameEn,
                 RoleByuserId = _accessor.HttpContext.Session.GetObject<User>("UserObject").UserId, // Get from session
                 RoleCustCode = _accessor.HttpContext.Session.GetObject<Customer>("CustomerObject").CustCode, // Get from session
                 RoleIsactive = 1,

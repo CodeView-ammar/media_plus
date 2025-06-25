@@ -170,7 +170,7 @@ namespace MediaPlus.Controllers
 
        //======================================================================
        // MaterialType Delete Part
-       [HttpGet]
+       [HttpPost]
        public IActionResult Delete(int id)
        {
             _materialTypeTb.Remove(id);

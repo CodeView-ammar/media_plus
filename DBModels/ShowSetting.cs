@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MediaPlus.DBModels;
 
 public partial class ShowSetting
 {
+
     public int ShowSettingId { get; set; }
 
     public string? ShowSettingShowcode { get; set; }

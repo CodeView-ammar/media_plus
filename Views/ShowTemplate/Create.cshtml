@@ -1,14 +1,29 @@
 @model MediaPlus.Models.ViewModels.ShowTemplateViewModel
 
+@using MediaPlus.Services
+@using Newtonsoft.Json
 
+@{
+    ViewBag.Title = @Localizer["addnew"];
+
+
+
+
+
+
+
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
+}
+<style>
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-2 col-md-offset-3">
 		    <form role="form"asp-action="Create" asp-controller="ShowTemplate">
-                <br>
-                <h2 class="text-center">@Localizer["addnew"]
-                    </h2>
-                <hr class="colorgraph">
 
                 <div class="row">
                     <div class="col-xs-12 col-sm-6 col-md-6">
@@ -46,10 +61,10 @@
 			<hr class="colorgraph">
 			<div class="row">
 				<div class="col-xs-12 col-md-6">
-                    <a asp-action="Index" asp-controller="ShowTemplate" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
+                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
                 </div>
 				<div class="col-xs-12 col-md-6">
-                    <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
+                    <a asp-action="Index" asp-controller="ShowTemplate" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
                 </div>
 			</div>
 		</form>

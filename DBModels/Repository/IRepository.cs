@@ -12,6 +12,7 @@ namespace MediaPlus.DBModels.Repository
 
     public interface IRepository<T>
     {
+        IQueryable<T> GetAll();
         void Add(T entity);
         IEnumerable<T> GetAllEntities();
         IQueryable<T> EntitiesIQueryable();
@@ -29,5 +30,7 @@ namespace MediaPlus.DBModels.Repository
         void Update(T entity);
         void UpdateByWhereClause(Expression<Func<T, bool>> wherePredict, Action<T> forEachPredict);
         T FirstOrDefault(Expression<Func<T, bool>> predicate);
+
     }
+
 }

@@ -31,7 +31,7 @@ public partial class MediaPlusDbContext : DbContext
     public virtual DbSet<License> Licenses { get; set; }
 
     public virtual DbSet<MaterialType> MaterialTypes { get; set; }
-
+    public virtual DbSet<PaymentType> PaymentType { get; set; }
     public virtual DbSet<RoleWithPermission> RoleWithPermissions { get; set; }
 
     public virtual DbSet<Show> Shows { get; set; }
@@ -61,7 +61,10 @@ public partial class MediaPlusDbContext : DbContext
     {
         if (!optionsBuilder.IsConfigured)
         {
-            optionsBuilder.UseSqlServer("Server=CODEVIEW\\AMMAR;Database=MediaPlus_DB;Trusted_Connection=True;TrustServerCertificate=True");
+            string connString = "Data Source=codeview\\ammar;Initial Catalog=media_plu;Integrated Security=True;TrustServerCertificate=True;";
+
+            optionsBuilder.UseSqlServer(connString);
+
         }
     }
 
@@ -94,7 +97,25 @@ public partial class MediaPlusDbContext : DbContext
                 .HasColumnType("datetime")
                 .HasColumnName("Devices_udate");
         });
-
+        modelBuilder.Entity<PaymentType>()
+        .ToTable("Payment_Type")
+        .Property(p => p.TypeId).HasColumnName("type_id");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeName).HasColumnName("type_name");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeShortName).HasColumnName("type_short_name");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeIsActive).HasColumnName("type_isactive");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeCustCode).HasColumnName("type_cust_code");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeCreateAt).HasColumnName("type_create_at");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeUpdateAt).HasColumnName("type_update_at");
+        modelBuilder.Entity<PaymentType>()
+            .Property(p => p.TypeAddByUserId).HasColumnName("type_add_byuserid");
+        
+        
         modelBuilder.Entity<AdGroup>(entity =>
         {
             entity.HasKey(e => e.GroupId).HasName("PK_ad_groups");

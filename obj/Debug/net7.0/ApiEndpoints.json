@@ -429,8 +429,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "model",
-        "Type": "aLoginViewModel",
+        "Name": "loginVM",
+        "Type": "MediaPlus.Models.ViewModels.LoginViewModel",
         "IsRequired": true
       }
     ],
@@ -641,6 +641,73 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "ApiUserController",
+    "Method": "GetAllUsers",
+    "RelativePath": "api/ApiUser/all",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[MediaPlus.DBModels.User, MediaPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiUserController",
+    "Method": "GetUsersByCustCode",
+    "RelativePath": "api/ApiUser/perinfo/{userid}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "userid",
+        "Type": "System.Int32",
+        "IsRequired": false
+      },
+      {
+        "Name": "userid",
+        "Type": "",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[MediaPlus.DBModels.User, MediaPlus, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "ApiUserController",
+    "Method": "GetStatistics",
+    "RelativePath": "api/ApiUser/statistics/{custCode}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "MediaPlus.Controllers.ApiController.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
@@ -694,12 +761,66 @@
   },
   {
     "ContainingType": "MediaPlus.Controllers.MediaController",
+    "Method": "DeleteMaterial",
+    "RelativePath": "api/Media/delete/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediaPlus.Controllers.MediaController",
     "Method": "GetMaterials",
-    "RelativePath": "api/Media/show",
+    "RelativePath": "api/Media/show/{custCode}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "custCode",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediaPlus.Controllers.ApiController.ReportApiController",
+    "Method": "GetDevicesPerformanceReport",
+    "RelativePath": "api/ReportApi/devices-performance",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "MediaPlus.Controllers.ApiController.ReportApiController",
+    "Method": "GetShowsPerDevice",
+    "RelativePath": "api/ReportApi/shows-per-device",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "custCode",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
     "ReturnTypes": []
   },
   {

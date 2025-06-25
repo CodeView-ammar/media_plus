@@ -1,197 +1,262 @@
 @using MediaPlus.Services
 @model UserSessionModel
 
-<div class="user-panel d-flex align-items-center mb-3 pb-3 border-bottom">
-    <div class="image">
-        <img src="~/img/avatars/avatar2.png" class="img-circle elevation-2" alt="User Image">
+<div class="navigation-wrapper p-3">
+    <div class="user-info mb-4 p-3 rounded-3" style="background: linear-gradient(135deg, #f8fafc, #e2e8f0);">
+        @if (Model != null)
+        {
+            <div class="d-flex align-items-center">
+                <div class="avatar-circle me-3">
+                    <i class="fas fa-user-circle fa-2x text-primary"></i>
+                </div>
+                <div>
+                    <h6 class="mb-1 fw-bold text-dark">@Model.UserLoginName</h6>
+                    <small class="text-muted">@Model.RoleName</small>
+                </div>
+            </div>
+        }
     </div>
-    <div class="info">
-        <span class="username d-block">
-            @if (Model != null)
-            {
-                @(Context.Request.Cookies[".AspNetCore.Culture"] == "c=en-US|uic=en-US" 
-                    ? Model.UserNameEn 
-                    : Model.UserNameAr)
-            }
-            else
-            {
-                @Localizer["Guest"]
-            }
-        </span>
-        <span class="role">@(Model?.RoleName ?? "")</span>
-    </div>
-</div>
 
-<ul class="nav nav-pills flex-column">
-    <li class="nav-item">
-        <a asp-action="Index" asp-controller="Dashboard" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <span>@Localizer["dashboard"]</span>
-        </a>
-    </li>
+    <nav class="nav-menu">
+        <ul class="nav flex-column">
+            <!-- Dashboard -->
+            <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center p-3 rounded-3" asp-controller="Dashboard" asp-action="Index">
+                    <i class="fas fa-tachometer-alt me-3 text-primary"></i>
+                    <span class="fw-medium">@Localizer["Dashboard"]</span>
+                </a>
+            </li>
 
-    @if (Model?.UserCustCode == "SuperAdmin")
-    {
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#customersSubmenu" role="button" aria-expanded="false" aria-controls="customersSubmenu">
-                <i class="nav-icon fas fa-users"></i>
-                <span>@Localizer["customers"]</span>
-                <i class="fas fa-angle-down ms-auto"></i>
-            </a>
-            <div class="collapse" id="customersSubmenu">
-                <ul class="nav nav-pills flex-column sub-menu">
-                    <li class="nav-item">
-                        <a asp-action="Index" asp-controller="Customer" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["display"]</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#licensesSubmenu" role="button" aria-expanded="false" aria-controls="licensesSubmenu">
-                <i class="nav-icon fas fa-key"></i>
-                <span>@Localizer["licenses"]</span>
-                <i class="fas fa-angle-down ms-auto"></i>
-            </a>
-            <div class="collapse" id="licensesSubmenu">
-                <ul class="nav nav-pills flex-column sub-menu">
-                    <li class="nav-item">
-                        <a asp-action="Index" asp-controller="License" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["display"]</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    }
-
-    @if (Model?.UserCustCode == "SuperAdmin" || Model?.RoleName == "administrator")
-    {
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#usersSubmenu" role="button" aria-expanded="false" aria-controls="usersSubmenu">
-                <i class="nav-icon fas fa-user-cog"></i>
-                <span>@Localizer["users"]</span>
-                <i class="fas fa-angle-down ms-auto"></i>
-            </a>
-            <div class="collapse" id="usersSubmenu">
-                <ul class="nav nav-pills flex-column sub-menu">
-                    <li class="nav-item">
-                        <a asp-action="Index" asp-controller="User" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["users"]</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-action="Index" asp-controller="UserRole" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["roles"]</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-action="RolesPermission" asp-controller="UserRole" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["Adjust Roles Permission"]</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    }
-
-    @if (Model?.UserPermissions.Contains("material.read") == true)
-    {
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#materialsSubmenu" role="button" aria-expanded="false" aria-controls="materialsSubmenu">
-                <i class="nav-icon fas fa-box"></i>
-                <span>@Localizer["materials"]</span>
-                <i class="fas fa-angle-down ms-auto"></i>
-            </a>
-            <div class="collapse" id="materialsSubmenu">
-                <ul class="nav nav-pills flex-column sub-menu">
-                    <li class="nav-item">
-                        <a asp-action="Index" asp-controller="Material" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["materials"]</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a asp-action="Index" asp-controller="MaterialType" class="nav-link">
-                            <i class="nav-icon fas fa-circle"></i>
-                            <span>@Localizer["material types"]</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    }
-
-    @if (Model?.UserPermissions.Contains("group.read") == true || Model?.UserPermissions.Contains("device.read") == true)
-    {
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#devicesGroupsSubmenu" role="button" aria-expanded="false" aria-controls="devicesGroupsSubmenu">
-                <i class="nav-icon fas fa-desktop"></i>
-                <span>@Localizer["Devices&Groups"]</span>
-                <i class="fas fa-angle-down ms-auto"></i>
-            </a>
-            <div class="collapse" id="devicesGroupsSubmenu">
-                <ul class="nav nav-pills flex-column sub-menu">
-                    @if (Model?.UserPermissions.Contains("device.read") == true)
-                    {
+            <!-- Users Management -->
+            <li class="nav-item mb-2">
+                <div class="nav-section">
+                    <h6 class="nav-section-title text-muted fw-bold mb-3 px-3">
+                        <i class="fas fa-users me-2"></i>
+                        @Localizer["User Management"]
+                    </h6>
+                    <ul class="nav flex-column collapse">
                         <li class="nav-item">
-                            <a asp-action="Index" asp-controller="AdDevice" class="nav-link">
-                                <i class="nav-icon fas fa-circle"></i>
-                                <span>@Localizer["Devices"]</span>
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="User" asp-action="Index">
+                                <i class="fas fa-user me-3 text-info"></i>
+                                <span>@Localizer["Users"]</span>
                             </a>
                         </li>
-                    }
-                    @if (Model?.UserPermissions.Contains("group.read") == true)
-                    {
                         <li class="nav-item">
-                            <a asp-action="Index" asp-controller="AdGroup" class="nav-link">
-                                <i class="nav-icon fas fa-circle"></i>
-                                <span>@Localizer["Groups"]</span>
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="UserRole" asp-action="Index">
+                                <i class="fas fa-user-tag me-3 text-info"></i>
+                                <span>@Localizer["User Roles"]</span>
                             </a>
                         </li>
-                    }
-                </ul>
-            </div>
-        </li>
-    }
-
-    @if (Model?.UserPermissions.Contains("show.read") == true || Model?.UserPermissions.Contains("showtemplate.read") == true)
-    {
-        <li class="nav-item">
-            <a class="nav-link" data-bs-toggle="collapse" href="#showsSubmenu" role="button" aria-expanded="false" aria-controls="showsSubmenu">
-                <i class="nav-icon fas fa-tv"></i>
-                <span>@Localizer["Shows"]</span>
-                <i class="fas fa-angle-down ms-auto"></i>
-            </a>
-            <div class="collapse" id="showsSubmenu">
-                <ul class="nav nav-pills flex-column sub-menu">
-                    @if (Model?.UserPermissions.Contains("show.read") == true)
-                    {
                         <li class="nav-item">
-                            <a asp-action="Index" asp-controller="Show" class="nav-link">
-                                <i class="nav-icon fas fa-circle"></i>
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="UserPermission" asp-action="Index">
+                                <i class="fas fa-shield-alt me-3 text-info"></i>
+                                <span>@Localizer["Permissions"]</span>
+                            </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="PaymentType" asp-action="Index">
+                                <i class="fas fa-shield-alt me-3 text-info"></i>
+                                <span>@Localizer["Payment Type"]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Content Management -->
+            <li class="nav-item mb-2">
+                <div class="nav-section">
+                    <h6 class="nav-section-title text-muted fw-bold mb-3 px-3">
+                        <i class="fas fa-film me-2"></i>
+                        @Localizer["Content Management"]
+                    </h6>
+                    <ul class="nav flex-column collapse">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3 " asp-controller="Show" asp-action="Index">
+                                <i class="fas fa-play-circle me-3 text-success"></i>
                                 <span>@Localizer["Shows"]</span>
                             </a>
                         </li>
-                    }
-                    @if (Model?.UserPermissions.Contains("showtemplate.read") == true)
-                    {
+
                         <li class="nav-item">
-                            <a asp-action="Index" asp-controller="ShowTemplate" class="nav-link">
-                                <i class="nav-icon fas fa-circle"></i>
-                                <span>@Localizer["Show Template"]</span>
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="ShowTemplate" asp-action="Index">
+                                <i class="fas fa-file-alt me-3 text-success"></i>
+                                <span>@Localizer["Templates"]</span>
                             </a>
                         </li>
-                    }
-                </ul>
-            </div>
-        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Material Management -->
+            <li class="nav-item mb-2">
+                <div class="nav-section">
+                    <h6 class="nav-section-title text-muted fw-bold mb-3 px-3">
+                        <i class="fas fa-folder me-2"></i>
+                        @Localizer["Material Management"]
+                    </h6>
+                    <ul class="nav flex-column collapse">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="Material" asp-action="Index">
+                                <i class="fas fa-file-video me-3 text-warning"></i>
+                                <span>@Localizer["Materials"]</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="MaterialType" asp-action="Index">
+                                <i class="fas fa-tags me-3 text-warning"></i>
+                                <span>@Localizer["Material Types"]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Advertising Management -->
+            <li class="nav-item mb-2">
+                <div class="nav-section">
+                    <h6 class="nav-section-title text-muted fw-bold mb-3 px-3">
+                        <i class="fas fa-bullhorn me-2"></i>
+                        @Localizer["Advertising"]
+                    </h6>
+                    <ul class="nav flex-column collapse">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="AdGroup" asp-action="Index">
+                                <i class="fas fa-layer-group me-3 text-danger"></i>
+                                <span>@Localizer["Ad Groups"]</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="AdDevice" asp-action="Index">
+                                <i class="fas fa-tv me-3 text-danger"></i>
+                                <span>@Localizer["Ad Devices"]</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Customer Management -->
+            <li class="nav-item mb-2">
+                <div class="nav-section">
+                    <h6 class="nav-section-title text-muted fw-bold mb-3 px-3">
+                        <i class="fas fa-handshake me-2"></i>
+                        @Localizer["Customer Management"]
+                    </h6>
+                    <ul class="nav flex-column collapse">
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="Customer" asp-action="Index">
+                                <i class="fas fa-users-cog me-3 text-purple"></i>
+                                <span>@Localizer["Customers"]</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link d-flex align-items-center p-2 rounded-3 ms-3" asp-controller="License" asp-action="Index">
+                                <i class="fas fa-certificate me-3 text-purple"></i>
+                                <span>@Localizer["Licenses"]</span>
+                            </a>
+                        </li>
+
+                    </ul>
+                </div>
+            </li>
+
+            <!-- Timeline -->
+            <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center p-3 rounded-3" asp-controller="Timeline" asp-action="Index">
+                    <i class="fas fa-clock me-3 text-secondary"></i>
+                    <span class="fw-medium">@Localizer["Timeline"]</span>
+                </a>
+            </li>
+
+            <!-- Settings -->
+            <li class="nav-item mb-2">
+                <a class="nav-link d-flex align-items-center p-3 rounded-3" asp-controller="Dashboard" asp-action="TimelineSettings">
+                    <i class="fas fa-cogs me-3 text-secondary"></i>
+                    <span class="fw-medium">@Localizer["Settings"]</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
+
+<style>
+    .navigation-wrapper {
+        height: 100%;
     }
-</ul>
+
+    .nav-link {
+        color: #64748b !important;
+        text-decoration: none;
+        transition: all 0.3s ease;
+        border: 2px solid transparent;
+    }
+
+    .nav-link:hover {
+        background-color: #f1f5f9 !important;
+        color: #2563eb !important;
+        transform: translateX(5px);
+        border-color: #e2e8f0;
+    }
+
+    .nav-link.active {
+        background: linear-gradient(135deg, #2563eb, #8b5cf6) !important;
+        color: white !important;
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.3);
+    }
+
+    .nav-section-title {
+        font-size: 0.875rem;
+        letter-spacing: 0.5px;
+        border-bottom: 2px solid #e2e8f0;
+        padding-bottom: 0.5rem;
+        cursor: pointer; /* Add cursor pointer for clickable sections */
+    }
+
+    .avatar-circle {
+        animation: pulse 2s infinite;
+    }
+
+    @@keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); }
+        100% { transform: scale(1); }
+    }
+
+    .text-purple {
+        color: #8b5cf6 !important;
+    }
+
+    /* RTL Support */
+    @@media (direction: rtl) {
+        .nav-link:hover {
+            transform: translateX(-5px);
+        }
+    }
+</style>
+
+<script>
+    $(document).ready(function() { 
+        // Set active nav item based on current controller
+        var currentController = '@ViewContext.RouteData.Values["Controller"]';
+        var currentAction = '@ViewContext.RouteData.Values["Action"]';
+        $('.nav-link').each(function() {
+    
+            var href = $(this).attr('href');
+            if (href && href.includes(currentController)) {
+                $(this).addClass('active');
+
+                // Open the corresponding section if the item is active
+                $(this).closest('.nav-section').find('ul').collapse('show'); // › Õ «·ﬁ”„
+            }
+        });
+
+        // Smooth collapse/expand for nav sections
+        $('.nav-section-title').on('click', function() {
+            $(this).next('ul').slideToggle(300);
+            $(this).find('i').toggleClass('fa-rotate-90');
+        });
+    });
+</script>

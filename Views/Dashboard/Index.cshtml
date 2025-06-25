@@ -1,90 +1,282 @@
+
 @{
     ViewData["Title"] = Localizer["Dashboard"];
 }
 
-<div class="mb-3">
-    <div class="d-flex align-items-center justify-content-between">
-        <a href="/timeline" class="btn btn-primary">
-            <i class="fas fa-clock me-2"></i> @Localizer["إعدادات الجدول الزمني"]
-        </a>
-        <a href="/Dashboard" class="btn btn-outline-secondary">
-            <i class="fas fa-sync-alt me-2"></i> @Localizer["تحديث"]
-        </a>
+<div class="dashboard-container">
+    <!-- Welcome Section -->
+    <div class="row mb-4">
+        <div class="col-12">
+            <div class="welcome-card card border-0 shadow-sm">
+                <div class="card-body p-4">
+                    <div class="row align-items-center">
+                        <div class="col-md-8">
+                            <h2 class="welcome-title mb-2">@Localizer["Welcome back"]! 👋</h2>
+                            <p class="welcome-subtitle text-muted mb-0">@Localizer["Here's what's happening with your media platform today"]</p>
+                        </div>
+                        <div class="col-md-4 text-end">
+                            <div class="welcome-stats">
+                                <div class="stat-item">
+                                    <span class="stat-value">@DateTime.Now.ToString("dd")</span>
+                                    <span class="stat-label">@DateTime.Now.ToString("MMM")</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-</div>
 
-<div class="card border-0 shadow-sm mb-4">
-    <div class="card-header bg-white d-flex align-items-center py-3">
-        <i class="fas fa-tv text-primary me-2"></i>
-        <h5 class="card-title mb-0">@Localizer["نظام إدارة المحتوى المرئي"]</h5>
+    <!-- Statistics Cards -->
+    <div class="row mb-4">
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="stats-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-primary text-white rounded-circle me-3">
+                            <i class="fas fa-users fa-lg"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="stats-value text-primary fw-bold h4 mb-1">1,234</div>
+                            <div class="stats-label text-muted small">@Localizer["Total Users"]</div>
+                        </div>
+                    </div>
+                    <div class="stats-trend mt-3">
+                        <span class="trend-up text-success">
+                            <i class="fas fa-arrow-up me-1"></i>
+                            +12%
+                        </span>
+                        <span class="text-muted small">@Localizer["from last month"]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="stats-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-success text-white rounded-circle me-3">
+                            <i class="fas fa-play-circle fa-lg"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="stats-value text-success fw-bold h4 mb-1">567</div>
+                            <div class="stats-label text-muted small">@Localizer["Active Shows"]</div>
+                        </div>
+                    </div>
+                    <div class="stats-trend mt-3">
+                        <span class="trend-up text-success">
+                            <i class="fas fa-arrow-up me-1"></i>
+                            +8%
+                        </span>
+                        <span class="text-muted small">@Localizer["from last month"]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="stats-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-warning text-white rounded-circle me-3">
+                            <i class="fas fa-file-video fa-lg"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="stats-value text-warning fw-bold h4 mb-1">2,891</div>
+                            <div class="stats-label text-muted small">@Localizer["Media Files"]</div>
+                        </div>
+                    </div>
+                    <div class="stats-trend mt-3">
+                        <span class="trend-up text-success">
+                            <i class="fas fa-arrow-up me-1"></i>
+                            +23%
+                        </span>
+                        <span class="text-muted small">@Localizer["from last month"]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xl-3 col-md-6 mb-4">
+            <div class="stats-card card border-0 shadow-sm h-100">
+                <div class="card-body">
+                    <div class="d-flex align-items-center">
+                        <div class="stats-icon bg-info text-white rounded-circle me-3">
+                            <i class="fas fa-tv fa-lg"></i>
+                        </div>
+                        <div class="flex-grow-1">
+                            <div class="stats-value text-info fw-bold h4 mb-1">45</div>
+                            <div class="stats-label text-muted small">@Localizer["Ad Devices"]</div>
+                        </div>
+                    </div>
+                    <div class="stats-trend mt-3">
+                        <span class="trend-down text-danger">
+                            <i class="fas fa-arrow-down me-1"></i>
+                            -3%
+                        </span>
+                        <span class="text-muted small">@Localizer["from last month"]</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="card-body">
-        <div class="row">
-            <!-- Quick stats cards -->
-            <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-primary bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-box text-primary"></i>
-                            </div>
-                            <h5 class="card-title mb-0">@Localizer["المواد"]</h5>
+
+    <!-- Charts Section -->
+    <div class="row mb-4">
+        <div class="col-xl-8 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-transparent border-0 pt-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0 fw-bold">@Localizer["Content Performance"]</h5>
+                        <div class="btn-group btn-group-sm" role="group">
+                            <button type="button" class="btn btn-outline-primary active">@Localizer["Week"]</button>
+                            <button type="button" class="btn btn-outline-primary">@Localizer["Month"]</button>
+                            <button type="button" class="btn btn-outline-primary">@Localizer["Year"]</button>
                         </div>
-                        <h2 class="mb-2">248</h2>
-                        <p class="text-success mb-0">
-                            <i class="fas fa-arrow-up me-1"></i> 12% @Localizer["منذ الشهر الماضي"]
-                        </p>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="performanceChart"></canvas>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-success bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-tv text-success"></i>
+        <div class="col-xl-4 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-transparent border-0 pt-4">
+                    <h5 class="card-title mb-0 fw-bold">@Localizer["Device Status"]</h5>
+                </div>
+                <div class="card-body">
+                    <div class="chart-container" style="height: 300px;">
+                        <canvas id="deviceChart"></canvas>
+                    </div>
+                    <div class="device-legends mt-3">
+                        <div class="legend-item d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="legend-color bg-success rounded-circle me-2" style="width: 12px; height: 12px;"></div>
+                                <span class="small">@Localizer["Online"]</span>
                             </div>
-                            <h5 class="card-title mb-0">@Localizer["العروض"]</h5>
+                            <span class="fw-bold text-success">75%</span>
                         </div>
-                        <h2 class="mb-2">45</h2>
-                        <p class="text-success mb-0">
-                            <i class="fas fa-arrow-up me-1"></i> 8% @Localizer["منذ الشهر الماضي"]
-                        </p>
+                        <div class="legend-item d-flex justify-content-between align-items-center mb-2">
+                            <div class="d-flex align-items-center">
+                                <div class="legend-color bg-warning rounded-circle me-2" style="width: 12px; height: 12px;"></div>
+                                <span class="small">@Localizer["Maintenance"]</span>
+                            </div>
+                            <span class="fw-bold text-warning">15%</span>
+                        </div>
+                        <div class="legend-item d-flex justify-content-between align-items-center">
+                            <div class="d-flex align-items-center">
+                                <div class="legend-color bg-danger rounded-circle me-2" style="width: 12px; height: 12px;"></div>
+                                <span class="small">@Localizer["Offline"]</span>
+                            </div>
+                            <span class="fw-bold text-danger">10%</span>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-info bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-desktop text-info"></i>
+    <!-- Recent Activity & Quick Actions -->
+    <div class="row mb-4">
+        <div class="col-xl-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-transparent border-0 pt-4">
+                    <div class="d-flex justify-content-between align-items-center">
+                        <h5 class="card-title mb-0 fw-bold">@Localizer["Recent Activity"]</h5>
+                        <a href="#" class="btn btn-sm btn-outline-primary">@Localizer["View All"]</a>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="activity-timeline">
+                        <div class="activity-item d-flex align-items-start mb-3">
+                            <div class="activity-icon bg-primary text-white rounded-circle me-3">
+                                <i class="fas fa-user-plus fa-sm"></i>
                             </div>
-                            <h5 class="card-title mb-0">@Localizer["الأجهزة"]</h5>
+                            <div class="activity-content flex-grow-1">
+                                <p class="activity-text mb-1">@Localizer["New user registered"]: <strong>Ahmed Hassan</strong></p>
+                                <small class="text-muted">2 @Localizer["hours ago"]</small>
+                            </div>
                         </div>
-                        <h2 class="mb-2">72</h2>
-                        <p class="text-success mb-0">
-                            <i class="fas fa-circle me-1 text-success"></i> 68 @Localizer["متصل"]
-                        </p>
+
+                        <div class="activity-item d-flex align-items-start mb-3">
+                            <div class="activity-icon bg-success text-white rounded-circle me-3">
+                                <i class="fas fa-play fa-sm"></i>
+                            </div>
+                            <div class="activity-content flex-grow-1">
+                                <p class="activity-text mb-1">@Localizer["Show published"]: <strong>@Localizer["Morning News"]</strong></p>
+                                <small class="text-muted">4 @Localizer["hours ago"]</small>
+                            </div>
+                        </div>
+
+                        <div class="activity-item d-flex align-items-start mb-3">
+                            <div class="activity-icon bg-warning text-white rounded-circle me-3">
+                                <i class="fas fa-upload fa-sm"></i>
+                            </div>
+                            <div class="activity-content flex-grow-1">
+                                <p class="activity-text mb-1">@Localizer["New media uploaded"]: <strong>video_001.mp4</strong></p>
+                                <small class="text-muted">6 @Localizer["hours ago"]</small>
+                            </div>
+                        </div>
+
+                        <div class="activity-item d-flex align-items-start mb-3">
+                            <div class="activity-icon bg-info text-white rounded-circle me-3">
+                                <i class="fas fa-tv fa-sm"></i>
+                            </div>
+                            <div class="activity-content flex-grow-1">
+                                <p class="activity-text mb-1">@Localizer["Device connected"]: <strong>Screen #12</strong></p>
+                                <small class="text-muted">8 @Localizer["hours ago"]</small>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
+        </div>
 
-            <div class="col-xl-3 col-lg-6 col-md-6 mb-4">
-                <div class="card border-0 shadow-sm h-100">
-                    <div class="card-body">
-                        <div class="d-flex align-items-center mb-3">
-                            <div class="rounded-circle bg-warning bg-opacity-10 p-3 me-3">
-                                <i class="fas fa-users text-warning"></i>
-                            </div>
-                            <h5 class="card-title mb-0">@Localizer["المستخدمين"]</h5>
+        <div class="col-xl-6 mb-4">
+            <div class="card border-0 shadow-sm h-100">
+                <div class="card-header bg-transparent border-0 pt-4">
+                    <h5 class="card-title mb-0 fw-bold">@Localizer["Quick Actions"]</h5>
+                </div>
+                <div class="card-body">
+                    <div class="row g-3">
+                        <div class="col-6">
+                            <a href="#" class="quick-action-card d-flex flex-column align-items-center p-3 rounded-3 text-decoration-none">
+                                <div class="quick-action-icon bg-primary text-white rounded-circle mb-2">
+                                    <i class="fas fa-plus fa-lg"></i>
+                                </div>
+                                <span class="quick-action-text small fw-medium text-center">@Localizer["Add New Show"]</span>
+                            </a>
                         </div>
-                        <h2 class="mb-2">24</h2>
-                        <p class="text-muted mb-0">
-                            <i class="fas fa-user-shield me-1"></i> 3 @Localizer["مدير نظام"]
-                        </p>
+                        <div class="col-6">
+                            <a href="#" class="quick-action-card d-flex flex-column align-items-center p-3 rounded-3 text-decoration-none">
+                                <div class="quick-action-icon bg-success text-white rounded-circle mb-2">
+                                    <i class="fas fa-upload fa-lg"></i>
+                                </div>
+                                <span class="quick-action-text small fw-medium text-center">@Localizer["Upload Media"]</span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="quick-action-card d-flex flex-column align-items-center p-3 rounded-3 text-decoration-none">
+                                <div class="quick-action-icon bg-warning text-white rounded-circle mb-2">
+                                    <i class="fas fa-user-plus fa-lg"></i>
+                                </div>
+                                <span class="quick-action-text small fw-medium text-center">@Localizer["Add User"]</span>
+                            </a>
+                        </div>
+                        <div class="col-6">
+                            <a href="#" class="quick-action-card d-flex flex-column align-items-center p-3 rounded-3 text-decoration-none">
+                                <div class="quick-action-icon bg-info text-white rounded-circle mb-2">
+                                    <i class="fas fa-cog fa-lg"></i>
+                                </div>
+                                <span class="quick-action-text small fw-medium text-center">@Localizer["System Settings"]</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -92,240 +284,222 @@
     </div>
 </div>
 
-<div class="row">
-    <!-- Timeline Section -->
-    <div class="col-lg-8 mb-4">
-        <div class="card border-0 shadow-sm h-100">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
-                <div>
-                    <i class="fas fa-clock text-primary me-2"></i>
-                    <h5 class="card-title d-inline-block mb-0">@Localizer["الجدول الزمني"]</h5>
-                </div>
-                <div class="btn-group btn-group-sm">
-                    <button type="button" class="btn btn-outline-secondary dashboard-filter-btn active" data-filter="week">@Localizer["أسبوع"]</button>
-                    <button type="button" class="btn btn-outline-secondary dashboard-filter-btn" data-filter="month">@Localizer["شهر"]</button>
-                    <button type="button" class="btn btn-outline-secondary dashboard-filter-btn" data-filter="year">@Localizer["سنة"]</button>
-                </div>
-            </div>
-            <div class="card-body">
-                <div class="timeline-container">
-                    <table class="table table-hover">
-                        <thead>
-                            <tr>
-                                <th>@Localizer["اسم الجدول"]</th>
-                                <th>@Localizer["النوع"]</th>
-                                <th>@Localizer["التاريخ"]</th>
-                                <th>@Localizer["المدة"]</th>
-                                <th>@Localizer["الحالة"]</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>@Localizer["عرض الاستقبال"]</td>
-                                <td><span class="badge bg-primary">@Localizer["فيديو"]</span></td>
-                                <td>2025/05/07</td>
-                                <td>09:00 - 12:00</td>
-                                <td><span class="badge bg-success">@Localizer["نشط"]</span></td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["عرض البهو الرئيسي"]</td>
-                                <td><span class="badge bg-info">@Localizer["عرض تقديمي"]</span></td>
-                                <td>2025/05/07</td>
-                                <td>13:00 - 15:00</td>
-                                <td><span class="badge bg-warning">@Localizer["مجدول"]</span></td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["عرض إعلامي"]</td>
-                                <td><span class="badge bg-secondary">@Localizer["صور"]</span></td>
-                                <td>2025/05/08</td>
-                                <td>10:00 - 11:30</td>
-                                <td><span class="badge bg-danger">@Localizer["مؤجل"]</span></td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["تقرير المبيعات"]</td>
-                                <td><span class="badge bg-warning">@Localizer["إحصائيات"]</span></td>
-                                <td>2025/05/08</td>
-                                <td>14:30 - 16:00</td>
-                                <td><span class="badge bg-success">@Localizer["نشط"]</span></td>
-                            </tr>
-                            <tr>
-                                <td>@Localizer["منتجات جديدة"]</td>
-                                <td><span class="badge bg-danger">@Localizer["فيديو"]</span></td>
-                                <td>2025/05/09</td>
-                                <td>09:30 - 12:00</td>
-                                <td><span class="badge bg-secondary">@Localizer["مسودة"]</span></td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
+<style>
+    .dashboard-container {
+        animation: fadeIn 0.6s ease-in;
+    }
 
-    <div class="col-lg-4 mb-4">
-        <div class="card border-0 shadow-sm h-100">
-            <div class="card-header bg-white py-3">
-                <i class="fas fa-chart-pie text-primary me-2"></i>
-                <h5 class="card-title d-inline-block mb-0">@Localizer["حالة الأجهزة"]</h5>
-            </div>
-            <div class="card-body d-flex flex-column align-items-center justify-content-center">
-                <div style="max-width: 220px; max-height: 220px;">
-                    <canvas id="deviceStatusChart"></canvas>
-                </div>
-                <div class="mt-3 text-center">
-                    <div class="d-flex justify-content-center">
-                        <div class="px-3">
-                            <span class="badge bg-success">68</span> @Localizer["متصل"]
-                        </div>
-                        <div class="px-3">
-                            <span class="badge bg-danger">4</span> @Localizer["غير متصل"]
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    .welcome-card {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        color: white;
+        border-radius: 20px;
+    }
 
-    <!-- Recent materials -->
-    <div class="col-md-6 mb-4">
-        <div class="card border-0 shadow-sm h-100">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
-                <div>
-                    <i class="fas fa-film text-primary me-2"></i>
-                    <h5 class="card-title d-inline-block mb-0">@Localizer["العروض الأخيرة"]</h5>
-                </div>
-                <a href="#" class="btn btn-sm btn-primary">@Localizer["عرض الكل"]</a>
-            </div>
-            <div class="card-body p-0">
-                <div class="list-group list-group-flush">
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["عرض المدخل الرئيسي"]</h6>
-                                <p class="mb-1 text-muted">@Localizer["يعرض الآن"]</p>
-                            </div>
-                            <span class="badge bg-success">@Localizer["نشط"]</span>
-                        </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["عرض منطقة الاستقبال"]</h6>
-                                <p class="mb-1 text-muted">@Localizer["تم التحديث قبل ساعتين"]</p>
-                            </div>
-                            <span class="badge bg-success">@Localizer["نشط"]</span>
-                        </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["عرض معلومات البهو"]</h6>
-                                <p class="mb-1 text-muted">@Localizer["تم التحديث قبل 3 ساعات"]</p>
-                            </div>
-                            <span class="badge bg-warning">@Localizer["مجدول"]</span>
-                        </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["حملة ترويجية"]</h6>
-                                <p class="mb-1 text-muted">@Localizer["تم التحديث بالأمس"]</p>
-                            </div>
-                            <span class="badge bg-secondary">@Localizer["مسودة"]</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+    .welcome-title {
+        font-size: 2rem;
+        font-weight: 700;
+    }
 
-    <!-- Recent materials -->
-    <div class="col-md-6 mb-4">
-        <div class="card border-0 shadow-sm h-100">
-            <div class="card-header bg-white d-flex justify-content-between align-items-center py-3">
-                <div>
-                    <i class="fas fa-box text-primary me-2"></i>
-                    <h5 class="card-title d-inline-block mb-0">@Localizer["المواد الأخيرة"]</h5>
-                </div>
-                <a href="#" class="btn btn-sm btn-primary">@Localizer["عرض الكل"]</a>
-            </div>
-            <div class="card-body p-0">
-                <div class="list-group list-group-flush">
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["فيديو عرض المنتج"]</h6>
-                                <p class="mb-1 text-muted"><i class="fas fa-file-video text-danger me-1"></i> @Localizer["فيديو"] - 24 MB</p>
-                            </div>
-                            <small>@Localizer["منذ ساعة"]</small>
-                        </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["عرض تقديمي للشركة"]</h6>
-                                <p class="mb-1 text-muted"><i class="fas fa-file-powerpoint text-warning me-1"></i> @Localizer["عرض تقديمي"] - 8 MB</p>
-                            </div>
-                            <small>@Localizer["منذ 3 ساعات"]</small>
-                        </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["لافتة رقمية"]</h6>
-                                <p class="mb-1 text-muted"><i class="fas fa-image text-primary me-1"></i> @Localizer["صورة"] - 3.2 MB</p>
-                            </div>
-                            <small>@Localizer["منذ يوم"]</small>
-                        </div>
-                    </div>
-                    <div class="list-group-item">
-                        <div class="d-flex w-100 justify-content-between align-items-center">
-                            <div>
-                                <h6 class="mb-1">@Localizer["مستند التقرير السنوي"]</h6>
-                                <p class="mb-1 text-muted"><i class="fas fa-file-pdf text-danger me-1"></i> @Localizer["PDF"] - 12 MB</p>
-                            </div>
-                            <small>@Localizer["منذ يومين"]</small>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+    .welcome-subtitle {
+        color: rgba(255, 255, 255, 0.8) !important;
+        font-size: 1.1rem;
+    }
+
+    .welcome-stats .stat-item {
+        text-align: center;
+    }
+
+    .welcome-stats .stat-value {
+        display: block;
+        font-size: 2.5rem;
+        font-weight: 700;
+        line-height: 1;
+    }
+
+    .welcome-stats .stat-label {
+        display: block;
+        font-size: 0.9rem;
+        opacity: 0.8;
+    }
+
+    .stats-card {
+        transition: all 0.3s ease;
+        border-radius: 15px;
+    }
+
+    .stats-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15) !important;
+    }
+
+    .stats-icon {
+        width: 60px;
+        height: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .stats-value {
+        font-size: 2rem;
+        line-height: 1;
+    }
+
+    .trend-up, .trend-down {
+        font-size: 0.875rem;
+        font-weight: 600;
+    }
+
+    .activity-timeline {
+        position: relative;
+    }
+
+    .activity-icon {
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-shrink: 0;
+    }
+
+    .activity-text {
+        font-size: 0.9rem;
+        margin: 0;
+    }
+
+    .quick-action-card {
+        background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+        border: 2px solid transparent;
+        transition: all 0.3s ease;
+        color: inherit !important;
+    }
+
+    .quick-action-card:hover {
+        background: linear-gradient(135deg, #e2e8f0, #cbd5e1);
+        border-color: #2563eb;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 15px rgba(37, 99, 235, 0.2);
+    }
+
+    .quick-action-icon {
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .chart-container {
+        position: relative;
+    }
+
+    @@keyframes fadeIn {
+        from { opacity: 0; transform: translateY(20px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+</style>
 
 @section Scripts {
-    <!-- Chart.js CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
-    <script src="~/js/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Initialize device status chart
-        document.addEventListener('DOMContentLoaded', function() {
-            const ctx = document.getElementById('deviceStatusChart').getContext('2d');
-            new Chart(ctx, {
-                type: 'doughnut',
+        $(document).ready(function() {
+            // Performance Chart
+            const performanceCtx = document.getElementById('performanceChart').getContext('2d');
+            new Chart(performanceCtx, {
+                type: 'line',
                 data: {
-                    labels: ['متصل', 'غير متصل'],
+                    labels: ['@Localizer["Mon"]', '@Localizer["Tue"]', '@Localizer["Wed"]', '@Localizer["Thu"]', '@Localizer["Fri"]', '@Localizer["Sat"]', '@Localizer["Sun"]'],
                     datasets: [{
-                        data: [68, 4],
-                        backgroundColor: ['#10b981', '#ef4444'],
-                        borderWidth: 0,
-                        borderRadius: 5,
+                        label: '@Localizer["Views"]',
+                        data: [65, 59, 80, 81, 56, 55, 40],
+                        borderColor: '#2563eb',
+                        backgroundColor: 'rgba(37, 99, 235, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: '@Localizer["Engagement"]',
+                        data: [28, 48, 40, 19, 86, 27, 90],
+                        borderColor: '#10b981',
+                        backgroundColor: 'rgba(16, 185, 129, 0.1)',
+                        tension: 0.4,
+                        fill: true
                     }]
                 },
                 options: {
                     responsive: true,
                     maintainAspectRatio: false,
-                    cutout: '70%',
                     plugins: {
                         legend: {
-                            position: 'bottom',
-                            labels: {
-                                boxWidth: 12,
-                                padding: 15
+                            position: 'bottom'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: true,
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
+                            }
+                        },
+                        x: {
+                            grid: {
+                                color: 'rgba(0, 0, 0, 0.05)'
                             }
                         }
                     }
                 }
+            });
+
+            // Device Status Chart
+            const deviceCtx = document.getElementById('deviceChart').getContext('2d');
+            new Chart(deviceCtx, {
+                type: 'doughnut',
+                data: {
+                    labels: ['@Localizer["Online"]', '@Localizer["Maintenance"]', '@Localizer["Offline"]'],
+                    datasets: [{
+                        data: [75, 15, 10],
+                        backgroundColor: ['#10b981', '#f59e0b', '#ef4444'],
+                        borderWidth: 0
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            display: false
+                        }
+                    }
+                }
+            });
+
+            // Auto-refresh stats every 30 seconds
+            setInterval(function() {
+                // Simulate real-time updates
+                updateStats();
+            }, 30000);
+
+            function updateStats() {
+                $('.stats-value').each(function() {
+                    const currentValue = parseInt($(this).text().replace(/,/g, ''));
+                    const newValue = currentValue + Math.floor(Math.random() * 10) - 5;
+                    $(this).text(newValue.toLocaleString());
+                });
+            }
+
+            // Add loading animation to quick actions
+            $('.quick-action-card').on('click', function(e) {
+                e.preventDefault();
+                const $this = $(this);
+                const originalIcon = $this.find('i').attr('class');
+                
+                $this.find('i').attr('class', 'fas fa-spinner fa-spin fa-lg');
+                
+                setTimeout(function() {
+                    $this.find('i').attr('class', originalIcon);
+                    showNotification('@Localizer["Feature coming soon"]!', 'info');
+                }, 1000);
             });
         });
     </script>

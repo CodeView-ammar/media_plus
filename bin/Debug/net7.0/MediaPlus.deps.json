@@ -35,12 +35,6 @@
           },
           "en-US/MediaPlus.resources.dll": {
             "locale": "en-US"
-          },
-          "ar_SA/MediaPlus.resources.dll": {
-            "locale": "ar_SA"
-          },
-          "en_US/MediaPlus.resources.dll": {
-            "locale": "en_US"
           }
         }
       },

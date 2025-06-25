@@ -357,6 +357,46 @@ namespace MediaPlus.Migrations
                     b.ToTable("Material_Type", (string)null);
                 });
 
+            modelBuilder.Entity("MediaPlus.DBModels.PaymentType", b =>
+                {
+                    b.Property<int?>("TypeId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int?>("TypeId"));
+
+                    b.Property<string>("CustomerName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("TypeCdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TypeCustCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<bool>("TypeIsActive")
+                        .HasColumnType("bit");
+
+                    b.Property<string>("TypeNameAr")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TypeNameEn")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("TypeUdate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int?>("TypeUserId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("UserName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("TypeId");
+
+                    b.ToTable("Payment_Type", (string)null);
+                });
+
             modelBuilder.Entity("MediaPlus.DBModels.RoleWithPermission", b =>
                 {
                     b.Property<int>("RwpId")

@@ -1,11 +1,25 @@
 @model IEnumerable<CustomerViewModel>
+@using MediaPlus.Services
+@using Newtonsoft.Json
 
-    <!-- BEGIN MAIN CONTENT -->
+@{
+    ViewBag.Title = @Localizer["customers"];
+
+
+
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
+
+}
+<style>
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
+
+<!-- BEGIN MAIN CONTENT -->
         <div id="main-content">
-            <div class="page-title"> <i class="icon-custom-left"></i>
-                <h3 class="text-center"><strong>@Localizer["customers"]</strong></h3>
-                <hr>
-            </div>
+            
             <a style="float: left;" asp-action="Create" asp-controller="Customer" class="btn btn-primary" role="button">
                 @Localizer["addnewhead"]
                 <i class="fa fa-plus"></i>
@@ -91,10 +105,14 @@
                                                         <td  class="text-center">
                                                             <div style="float:left;" >
                                                                 <a asp-action="Edit" asp-controller="Customer" asp-route-id="@Customer.CustId" class="btn btn-primary" type="button">@Localizer["edit"]</a>
-                                        
-                                                                <button type="button" id="DeleteButton"  class="btn btn-danger" data-toggle="modal" data-target="#exampleModal" onclick='MoveTheIdToModal("@Customer.CustNameAr","@Customer.CustNameEn","@Customer.CustId")'>
-                                                                    @Localizer["delete"]
-                                                                </button>
+
+                                                        <button type="button"
+                                                                class="btn btn-danger"
+                                                                data-bs-toggle="modal"
+                                                                data-bs-target="#exampleModal"
+                                                                onclick="MoveTheIdToModal(@Customer.CustId)">
+                                                            @Localizer["delete"]
+                                                        </button>
                                                             </div>
                                                         </td>
                                                     </tr>
@@ -110,6 +128,8 @@
             </div>
         </div>
 
+
+@section model{
 
 
 
@@ -131,6 +151,7 @@
       </div>
       <div class="modal-footer">
         <form id="DeleteForm" method="post" asp-action="Delete">
+                    <input type="hidden" name="id" id="deleteItemId" />
             <button type="button" class="btn btn-secondary" data-dismiss="modal">@Localizer["close"]</button>
             <button type="submit" class="btn btn-danger">@Localizer["delete"]</button>
         </form>
@@ -138,18 +159,36 @@
     </div>
   </div>
 </div>
-
+}
 @section Scripts{
     
     <script type="text/javascript">
-         function MoveTheIdToModal(...params){
-            var elem = document.getElementById("DeleteForm")
-            var elemValue = elem.getAttribute('action').split('/');
-            var nameElem = document.getElementById("customerName")
-            customerName.innerHTML = params[0] == "null" ?  params[1] : params[0];
-            var newhref = '/' + elemValue[1] + '/' + elemValue[2] + '/' + params[2];
-            elem.setAttribute("action", newhref); 
+        function MoveTheIdToModal(CustId) {
+            document.getElementById("deleteItemId").value = CustId;
+        }
+        function ToggleOnAndOff(event, id) {
+            event.preventDefault();
+
+            const controller = event.currentTarget.getAttribute("controll");
+            fetch(`/${controller}/ToggleState/${id}`)
+                .then(response => {
+                    if (response.ok) {
+                        location.reload();
+                    } else {
+                        alert("ÕœÀ Œÿ√ √À‰«¡ «· »œÌ·.");
+                    }
+                });
         }
 
+        //  ÂÌ∆… «·œ« « «»·
+        $(document).ready(function () {
+            $('#Datatable').DataTable({
+                pageLength: 10,
+                responsive: true,
+                language: {
+                    url: '//cdn.datatables.net/plug-ins/1.10.25/i18n/Arabic.json'
+                }
+            });
+        });
     </script>
 }

@@ -27,6 +27,8 @@ namespace MediaPlus.Controllers
         private readonly UserSessionModel? _currentUser;
         private readonly ILogger<UserController> _logger;
         private readonly IWebHostEnvironment env;
+
+        
         private readonly bool isEnglishCulture ;
 
 #pragma warning disable CS8602 // Dereference of a possibly null reference.
@@ -114,8 +116,8 @@ namespace MediaPlus.Controllers
                                                                     .RoleNameAr,
                                     });
 
-            
-            return View(users);
+
+            return View(users.ToList());
         }
 
 
@@ -264,42 +266,57 @@ namespace MediaPlus.Controllers
 			}
 			var targetUser = _userTb.GetEntity(userVm.UserId);
 
-            if(userVm.UserPhoto != null){
-
-                //delete previos photo
-                if (targetUser.UserPhoto != "default_photo_user.jpg,image/jpg"){
-                    System.IO.File.Delete(Path.Combine(env.WebRootPath, "upload/user/photo", targetUser.UserPhoto.Split(",")[0]));
+            if (userVm.UserPhoto != null)
+            {
+                // حذف الصورة القديمة إن لم تكن الصورة الافتراضية
+                if (!string.IsNullOrEmpty(targetUser.UserPhoto) && targetUser.UserPhoto != "default_photo_user.jpg,image/jpeg")
+                {
+                    var oldFileName = targetUser.UserPhoto.Split(",")[0];
+                    var oldPath = Path.Combine(env.WebRootPath, "upload/user/photo", oldFileName);
+                    if (System.IO.File.Exists(oldPath))
+                    {
+                        System.IO.File.Delete(oldPath);
+                    }
                 }
 
-                // Upload the valid photo to spacific folder
-                string filename = Guid.NewGuid().ToString().Substring(0,18) + Path.GetExtension(userVm.UserPhoto.FileName);
+                // رفع الصورة الجديدة
+                string filename = Guid.NewGuid().ToString().Substring(0, 18) + Path.GetExtension(userVm.UserPhoto.FileName);
                 var path = Path.Combine(env.WebRootPath, "upload/user/photo", filename);
                 using (var fileStream = System.IO.File.Create(path))
                 {
                     userVm.UserPhoto.CopyTo(fileStream);
                 }
-                userVm.UserPhotoPath = filename+","+userVm.UserPhoto.ContentType;
+
+                // حفظ المسار الجديد
+                userVm.UserPhotoPath = filename + "," + userVm.UserPhoto.ContentType;
+                targetUser.UserPhoto = userVm.UserPhotoPath;
             }
+            else
+            {
+                // إذا لم يتم رفع صورة جديدة، يتم الاحتفاظ بالصورة القديمة أو تعيين صورة افتراضية
+                if (string.IsNullOrEmpty(targetUser.UserPhoto))
+                {
+                    targetUser.UserPhoto = "default_photo_user.jpg,image/jpeg";
+                }
+            }
+
 
             targetUser.UserNameAr = userVm.UserNameAr;
             targetUser.UserNameEn = userVm.UserNameEn;
             targetUser.UserLoginName = userVm.UserLoginName;
             targetUser.UserPassword = userVm.UserPassword;
             targetUser.UserUdate = DateTime.Now;
-            targetUser.UserCdate = userVm.UserCdate.Value;
-            targetUser.UserCustCode = userVm.UserCustCode;
             targetUser.UserRoleId = userVm.UserRoleId;
-            targetUser.UserPhoto = userVm.UserPhotoPath;
-               
+
             _userTb.Update(targetUser);
 
             return RedirectToAction("Index", "User");
         }
 
-       //======================================================================
-       // User Delete Part
-       [HttpGet]
-       public IActionResult Delete(int id)
+        //======================================================================
+        // User Delete Part
+        [HttpPost]
+        public IActionResult Delete(int id)
        {
             //delete attached photo
             var selectedFile = _userTb.GetEntity(id);

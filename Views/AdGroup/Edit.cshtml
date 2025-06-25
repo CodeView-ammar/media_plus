@@ -1,18 +1,24 @@
 @model MediaPlus.Models.ViewModels.AdGroupViewModel
-
+@using MediaPlus.Services
+@using Newtonsoft.Json
 
 @{
-    ViewData["Title"] = "Edit Group";
-}
+    ViewBag.Title = @Localizer["edithead"];
 
+    var currentUser = JsonConvert.DeserializeObject<UserSessionModel>(Context.Session.GetString("UserObject")!);
+}
+<style>
+
+    .main-content {
+        width: -WEBKIT-FILL-AVAILABLE;
+    }
+</style>
 <div class="container">
     <div class="row">
-        <div class="col-xs-12 col-sm-8 col-md-7 col-sm-offset-2 col-md-offset-3">
-		    <form role="form"asp-action="Edit" asp-controller="AdGroup" enctype="multipart/form-data">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-sm-offset-2 col-md-offset-3">
+            <form role="form" asp-action="Edit" asp-controller="AdGroup" enctype="multipart/form-data">
                 <br>
-                <h2 class="text-center">@Localizer["edithead"]</h2>
-                <hr class="colorgraph">
-
+                
                 <div class="form-group">
                     <label asp-for="GroupName">@Localizer["name"]</label>
                     <input asp-for="GroupName" type="text" class="form-control input-lg" placeholder="@Localizer["name"]" tabindex="1">
@@ -41,10 +47,10 @@
 			    <hr class="colorgraph">
                 <div class="row">
                     <div class="col-xs-12 col-md-6">
-                        <a asp-action="Index" asp-controller="AdGroup" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">Return</a>
+                        <input type="submit" value="@Localizer["submit"]" class="btn btn-success btn-block btn-lg">
                     </div>
                     <div class="col-xs-12 col-md-6">
-                        <input type="submit" class="btn btn-success btn-block btn-lg"></input>
+                        <a asp-action="Index" asp-controller="AdGroup" value="Return" class="btn btn-primary btn-block btn-lg" tabindex="7">@Localizer["return"]</a>
                     </div>
                 </div>
 		</form>

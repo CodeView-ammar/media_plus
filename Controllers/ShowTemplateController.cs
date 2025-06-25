@@ -184,10 +184,10 @@ namespace MediaPlus.Controllers
             return RedirectToAction("Index", "ShowTemplate");
         }
 
-       //======================================================================
-       // ShowTemplate Delete Part
-       [HttpGet]
-       public IActionResult Delete(int id)
+        //======================================================================
+        // ShowTemplate Delete Part
+        [HttpPost]
+        public IActionResult Delete(int id)
        {
             var showTemplate = _ShowTemplateTb.EntitiesIQueryable().FirstOrDefault(s=>s.TempId == id);
 
@@ -234,10 +234,10 @@ namespace MediaPlus.Controllers
 
         // =====================================================================
         // Show Template Part
-       [HttpPost]
-       public IActionResult UpdateTemplatesDetails([Bind(Prefix = "TempDetails")]List<TemplateDetail> templateDetails){
-
-            var errors = new List<string>(); // <-- Â–« Ì÷„‰ √‰Â« ·Ì”  null
+        [HttpPost]
+        public IActionResult UpdateTemplatesDetails([Bind(Prefix = "TempDetails")] List<TemplateDetail> templateDetails)
+        {
+            var errors = new List<string>();
 
             foreach (var item in templateDetails)
             {
@@ -248,16 +248,24 @@ namespace MediaPlus.Controllers
                 }
 
                 var targetElement = _ShowTemplateDetailTb.GetEntity(item.TempDetail);
+
+                if (targetElement == null)
+                {
+                    errors.Add($"«·⁄‰’— »—ﬁ„ {item.TempDetail} €Ì— „ÊÃÊœ ›Ì ﬁ«⁄œ… «·»Ì«‰« .");
+                    continue;
+                }
+
                 targetElement.TempZoneHeight = item.TempZoneHeight;
                 targetElement.TempZoneWidth = item.TempZoneWidth;
                 targetElement.TempIsactive = item.TempIsactive ?? 1;
 
                 _ShowTemplateDetailTb.Update(targetElement);
             }
+
             TempData["TemplateErrors"] = "";
             if (errors.Any())
             {
-                TempData["TemplateErrors"] = JsonSerializer.Serialize(errors); // ‰ÕÊ·Â ·”·”·… ‰’Ì…
+                TempData["TemplateErrors"] = JsonSerializer.Serialize(errors);
             }
             else
             {
@@ -265,6 +273,7 @@ namespace MediaPlus.Controllers
             }
 
             return RedirectToAction("Index", "ShowTemplate");
-       }
+        }
+
     }
 }
